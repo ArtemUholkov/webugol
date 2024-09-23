@@ -1,0 +1,39 @@
+.popup {
+  height: 100svh;
+  width: 100svw;
+  position: fixed;
+  top: 0;
+  left: 100%;
+  background: linear-gradient(180deg, #5e01d5 16.2%, #ff8902 135%);
+  transition: all 0.5s;
+  padding-top: 32px;
+}
+.open {
+  left: 0;
+  transition: all 0.5s;
+}
+.close-button,
+.search-button {
+  height: 40px;
+  width: 40px;
+  transition: all 0.3s;
+}
+.close-button {
+  margin-right: 20px;
+}
+.close-button:hover,
+.search-button:hover {
+  cursor: pointer;
+  opacity: 0.6;
+  transition: all 0.3s;
+}
+.popup_links {
+}
+.navbar {
+}
+.nav_number {
+}
+.nav_text {
+}
+.nav_icon {
+}
