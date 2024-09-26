@@ -38,6 +38,7 @@ header {
   border: 1px solid rgba(254, 241, 225, 0.4);
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(27px);
+  transition: all 0.3s;
 }
 .burger_img {
   height: 40px;

@@ -8,6 +8,14 @@
     <link rel="apple-touch-icon" sizes="120x120" href="img/global/favicon.png" />
     <link rel="apple-touch-icon" sizes="76x76" href="img/global/favicon.png" />
     <link rel="apple-touch-icon" sizes="57x57" href="img/global/favicon.png" />
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Biryani:wght@200;300;400;600;700;800;900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FONTS END -->
     <link rel="icon" href="img/global/favicon.png" />
     <title>Webugol - Moneymaking</title>
     <link rel="stylesheet" href="css/index.css" />
@@ -28,6 +36,36 @@
       </div>
     </header>
     <section class="popup">
+      <div class="sec_popup">
+        <div class="popup_content_wrapper">
+          <p class="popup_title">INDUSTRIES</p>
+          <div class="popup_links_wrapper">
+            <a href="#" class="popup_links_item">Health & Wellness</a>
+            <a href="#" class="popup_links_item">Construction</a>
+            <a href="#" class="popup_links_item">Home Services</a>
+            <a href="#" class="popup_links_item">Ecommerce</a>
+            <a href="#" class="popup_links_item">IT Companies</a>
+            <a href="#" class="popup_links_item">Industrial</a>
+          </div>
+        </div>
+      </div>
+      <div class="trd_popup">
+        <div class="popup_content_wrapper">
+          <p class="popup_title">Services</p>
+          <div class="popup_links_wrapper">
+            <a href="#" class="popup_links_item">Google Ads</a>
+            <a href="#" class="popup_links_item">Meta Ads</a>
+            <a href="#" class="popup_links_item">Website SEO</a>
+            <a href="#" class="popup_links_item">Local SEO</a>
+            <a href="#" class="popup_links_item">Email Marketing</a>
+            <a href="#" class="popup_links_item">Influencer Marketing</a>
+            <a href="#" class="popup_links_item">Graphic Design</a>
+            <a href="#" class="popup_links_item">UX Design / Web Design</a>
+            <a href="#" class="popup_links_item">Website Development</a>
+            <a href="#" class="popup_links_item">Advanced Analytics</a>
+          </div>
+        </div>
+      </div>
       <div class="popup_wrapper">
         <div class="popup_header">
           <div class="header_wrapper">
@@ -36,32 +74,75 @@
                 <img src="img/global/white-logo.svg" alt="logo" class="header_logo_img" />
               </a>
             </div>
-            <div class="header_burger-wrapper">
+            <div class="header_burger-wrapper popup_burger_wrapper">
               <div class="popup_burger">
-                <img src="img/main/close.svg" alt="close" class="close-button" />
-                <img src="img/main/search.svg" alt="search" class="search-button" />
+                <svg
+                  class="close-button"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="40"
+                  viewBox="0 0 40 40"
+                  fill="none"
+                >
+                  <path
+                    id="mypath_one"
+                    d="M8 8.00049L31 31.0005M8 31.0005L31 8.00049"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <svg
+                  class="search-button"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="40"
+                  viewBox="0 0 40 40"
+                  fill="none"
+                >
+                  <path
+                    id="mypath_two"
+                    d="M35.0003 35L27.762 27.7616M27.762 27.7616C29.0002 26.5235 29.9823 25.0536 30.6524 23.4359C31.3225 21.8182 31.6674 20.0843 31.6674 18.3333C31.6674 16.5823 31.3225 14.8484 30.6524 13.2307C29.9823 11.613 29.0002 10.1431 27.762 8.90498C26.5239 7.66683 25.054 6.68468 23.4363 6.0146C21.8185 5.34452 20.0847 4.99963 18.3337 4.99963C16.5827 4.99963 14.8488 5.34452 13.2311 6.0146C11.6134 6.68468 10.1435 7.66683 8.90534 8.90498C6.40479 11.4055 5 14.797 5 18.3333C5 21.8696 6.40479 25.2611 8.90534 27.7616C11.4059 30.2622 14.7974 31.667 18.3337 31.667C21.87 31.667 25.2615 30.2622 27.762 27.7616Z"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <div class="search_field">
+                  <input type="text" class="field" />
+                  <button class="close-search">&times;</button>
+                </div>
               </div>
             </div>
           </div>
         </div>
         <div class="popup_links">
           <nav class="navbar">
-            <a href="#"><span class="nav_number">01</span><span class="nav_text">MAIN</span></a>
-            <a href="#"><span class="nav_number">02</span><span class="nav_text">about us</span></a>
-            <a href="#"
+            <a href="#" class="nav_link" id="removeit"
+              ><span class="nav_number">01</span><span class="nav_text">MAIN</span></a
+            >
+            <a href="#" class="nav_link" id="removeit"
+              ><span class="nav_number">02</span><span class="nav_text">about us</span></a
+            >
+            <a href="#" class="nav_link" id="fstlink"
               ><span class="nav_number">03</span><span class="nav_text">industries</span
               ><span class="nav_icon"><img src="img/main/arrow.svg" alt="icon" /></span
             ></a>
-            <a href="#"
+            <a href="#" class="nav_link" id="sndlink"
               ><span class="nav_number">04</span><span class="nav_text">services</span
               ><span class="nav_icon"><img src="img/main/arrow.svg" alt="icon" /></span
             ></a>
-            <a href="#"><span class="nav_number">05</span><span class="nav_text">projects</span></a>
-            <a href="#"
-              ><span class="nav_number">06</span><span class="nav_text">blog</span
-              ><span class="nav_icon"><img src="img/main/arrow.svg" alt="icon" /></span
-            ></a>
-            <a href="#"><span class="nav_number">07</span><span class="nav_text">contacts</span></a>
+            <a href="#" class="nav_link" id="removeit"
+              ><span class="nav_number">05</span><span class="nav_text">projects</span></a
+            >
+            <a href="#" class="nav_link" id="removeit"
+              ><span class="nav_number">06</span><span class="nav_text">blog</span></a
+            >
+            <a href="#" class="nav_link" id="removeit"
+              ><span class="nav_number">07</span><span class="nav_text">contacts</span></a
+            >
           </nav>
         </div>
       </div>
