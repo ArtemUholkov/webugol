@@ -17,6 +17,7 @@ const searchField = document.querySelector('.search_field');
 const closeSearchButton = document.querySelector('.close-search');
 const arrowiconOne = document.querySelector('.nav_icon_one');
 const arrowiconTwo = document.querySelector('.nav_icon_two');
+const goBack = document.querySelectorAll('.popup_arrow-back');
 
 // Helper function to toggle popup visibility
 const togglePopup = (isOpen) => {
@@ -108,3 +109,8 @@ if (screen.width <= 960) {
     toggleDropdown(sndDropdown);
   });
 }
+goBack.forEach((item) => {
+  item.addEventListener('click', () => {
+    resetState();
+  });
+});
