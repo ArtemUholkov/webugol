@@ -273,3 +273,35 @@
     transition: all 0.3s;
   }
 }
+@media (max-width: 800px) {
+  .popup {
+    padding-top: 0;
+  }
+  .close-button {
+    margin-right: 0;
+  }
+  .popup_header {
+    border-radius: 0px 0px 5px 5px;
+    border-right: 1px solid rgba(254, 241, 225, 0.4);
+    border-bottom: 1px solid rgba(254, 241, 225, 0.4);
+    border-left: 1px solid rgba(254, 241, 225, 0.4);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(27px);
+  }
+}
+@media (max-width: 590px) {
+  .popup_links {
+    padding-top: 38px;
+  }
+  .navbar {
+    gap: 22px;
+    max-width: 315px !important;
+  }
+  .popup_content_wrapper {
+    padding-top: 75px !important;
+    padding-left: 40px;
+  }
+  .nav_text {
+    font-size: 20px;
+  }
+}
