@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Biryani:wght@200;300;400;600;700;800;900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Biryani:wght@200;300;400;600;700;800;900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
     <!-- FONTS END -->
@@ -491,11 +491,11 @@
         <div class="numbers_item">
           <div class="number_icon_wrapper">
             <p class="number_icon_number">700</p>
-            <div class="number_icon_icon">
+            <div class="number_icon_icon plus_icon-last">
               <img src="img/numbers/plus.svg" alt="plus icon" class="icon_icon_plus" />
             </div>
           </div>
-          <p class="numbers_item_subtext">clients benefiting from our expertise</p>
+          <p class="numbers_item_subtext">targeted leads per day</p>
         </div>
       </div>
       <a href="#" class="numbers_button">CHECK ALL PROJECTS</a>
@@ -506,7 +506,7 @@
         <p class="section_subtitle industries_subtitle">Enhance Your Reach, Improve Your Results</p>
         <div class="industries_content_wrapper">
           <div class="industries_content_space">
-            <div class="induestries_content_item">
+            <div class="induestries_content_item" id="first">
               <p class="industries_content_title">Health & Wellness</p>
               <p class="industries_content_subtitle">Convert leads into patients</p>
               <p class="industries_content_text">
@@ -514,20 +514,223 @@
                 enhancing patient acquisition and boosting your practice's growth.
               </p>
               <a href="#" class="industries_content_button">more details</a>
+
               <img
                 class="industries_content_image"
                 src="img/industries/heart-1.png"
                 alt="content image"
               />
             </div>
+            <div class="induestries_content_item" id="second" style="display: none">
+              <p class="industries_content_title">Construcrion</p>
+              <p class="industries_content_subtitle">Reduce lead acquisition cost</p>
+              <p class="industries_content_text">
+                We focus on daily optimization strategies that reduce your Cost Per Acquisition
+                (CPA), making your leads more affordable and your campaigns more effective.
+              </p>
+              <a href="#" class="industries_content_button">more details</a>
+              <img
+                class="industries_content_image"
+                src="img/industries/cone-2.png"
+                alt="content image"
+              />
+            </div>
+            <div class="induestries_content_item" id="third" style="display: none">
+              <p class="industries_content_title">Home Services</p>
+              <p class="industries_content_subtitle">Boost conversions with quality leads</p>
+              <p class="industries_content_text">
+                Our lead qualifying funnels are crafted to filter and secure higher-quality leads,
+                ensuring that your business connects with the right customers.
+              </p>
+              <a href="#" class="industries_content_button">more details</a>
+              <img
+                class="industries_content_image"
+                src="img/industries/shape-3.png"
+                alt="content image"
+              />
+            </div>
+            <div class="induestries_content_item" id="fourth" style="display: none">
+              <p class="industries_content_title">eCommerce</p>
+              <p class="industries_content_subtitle">Enhance ROI and customer retention</p>
+              <p class="industries_content_text">
+                We enhance your eCommerce strategy by increasing the lifetime value of your clients,
+                fostering greater loyalty and higher returns.
+              </p>
+              <a href="#" class="industries_content_button">more details</a>
+              <img
+                class="industries_content_image"
+                src="img/industries/shape-4.png"
+                alt="content image"
+              />
+            </div>
+            <div class="induestries_content_item" id="fifth" style="display: none">
+              <p class="industries_content_title">IT Companies</p>
+              <p class="industries_content_subtitle">Eliminate high competition</p>
+              <p class="industries_content_text">
+                We develop custom B2B marketing funnels that cut through the noise, positioning your
+                IT company as the go-to solution in a crowded market.
+              </p>
+              <a href="#" class="industries_content_button">more details</a>
+              <img
+                class="industries_content_image"
+                src="img/industries/shape-5.png"
+                alt="content image"
+              />
+            </div>
+            <div class="induestries_content_item" id="sixth" style="display: none">
+              <p class="industries_content_title">Industrial</p>
+              <p class="industries_content_subtitle">Target B2B clients in niche markets</p>
+              <p class="industries_content_text">
+                Our specialized, narrowly focused funnels are designed to effectively target and
+                engage your niche audience, ensuring your products reach the right customers.
+              </p>
+              <a href="#" class="industries_content_button">more details</a>
+              <img
+                class="industries_content_image"
+                src="img/industries/shape-6.png"
+                alt="content image"
+              />
+            </div>
           </div>
           <div class="industries_links_wrapper">
-            <a href="#" class="industries_link_item">Health & Wellness</a>
-            <a href="#" class="industries_link_item">Construction</a>
-            <a href="#" class="industries_link_item">Home Services</a>
-            <a href="#" class="industries_link_item">eCommerce</a>
-            <a href="#" class="industries_link_item">IT Companies</a>
-            <a href="#" class="industries_link_item">Industrial</a>
+            <p class="industries_link_item active-link">Health & Wellness</p>
+            <p class="industries_link_item">Construction</p>
+            <p class="industries_link_item">Home Services</p>
+            <p class="industries_link_item">eCommerce</p>
+            <p class="industries_link_item">IT Companies</p>
+            <p class="industries_link_item">Industrial</p>
+          </div>
+        </div>
+        <div class="industries_mob_content_wrapper">
+          <div class="faq-item" id="faq1">
+            <div class="question-wrapper" id="faq-click" onclick="toggleAnswer('faq1')">
+              <h3 class="question">Health & Wellness</h3>
+              <div class="circle-wrapper">
+                <span class="plus-minus-icon"></span>
+              </div>
+            </div>
+            <div class="answer-wrapper">
+              <div class="separator"></div>
+              <div class="answer">
+                <div class="induestries_content_item_mob" id="first">
+                  <p class="industries_content_title">Health & Wellness</p>
+                  <p class="industries_content_subtitle">Convert leads into patients</p>
+                  <p class="industries_content_text">
+                    Our tailored marketing funnels are designed to nurture your leads efficiently,
+                    enhancing patient acquisition and boosting your practice's growth.
+                  </p>
+                  <a href="#" class="industries_content_button">more details</a>
+
+                  <img
+                    class="industries_content_image_mob"
+                    src="img/industries/heart-1.png"
+                    alt="content image"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="faq-item" id="faq2">
+            <div class="question-wrapper" onclick="toggleAnswer('faq2')">
+              <h3 class="question">Construcrion</h3>
+              <div class="circle-wrapper">
+                <span class="plus-minus-icon"></span>
+              </div>
+            </div>
+            <div class="answer-wrapper">
+              <div class="separator"></div>
+              <div class="answer">
+                <div class="induestries_content_item_mob" id="second">
+                  <p class="industries_content_title">Construcrion</p>
+                  <p class="industries_content_subtitle">Reduce lead acquisition cost</p>
+                  <p class="industries_content_text">
+                    We focus on daily optimization strategies that reduce your Cost Per Acquisition
+                    (CPA), making your leads more affordable and your campaigns more effective.
+                  </p>
+                  <a href="#" class="industries_content_button">more details</a>
+                  <img
+                    class="industries_content_image_mob"
+                    src="img/industries/cone-2.png"
+                    alt="content image"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="faq-item" id="faq3">
+            <div class="question-wrapper" onclick="toggleAnswer('faq3')">
+              <h3 class="question">Home Services</h3>
+              <div class="circle-wrapper">
+                <span class="plus-minus-icon"></span>
+              </div>
+            </div>
+            <div class="answer-wrapper">
+              <div class="separator"></div>
+              <div class="answer">
+                <div class="induestries_content_item_mob" id="third">
+                  <p class="industries_content_title">Home Services</p>
+                  <p class="industries_content_subtitle">Boost conversions with quality leads</p>
+                  <p class="industries_content_text">
+                    Our lead qualifying funnels are crafted to filter and secure higher-quality
+                    leads, ensuring that your business connects with the right customers.
+                  </p>
+                  <a href="#" class="industries_content_button">more details</a>
+                  <img
+                    class="industries_content_image_mob"
+                    src="img/industries/shape-3.png"
+                    alt="content image"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="faq-item" id="faq4">
+            <div class="question-wrapper" onclick="toggleAnswer('faq4')">
+              <h3 class="question">eCommerce</h3>
+              <div class="circle-wrapper">
+                <span class="plus-minus-icon">+</span>
+              </div>
+            </div>
+            <div class="answer-wrapper">
+              <div class="separator"></div>
+              <p class="answer">
+                The duration of treatment will depend on your specific health goals, response to the
+                medication, and the guidance of your healthcare provider. Some patients might use
+                these treatments long-term under medical supervision.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item" id="faq5">
+            <div class="question-wrapper" onclick="toggleAnswer('faq5')">
+              <h3 class="question">IT Companies</h3>
+              <div class="circle-wrapper">
+                <span class="plus-minus-icon">+</span>
+              </div>
+            </div>
+            <div class="answer-wrapper">
+              <div class="separator"></div>
+              <p class="answer">
+                To schedule an appointment, simply fill out the form on our website and follow the
+                steps outlined there. Alternatively, you can call or text us directly (you can find
+                our contact details in the section below), and our team will be happy to assist you.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item" id="faq6">
+            <div class="question-wrapper" onclick="toggleAnswer('faq6')">
+              <h3 class="question">Industrial</h3>
+              <div class="circle-wrapper">
+                <span class="plus-minus-icon">+</span>
+              </div>
+            </div>
+            <div class="answer-wrapper">
+              <div class="separator"></div>
+              <p class="answer">
+                Yes, our clinic provides ongoing support and monitoring throughout your treatment.
+                We offer nutritional counseling, lifestyle advice, and regular check-ups to help you
+                achieve and maintain your weight loss goals.
+              </p>
+            </div>
           </div>
         </div>
       </div>

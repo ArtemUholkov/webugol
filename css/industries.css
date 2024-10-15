@@ -1,6 +1,7 @@
 .industries {
   width: 100%;
-  padding: 180px 275px 0;
+  padding: 180px 0;
+  padding-bottom: 150px;
 }
 .industries_wrapper {
   margin: 0 auto;
@@ -31,21 +32,27 @@
   margin-bottom: 42px;
 }
 .industries_content_wrapper {
+  margin: 0 auto;
+  max-width: 1321px;
   border-radius: 14px;
   border: 1px solid var(--Glass, #fff);
   background: var(--black-cards, #1d1d1d);
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 .industries_content_space {
   width: 100%;
   padding: 36px;
+  padding-bottom: 36px;
   position: relative;
+  height: 560px;
 }
 .induestries_content_item {
   display: flex;
   flex-direction: column;
+  height: 505px;
 }
 .industries_content_title {
   color: var(--orange, #ff8902);
@@ -99,8 +106,8 @@
 }
 .industries_content_image {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: -20px;
+  right: 25px;
 }
 .industries_links_wrapper {
   max-width: 420px;
@@ -124,10 +131,11 @@
   text-align: right;
   transition: all 0.3s;
 }
+
 .industries_link_item:hover {
-  color: var(--white, #fff);
   opacity: 0.7;
   transition: all 0.3s;
+  cursor: pointer;
 }
 .industries_link_item::after {
   content: '';
@@ -136,5 +144,158 @@
   bottom: 0;
   width: 100%;
   height: 1px; /* Adjust the thickness of the border */
-  background: linear-gradient(to right, rgba(153, 153, 153, 0), rgba(153, 153, 153, 1));
+  background: linear-gradient(to left, rgba(153, 153, 153, 1) 60%, rgba(153, 153, 153, 0) 100%);
+}
+.active-link {
+  color: var(--orange, #ff8902);
+  transition: all 0.3s;
+}
+.induestries_content_item {
+  display: none; /* Hide all items initially */
+  opacity: 0; /* Start invisible */
+  position: absolute; /* Stack on top of each other */
+  width: 100%; /* Adjust according to your layout */
+  transition: opacity 1s ease; /* Smooth transition for opacity */
+  z-index: 1; /* Ensure it's above other content */
+}
+
+.fade-in {
+  display: block; /* Change to block for layout */
+  opacity: 1; /* Fully visible */
+}
+
+.fade-out {
+  opacity: 0; /* Fade out to 0 */
+  transition: opacity 1s ease; /* Smooth transition for opacity */
+  z-index: 0; /* Push behind */
+}
+.industries_mob_content_wrapper {
+  display: none;
+}
+@media (max-width: 1380px) {
+  .industries_content_wrapper {
+    display: none;
+  }
+  .industries_mob_content_wrapper {
+    display: block;
+  }
+}
+
+.faq-item {
+  max-width: 963px;
+  padding: 32px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.question-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-direction: row-reverse;
+}
+
+.question {
+  color: var(--Charcoal-gray, #fff);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 120%;
+  text-transform: uppercase;
+  padding: 23px 18px;
+}
+
+.circle-wrapper {
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 24px;
+  color: #fff;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.plus-minus-icon {
+  font-family: 'Montserrat', sans-serif;
+
+  color: transparent;
+  font-size: 60px; /* Increased font size */
+
+  transition: transform 0.3s ease;
+}
+
+.separator {
+  background-color: #34b4f4;
+  height: 1px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.answer-wrapper {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.answer {
+  color: var(--Charcoal-gray, #fff);
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 160%;
+  align-self: stretch;
+}
+
+.active .question {
+  color: #ff8902;
+}
+
+.active .circle-wrapper {
+  background-color: var(--active-color); /* Example active color */
+}
+
+.active .plus-minus-icon {
+  content: '-';
+  transform: rotate(180deg);
+  transition: all 0.3s;
+}
+
+.active .answer-wrapper {
+  max-height: 200px; /* Adjust based on content */
+  opacity: 1;
+}
+
+.active .separator {
+  opacity: 1;
+}
+.industries_mob_content_wrapper {
+  margin-left: 40px;
+  margin-right: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+@media (max-width: 1380px) {
+  .industries_title {
+    font-size: 48px;
+  }
+  .industries_subtitle {
+    font-size: 22px;
+  }
+  .faq-item {
+    padding: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+  .faq-wrapper {
+    width: 100%;
+  }
 }

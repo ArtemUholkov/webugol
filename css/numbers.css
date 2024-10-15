@@ -40,8 +40,8 @@
 .number_icon_icon {
   display: block;
   position: absolute;
-  right: -20px;
-  top: 30px;
+  right: -5px;
+  top: 15px;
   color: var(
     --Glass,
     linear-gradient(253deg, rgba(255, 255, 255, 0.7) 3.65%, rgba(153, 153, 153, 0.7) 100%)
@@ -88,8 +88,8 @@
   -webkit-text-fill-color: transparent;
   display: block;
   position: absolute;
-  left: -35px;
-  top: 25px;
+  left: -40px;
+  top: 15px;
 }
 .numbers_button {
   display: flex;
@@ -116,4 +116,57 @@
   background: #6c01f6;
   color: #fff;
   transition: all 0.3s;
+}
+@media (max-width: 1500px) {
+  .numbers_wrapper {
+    gap: 80px;
+  }
+}
+@media (max-width: 1380px) {
+  .numbers_wrapper {
+    flex-direction: column;
+    gap: 35px;
+    margin-bottom: 62px;
+  }
+  .numbers {
+    padding-top: 110px;
+  }
+}
+@media (max-width: 630px) {
+  .number_icon_number {
+    font-size: 91px;
+  }
+  .icon_icon_plus {
+    width: 31.845px;
+    height: 32.132px;
+  }
+  .number_icon_icon {
+    width: 31.845px;
+    height: 32.132px;
+    top: 10px;
+    right: -5px;
+  }
+  .plus_icon-last {
+    right: -20px;
+  }
+  .icon_mm {
+    width: 53.763px;
+    height: 23.949px;
+    right: -45px;
+    bottom: 20px;
+  }
+  .number_icon_icon_dol {
+    font-size: 48px;
+    left: -25px;
+    top: 10px;
+  }
+  .numbers_item_subtext {
+    font-size: 12px;
+  }
+  .numbers_button {
+    padding: 18px 20px;
+    font-size: 16px;
+    max-width: 230px;
+    height: auto;
+  }
 }

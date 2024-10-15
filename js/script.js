@@ -114,3 +114,94 @@ goBack.forEach((item) => {
     resetState();
   });
 });
+const indLinks = document.querySelectorAll('.industries_link_item');
+const indContents = document.querySelectorAll('.induestries_content_item');
+
+indLinks.forEach((item, index) => {
+  item.addEventListener('click', () => {
+    // If the clicked item is already active, do nothing
+    if (item.classList.contains('active-link')) {
+      return; // Exit the function if the link is already active
+    }
+
+    // Remove active-link class from all items
+    indLinks.forEach((link) => link.classList.remove('active-link'));
+
+    // Hide all content items with fade-out effect
+    indContents.forEach((content) => {
+      if (content.classList.contains('fade-in')) {
+        content.classList.remove('fade-in'); // Start fade-out animation
+        content.classList.add('fade-out'); // Trigger fade-out
+
+        // Set timeout to hide after fading out
+        setTimeout(() => {
+          content.style.display = 'none'; // Hide the item after fade-out
+        }, 1000); // Match this with CSS transition duration
+      }
+    });
+
+    // Add active-link class to the clicked item
+    item.classList.add('active-link');
+
+    // Display the corresponding content with fade-in effect
+    const activeContent = indContents[index];
+    activeContent.style.display = 'block'; // Show the active content
+    requestAnimationFrame(() => {
+      activeContent.classList.remove('fade-out'); // Ensure it's not fading out
+      activeContent.classList.add('fade-in'); // Trigger the fade-in animation
+    });
+  });
+});
+
+// Initial state: Display the first content and mark the first link as active
+indLinks[0].classList.add('active-link');
+indContents[0].style.display = 'block'; // Ensure only the first content is visible
+requestAnimationFrame(() => {
+  indContents[0].classList.add('fade-in'); // Trigger the fade-in animation for the first item
+});
+
+let activeFaqId = null;
+
+function toggleAnswer(faqId) {
+  const currentFaq = document.getElementById(faqId);
+  const currentAnswerWrapper = currentFaq.querySelector('.answer-wrapper');
+  const currentQuestionWrapper = currentFaq.querySelector('.question-wrapper');
+  const currentSeparator = currentFaq.querySelector('.separator');
+  const currentIcon = currentFaq.querySelector('.plus-minus-icon'); // Select the plus/minus icon
+
+  if (activeFaqId && activeFaqId !== faqId) {
+    // Collapse previously active FAQ
+    const previousFaq = document.getElementById(activeFaqId);
+    const previousAnswerWrapper = previousFaq.querySelector('.answer-wrapper');
+    const previousQuestionWrapper = previousFaq.querySelector('.question-wrapper');
+    const previousSeparator = previousFaq.querySelector('.separator');
+    const previousIcon = previousFaq.querySelector('.plus-minus-icon'); // Select the plus/minus icon of previous FAQ
+
+    previousAnswerWrapper.style.maxHeight = null;
+    previousAnswerWrapper.style.opacity = 0;
+    previousSeparator.style.opacity = 0;
+    previousQuestionWrapper.classList.remove('active');
+    previousIcon.textContent = '+'; // Change to plus when closed
+  }
+
+  if (activeFaqId === faqId) {
+    // Collapse current if it's the same one clicked
+    currentAnswerWrapper.style.maxHeight = null;
+    currentAnswerWrapper.style.opacity = 0;
+    currentSeparator.style.opacity = 0;
+    currentQuestionWrapper.classList.remove('active');
+    currentIcon.textContent = '+'; // Change to plus when collapsed
+    activeFaqId = null; // Reset activeFaqId
+  } else {
+    // Expand current FAQ
+    currentAnswerWrapper.style.maxHeight = currentAnswerWrapper.scrollHeight + 'px';
+    currentAnswerWrapper.style.opacity = 1;
+    currentSeparator.style.opacity = 1;
+    currentQuestionWrapper.classList.add('active');
+    currentIcon.innerHTML = '&ndash;'; // Change to minus when expanded
+    activeFaqId = faqId; // Set the new active FAQ
+  }
+}
+
+// Optionally, trigger the first FAQ to open on page load
+document.querySelector('#faq-click').click();
