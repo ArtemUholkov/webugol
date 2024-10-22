@@ -159,14 +159,12 @@ indContents[0].style.display = 'block'; // Ensure only the first content is visi
 requestAnimationFrame(() => {
   indContents[0].classList.add('fade-in'); // Trigger the fade-in animation for the first item
 });
-
 let activeFaqId = null;
 
 function toggleAnswer(faqId) {
   const currentFaq = document.getElementById(faqId);
   const currentAnswerWrapper = currentFaq.querySelector('.answer-wrapper');
   const currentQuestionWrapper = currentFaq.querySelector('.question-wrapper');
-  const currentSeparator = currentFaq.querySelector('.separator');
   const currentIcon = currentFaq.querySelector('.plus-minus-icon'); // Select the plus/minus icon
 
   if (activeFaqId && activeFaqId !== faqId) {
@@ -174,12 +172,10 @@ function toggleAnswer(faqId) {
     const previousFaq = document.getElementById(activeFaqId);
     const previousAnswerWrapper = previousFaq.querySelector('.answer-wrapper');
     const previousQuestionWrapper = previousFaq.querySelector('.question-wrapper');
-    const previousSeparator = previousFaq.querySelector('.separator');
     const previousIcon = previousFaq.querySelector('.plus-minus-icon'); // Select the plus/minus icon of previous FAQ
 
     previousAnswerWrapper.style.maxHeight = null;
     previousAnswerWrapper.style.opacity = 0;
-    previousSeparator.style.opacity = 0;
     previousQuestionWrapper.classList.remove('active');
     previousIcon.textContent = '+'; // Change to plus when closed
   }
@@ -188,7 +184,6 @@ function toggleAnswer(faqId) {
     // Collapse current if it's the same one clicked
     currentAnswerWrapper.style.maxHeight = null;
     currentAnswerWrapper.style.opacity = 0;
-    currentSeparator.style.opacity = 0;
     currentQuestionWrapper.classList.remove('active');
     currentIcon.textContent = '+'; // Change to plus when collapsed
     activeFaqId = null; // Reset activeFaqId
@@ -196,7 +191,6 @@ function toggleAnswer(faqId) {
     // Expand current FAQ
     currentAnswerWrapper.style.maxHeight = currentAnswerWrapper.scrollHeight + 'px';
     currentAnswerWrapper.style.opacity = 1;
-    currentSeparator.style.opacity = 1;
     currentQuestionWrapper.classList.add('active');
     currentIcon.innerHTML = '&ndash;'; // Change to minus when expanded
     activeFaqId = faqId; // Set the new active FAQ
