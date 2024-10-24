@@ -158,11 +158,17 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
 }
 .solutions_items__c_b_title {
+  z-index: 5;
+  display: block;
 }
 .solutions_items__c_b_text {
+  display: block;
   max-width: 176px;
+  z-index: 5;
 }
 .solutions_items__r {
   display: flex;
@@ -185,14 +191,19 @@
   border: 1px solid var(--Glass, #fff);
   background: var(--black-cards, #1d1d1d);
   display: flex;
-
+  position: relative;
   flex-direction: column;
   justify-content: flex-end;
   padding-bottom: 26px;
+  overflow: hidden;
 }
 .solutions_items__r_t_l_title {
+  display: block;
+  z-index: 5;
 }
 .solutions_items__r_t_l_text {
+  display: block;
+  z-index: 5;
   max-width: 167px;
 }
 .solutions_items__r_t_r {
@@ -206,7 +217,8 @@
   display: flex;
   width: 340px;
   height: 160px;
-
+  position: relative;
+  overflow: hidden;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
@@ -217,9 +229,11 @@
 }
 
 .solutions_items__r_t_r_t_title {
+  z-index: 5;
 }
 
 .solutions_items__r_t_r_t_text {
+  z-index: 5;
   max-width: 211px;
 }
 .solutions_items__r_t_r_b {
@@ -231,12 +245,16 @@
   border: 1px solid var(--Glass, #fff);
   background: #1d1d1d;
   align-items: center;
+  overflow: hidden;
+  position: relative;
 }
 .solutions_items__r_t_r_b_title {
   max-width: 220px;
+  z-index: 5;
 }
 .solutions_items__r_t_r_b_text {
   max-width: 204px;
+  z-index: 5;
 }
 .solutions_items__r_b {
   width: 580px;
@@ -492,5 +510,175 @@
     transform: scale(1);
   }
   100% {
+  }
+}
+.solutions_items__c_b_img {
+  position: absolute;
+  bottom: -150px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 1;
+  animation: upShowBack2 7s infinite;
+  animation-play-state: paused;
+}
+.solutions_items__c_b:hover .solutions_items__c_b_img {
+  animation-play-state: running;
+}
+.solutions_items__c_b:hover {
+  cursor: pointer;
+}
+@keyframes upShowBack2 {
+  0% {
+    bottom: -150px;
+    transform: scale(1);
+  }
+  25% {
+    bottom: 0;
+    transform: scale(1);
+  }
+  40% {
+    bottom: 20px;
+    transform: scale(1.4);
+  }
+  75% {
+    bottom: 0;
+    transform: scale(1);
+  }
+  100% {
+    bottom: -150px;
+    transform: scale(1);
+  }
+}
+.solutions_items__r_t_l_img {
+  width: 316px;
+  height: 316px;
+  position: absolute;
+  top: -24px;
+  right: -64px;
+  animation: upShowRotate 7s infinite;
+  z-index: 1;
+  animation-play-state: paused;
+}
+.solutions_items__r_t_l:hover {
+  cursor: pointer;
+}
+.solutions_items__r_t_l:hover .solutions_items__r_t_l_img {
+  animation-play-state: running;
+}
+
+@keyframes upShowRotate {
+  0% {
+    top: -24px;
+    right: -64px;
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.3);
+    right: -30px;
+    top: 0;
+  }
+  30% {
+    transform: scale(1.3) rotate(120deg);
+  }
+  60% {
+    transform: scale(1.3) rotate(120deg);
+  }
+  80% {
+    transform: scale(1.3);
+    right: -30px;
+    top: 0;
+  }
+  100% {
+    top: -24px;
+    right: -64px;
+    transform: scale(1);
+    right: -64px;
+    top: -24px;
+  }
+}
+.solutions_items__r_t_r_b_img {
+  position: absolute;
+  left: -56px;
+  width: 200px;
+  z-index: 1;
+  opacity: 0;
+  animation: showWidthback 5s infinite;
+  animation-play-state: paused;
+}
+@keyframes showWidthback {
+  0% {
+    left: -56px;
+
+    opacity: 0;
+  }
+  20% {
+    width: 200px;
+
+    opacity: 1;
+  }
+  30% {
+    width: 330px;
+  }
+  70% {
+    width: 330px;
+  }
+  80% {
+    opacity: 1;
+    width: 200px;
+  }
+  100% {
+    left: -56px;
+  }
+}
+.solutions_items__r_t_r_b:hover {
+  cursor: pointer;
+}
+.solutions_items__r_t_r_b:hover .solutions_items__r_t_r_b_img {
+  animation-play-state: running;
+}
+
+.solutions_items__r_t_r_t_img {
+  position: absolute;
+  right: -276px;
+  top: -132px;
+  animation: showWidthback2 5s infinite;
+  animation-play-state: paused;
+  opacity: 0;
+}
+.solutions_items__r_t_r_t:hover {
+  cursor: pointer;
+}
+.solutions_items__r_t_r_t:hover .solutions_items__r_t_r_t_img {
+  animation-play-state: running;
+}
+@keyframes showWidthback2 {
+  0% {
+    right: -276px;
+    top: -132px;
+    opacity: 0;
+    transform: scale(1);
+  }
+  20% {
+    right: -276px;
+    opacity: 1;
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.7);
+    right: -100px;
+  }
+  60% {
+    right: -100px;
+    transform: scale(1.7);
+  }
+  80% {
+    transform: scale(1);
+    right: -276px;
+    top: -132px;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
