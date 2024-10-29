@@ -80,7 +80,7 @@ td {
   background: transparent;
 }
 
-body {
+body, html {
   line-height: 1;
   overflow-x: hidden;
 }

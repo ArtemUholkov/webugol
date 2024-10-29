@@ -199,3 +199,4 @@ function toggleAnswer(faqId) {
 
 // Optionally, trigger the first FAQ to open on page load
 document.querySelector('#faq-click').click();
+
