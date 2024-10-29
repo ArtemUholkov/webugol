@@ -1,0 +1,132 @@
+.digit {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 133px 250px 94px;
+    gap: 122px;
+    position: relative;
+}
+
+.digit::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.36) 0%, rgba(17, 17, 17, 0.60) 100%);
+    backdrop-filter: blur(102px);
+    z-index: -1;
+}
+
+.digit__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 355.556px;
+    height: 200px;
+    flex-shrink: 0;
+}
+
+.digit__number {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 164.546px;
+    font-weight: 800;
+    line-height: 181px;
+    text-transform: uppercase;
+    background: url('../../img/numbers/gif-numbers33.gif');
+    background-size: cover;
+    background-position: center;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    margin-bottom: 22px;
+}
+
+.digit__image {
+    width: 61.416px;
+    height: 51.696px;
+    position: absolute;
+    top: 20px;
+    right: 50px;
+}
+
+.digit__text {
+    color: var(--white, #FFF);
+    font-family: Biryani;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 275;
+    line-height: 24.2px;
+    text-align: center;
+}
+
+@media (max-width: 1350px) {
+    .digit {
+        padding: 133px 100px 94px;
+        gap: 50px
+    }
+
+    .digit__container {
+        width: 355.556px;
+        height: 200px;
+    }
+
+    .digit__image {
+        width: 61.416px;
+        height: 51.696px;
+        top: 20px;
+        right: 50px;
+    }
+
+    .digit__text {
+        font-size: 22px;
+        line-height: 24.2px;
+    }
+}
+
+@media (max-width: 1160px) {
+    .digit {
+        padding: 56px 57px;
+        gap: 30px;
+    }
+
+    .digit__container {
+        width: 244.2px;
+        height: 137.363px;
+    }
+
+    .digit__number {
+        margin-bottom: 3px;
+        font-size: 120px;
+        line-height: 131px;
+    }
+
+    .digit__image {
+        width: 42.181px;
+        height: 35.505px;
+        top: -10px;
+        right: 20px;
+    }
+}
+
+@media (max-width: 834px) {
+    .digit {
+        gap: 0px;
+    }
+}
+
+@media (max-width: 834px) {
+    .digit {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .digit__text {
+        font-size: 18px;
+        line-height: 24.2px;
+    }
+}
