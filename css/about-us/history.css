@@ -21,6 +21,7 @@
 .history-section__image-container {
     width: 100%;
     overflow-x: auto;
+    padding-bottom: 20px; 
 }
 
 .history-section__image {

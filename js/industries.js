@@ -21,3 +21,15 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+document.querySelectorAll('.main-industry__vertical-navigation__item').forEach(item => {
+    item.addEventListener('click', () => {
+        const page = item.getAttribute('data-page').toLowerCase().replace(/ /g, '-'); // Заменяем пробелы на дефисы
+        const targetSection = document.getElementById(page);
+        if (targetSection) {
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+});
+
+
