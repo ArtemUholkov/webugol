@@ -1,0 +1,31 @@
+.hw-main__video--it {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.hw-main__text-container--it-comp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1146px;
+    position: absolute;
+    top: 315px;
+    left: 249px;
+    gap: 40px;
+}
+
+.hw-main__title--it-comp {
+    color: #FFF;
+    font-family: Raleway;
+    font-size: 68px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 74.8px;
+    text-transform: uppercase;
+    max-width: 1146px;
+    width: 100%;
+    margin: 0;
+}

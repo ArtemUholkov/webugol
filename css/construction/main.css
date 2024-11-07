@@ -1,0 +1,7 @@
+.hw-main__video--construction {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    filter: brightness(0.7) contrast(0.6) grayscale(10%) sepia(1) hue-rotate(220deg) saturate(0);
+    opacity: 0.8;
+}

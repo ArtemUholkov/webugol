@@ -1,0 +1,135 @@
+.offer__container-image1--ecommerce {
+    display: flex;
+    width: 292px;
+    height: 292px;
+    position: absolute;
+    z-index: -1;
+    bottom: 0px;
+    animation: infiniteRotate 10s linear infinite;
+    transform-origin: center;
+}
+
+@keyframes infiniteRotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.offer__container-image2--ecommerce {
+    width: 230.4px;
+    height: 230.4px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 0;
+    animation: rotateAndScale 10s ease-in-out infinite alternate;
+}
+
+@keyframes rotateAndScale {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+
+    50% {
+        transform: scale(1.2) rotate(90deg);
+    }
+
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+.svg-container--ecommerce {
+    position: absolute;
+    width: 244.055px;
+    height: 244.055px;
+    bottom: 0;
+}
+
+.svg-first,
+.svg-second {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+}
+
+@keyframes rotateClockwise {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(180deg) scale(1.3);
+    }
+
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+@keyframes rotateCounterClockwise {
+    0% {
+        transform: rotate(0deg) scale(1);
+        filter: brightness(0) saturate(100%) invert(21%) sepia(86%) saturate(4561%) hue-rotate(243deg) brightness(91%) contrast(101%);
+    }
+
+    50% {
+        transform: rotate(-180deg) scale(1.3);
+        filter: brightness(0) saturate(100%) invert(62%) sepia(93%) saturate(618%) hue-rotate(344deg) brightness(98%) contrast(98%);
+    }
+
+    100% {
+        transform: rotate(-360deg) scale(1);
+        filter: brightness(0) saturate(100%) invert(21%) sepia(86%) saturate(4561%) hue-rotate(243deg) brightness(91%) contrast(101%);
+    }
+}
+
+.svg-first {
+    animation: rotateClockwise 10s linear infinite;
+}
+
+.svg-second {
+    animation: rotateCounterClockwise 10s linear infinite;
+}
+
+@media (max-width: 1270px) {
+    .offer__container-image1--ecommerce {
+        width: 242px;
+        height: 242px;
+    }
+
+    .offer__container-image2--ecommerce {
+        width: 180.4px;
+        height: 180.4px;
+    }
+}
+
+@media (max-width: 1120px) {
+    .svg-container--ecommerce {
+        width: 210.055px;
+        height: 210.055px;
+    }
+}
+
+@media (max-width: 475px) {
+    .offer__container-image1--ecommerce {
+        width: 192px;
+        height: 192px;
+    }
+
+    .offer__container-image2--ecommerce {
+        width: 130.4px;
+        height: 130.4px;
+    }
+
+    .svg-container--ecommerce {
+        width: 150.055px;
+        height: 150.055px;
+    }
+}
