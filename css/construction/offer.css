@@ -3,7 +3,7 @@
     width: 238px;
     height: 218px;
     position: absolute;
-    right: 0px;
+    left: 22%;
     bottom: 0px;
     z-index: -1;
     animation: rotateAndScale 5s ease-in-out infinite;
@@ -30,7 +30,7 @@
     height: 193px;
     position: absolute;
     left: 25%;
-    top: 0px;
+    top: 30px;
     z-index: -1;
     animation: rotateAndScaleRight 5s ease-in-out infinite;
     transform-origin: center;
@@ -54,8 +54,8 @@
     width: 280px;
     height: 180px;
     position: absolute;
-    right: 20px;
-    bottom: 20px;
+    right: 50px;
+    bottom: 60px;
     z-index: -1;
     overflow: visible;
 }
@@ -92,6 +92,15 @@
     50% {
         transform: scale(1.1) translateX(15px);
     }
+}
+
+.offer__image-bg--construction {
+    position: absolute;
+    left: 0;
+    top: 1600px;
+    width: 772px;
+    height: 1441px;
+    flex-shrink: 0;
 }
 
 @media (max-width: 1520px) {
@@ -139,15 +148,23 @@
     }
 }
 
+.const-title,
+.const-text {
+    max-width: 296px;
+    width: 100%;
+}
+
 @media (max-width: 1270px) {
     .offer__container-image1--construction {
         width: 220.366px;
         height: 180px;
+        bottom: 30px;
     }
 
     .offer__container-image2--construction {
         width: 180.388px;
         height: 170.887px;
+        top: 10px;
     }
 
     .offer__container-image3--construction {
@@ -174,20 +191,39 @@
     }
 }
 
+@media (max-width: 834px) {
+    .offer__image-bg--construction {
+        width: 500px;
+        height: 900px;
+        top: 2000px;
+    } 
+}
+
+@media (max-width: 500px) {
+    .offer__image-bg--construction {
+        width: 350px;
+        height: 600px;
+        top: 2000px;
+    } 
+}
+
 @media (max-width: 475px) {
     .offer__container-image1--construction {
         width: 150.366px;
         height: 150px;
         bottom: 10px;
+        left: 25%;
     }
 
     .offer__container-image2--construction {
-        width: 150.388px;
-        height: 150.887px;
+        width: 130.388px;
+        height: 130.887px;
+        left: 10%;
     }
 
     .offer__container-image3--construction {
         width: 150.388px;
         height: 150.887px;
+        left: 50%;
     }
 }

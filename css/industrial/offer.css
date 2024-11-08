@@ -1,0 +1,122 @@
+.offer__container__image2--industrial {
+  position: absolute;
+  left: 80px;
+  top: 10px;
+  width: 246px;
+  height: 246px;
+  animation: spinAndScale 5s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes spinAndScale {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  50% {
+    transform: rotate(45deg) scale(1.2);
+  }
+
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+
+.offer__container__image3--industrial {
+  width: 230.4px;
+  height: 230.4px;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  z-index: 0;
+  animation: rotateAndScale 5s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes rotateAndScale {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  50% {
+    transform: rotate(-10deg) scale(1.1);
+  }
+
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+      stop-color: #6C01F6;
+  }
+  50% {
+      stop-color: #9747FF;
+  }
+  100% {
+      stop-color: #FF8902;
+  }
+}
+
+.offer__container__image2--industrial stop:nth-child(1) {
+  animation: gradientShift 5s ease-in-out infinite;
+}
+
+.offer__container__image2--industrial stop:nth-child(2) {
+  animation: gradientShift 5s ease-in-out infinite 1.5s;
+}
+
+.offer__container__image2--industrial stop:nth-child(3) {
+  animation: gradientShift 5s ease-in-out infinite 3s;
+}
+
+
+@keyframes gradientShift {
+  0% {
+    stop-color: #620CD1;
+  }
+  50% {
+    stop-color: #9747FF;
+  }
+  100% {
+    stop-color: #F7931E;
+  }
+}
+
+.offer__container__image3--industrial stop:nth-child(1) {
+  animation: gradientShift 5s ease-in-out infinite;
+}
+
+.offer__container__image3--industrial stop:nth-child(2) {
+  animation: gradientShift 5s ease-in-out infinite 1s;
+}
+
+.offer__container__image3--industrial stop:nth-child(3) {
+  animation: gradientShift 5s ease-in-out infinite 2s;
+}
+
+@media (max-width: 1270px) {
+  .offer__container__image2--industrial {
+    width: 206px;
+    height: 206px;
+  }
+
+  .offer__container__image3--industrial {
+    width: 200.4px;
+    height: 200.4px;
+  }
+}
+
+@media (max-width: 500px) {
+  .offer__container__image2--industrial {
+    width: 150px;
+    height: 150px;
+  }
+
+  .offer__container__image3--industrial {
+    width: 150px;
+    height: 150px;
+  }
+}

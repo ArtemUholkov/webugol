@@ -2,6 +2,8 @@
     position: relative;
     width: 244.055px;
     height: 244.055px;
+    top: -80px;
+    left: 50px;
 }
 
 .svg-first,
@@ -55,11 +57,16 @@
 
 .offer__container-image3--services {
     position: absolute;
-    bottom: 0;
+    left: 80px;
+    bottom: -20px;
     width: 246px;
     height: 246px;
     transform-origin: center;
     animation: rotateAndPulse 5s ease-in-out infinite;
+}
+
+.position {
+    height: 200px;
 }
 
 @keyframes rotateAndPulse {
@@ -79,15 +86,52 @@
     }
 }
 
+@media (max-width: 1270px) {
+    .offer__container-image3--services {
+        left: 70px;
+        bottom: -20px;
+        width: 200px;
+        height: 200px;
+    }
+
+    .svg-container {
+        width: 200px;
+        height: 200px;
+    }
+
+    .position {
+        height: 160px;
+    }
+}
+
+@media (max-width: 1120px) {
+    .svg-container {
+        width: 260px;
+        height: 260px;
+    }
+
+    .offer__container-image3--services {
+        left: 70px;
+        bottom: -20px;
+        width: 260px;
+        height: 260px;
+    }
+}
 
 @media (max-width: 475px) {
     .offer__container-image3--services {
         width: 150px;
         height: 150px;
+        left: 150px;
     }
 
     .svg-container {
         width: 150px;
         height: 150px;
+        left: 150px;
+    }
+
+    .position {
+        height: 80px;
     }
 }

@@ -2,7 +2,6 @@
     display: flex;
     width: 100%;
     min-height: 100vh;
-    overflow: hidden;
     position: relative;
     background-color: black;
 }
@@ -28,9 +27,10 @@
 
 .hw-main__image {
     position: absolute;
+    z-index: 10;
     right: 0;
-    bottom: 0px;
-    z-index: 0;
+    bottom: -100px;
+    z-index: 2;
     width: 563.9px;
     height: 574.518px;
 }
@@ -41,10 +41,11 @@
     justify-content: center;
     align-items: flex-start;
     width: 100%;
-    max-width: 1087px;
+    max-width: 908px;
     position: absolute;
     top: 315px;
     left: 253px;
+    gap: 40px;
 }
 
 .hw-main__title {
@@ -57,10 +58,11 @@
     text-transform: uppercase;
     max-width: 908px;
     width: 100%;
+    margin: 0;
 }
 
 .hw-main__title.hw-main__title--size-construction {
-   max-width: 1087px !important;
+    max-width: 1087px !important;
 }
 
 .hw-main__button {
@@ -110,6 +112,7 @@
         left: 50%;
         transform: translate(-50%);
     }
+
     .hw-main__image {
         bottom: -100px;
         right: -100px;
@@ -117,6 +120,10 @@
 }
 
 @media (max-width: 1195px) {
+    .hw-main {
+        overflow: hidden;
+    }
+
     .hw-main__text-container {
         align-items: center;
     }
@@ -124,10 +131,8 @@
     .hw-main__image {
         right: -50px;
         bottom: -100px;
-    }
-
-    .hw-main__image {
-        display: none;
+        width: 432.764px;
+        height: 440.912px;
     }
 }
 
@@ -137,14 +142,27 @@
         line-height: normal;
         max-width: 691px;
     }
+
+    .hw-main__text-container {
+        gap: 32px;
+    }
+}
+
+@media (max-width: 833px) {
+    .hw-main__image {
+        display: none;
+    }
 }
 
 @media (max-width: 735px) {
     .hw-main__title {
-        font-size: 36px;
-        line-height: normal;
         max-width: 500px;
-        margin-bottom: 40px;
+    }
+
+    .hw-main__button {
+        display: flex;
+        width: 220px;
+        height: 47px;
     }
 }
 
@@ -153,12 +171,5 @@
         font-size: 36px;
         line-height: normal;
         max-width: 345px;
-        margin-bottom: 40px;
-    }
-
-    .hw-main__button {
-        display: flex;
-        width: 220px;
-        height: 47px;
     }
 }

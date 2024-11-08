@@ -5,3 +5,125 @@
     filter: brightness(0.7) contrast(0.6) grayscale(10%) sepia(1) hue-rotate(220deg) saturate(0);
     opacity: 0.8;
 }
+
+.hw-main__text-container--construction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1087px;
+    position: absolute;
+    top: 315px;
+    left: 253px;
+    gap: 40px;
+}
+
+.hw-main__title--construction {
+    color: #FFF;
+    font-family: Raleway;
+    font-size: 68px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 74.8px;
+    text-transform: uppercase;
+    max-width: 1087px;
+    width: 100%;
+    margin: 0;
+}
+
+.hw-main__image--construction {
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    bottom: -100px;
+    z-index: 0;
+    width: 639px;
+    height: 713px;
+}
+
+@media (max-width: 1580px) {
+    .hw-main__image--construction {
+        bottom: -100px;
+        z-index: 0;
+        width: 463.9px;
+        height: 474.518px;
+    }
+}
+
+@media (max-width: 1350px) {
+    .hw-main__text-container--construction {
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    .hw-main__image--construction {
+        bottom: -100px;
+        right: -100px;
+    }
+}
+
+@media (max-width: 1195px) {
+    .hw-main {
+        overflow: hidden;
+    }
+
+    .hw-main__text-container--construction {
+        align-items: center;
+    }
+
+    .hw-main__title--construction {
+        padding: 0 20px;
+    }
+    
+    .hw-main__image--construction {
+        right: -50px;
+        bottom: -100px;
+        width: 432.764px;
+        height: 440.912px;
+    }
+}
+
+@media (min-height: 1024px) {
+    .hw-main__title--construction {
+        margin-top: 200px;
+    }
+}
+
+@media (max-width: 930px) {
+    .hw-main__title--construction {
+        font-size: 52px;
+        line-height: normal;
+        max-width: 691px;
+    }
+
+    .hw-main__text-container--construction {
+        gap: 32px;
+    }
+}
+
+@media (max-width: 833px) {
+    .hw-main__image--construction {
+        display: none;
+    }
+}
+
+@media (max-width: 735px) {
+    .hw-main__title--construction {
+        max-width: 500px;
+    }
+
+    .hw-main__button {
+        display: flex;
+        width: 220px;
+        height: 47px;
+    }
+}
+
+@media (max-width: 500px) {
+    .hw-main__title--construction {
+        font-size: 36px;
+        line-height: normal;
+        max-width: 345px;
+    }
+}

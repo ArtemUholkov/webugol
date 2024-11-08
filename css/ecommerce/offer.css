@@ -4,7 +4,8 @@
     height: 292px;
     position: absolute;
     z-index: -1;
-    bottom: 0px;
+    bottom: -20px;
+    left: 15%;
     animation: infiniteRotate 10s linear infinite;
     transform-origin: center;
 }
@@ -22,7 +23,7 @@
     width: 230.4px;
     height: 230.4px;
     position: absolute;
-    right: 0px;
+    left: 40px;
     top: 0px;
     z-index: 0;
     animation: rotateAndScale 10s ease-in-out infinite alternate;
@@ -47,6 +48,7 @@
     width: 244.055px;
     height: 244.055px;
     bottom: 0;
+    left: 25%;
 }
 
 .svg-first,
@@ -98,7 +100,26 @@
     animation: rotateCounterClockwise 10s linear infinite;
 }
 
+.offer__image-bg--ecommerce {
+    position: absolute;
+    left: 0;
+    top: 1600px;
+    width: 1229px;
+    height: 1172px;
+    flex-shrink: 0;
+}
+
 @media (max-width: 1270px) {
+    .offer__image-bg--ecommerce {
+        width: 800px;
+        height: 1000px;
+    }
+
+    .svg-container--ecommerce {
+        width: 204.055px;
+        height: 204.055px;
+    }
+
     .offer__container-image1--ecommerce {
         width: 242px;
         height: 242px;
@@ -112,15 +133,35 @@
 
 @media (max-width: 1120px) {
     .svg-container--ecommerce {
-        width: 210.055px;
-        height: 210.055px;
+        width: 240.055px;
+        height: 240.055px;
+    }
+
+    .offer__container-image1--ecommerce {
+        width: 262px;
+        height: 262px;
+    }
+}
+
+
+@media (max-width: 835px) {
+    .offer__image-bg--ecommerce {
+        top: 2000px;
+        width: 400px;
+        height: 600px;
     }
 }
 
 @media (max-width: 475px) {
+    .offer__image-bg--ecommerce {
+        width: 350px;
+        height: 600px;
+    }
+
     .offer__container-image1--ecommerce {
         width: 192px;
         height: 192px;
+        left: 20%;
     }
 
     .offer__container-image2--ecommerce {

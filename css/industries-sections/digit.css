@@ -3,9 +3,10 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 133px 250px 94px;
+    padding: 116px 0;
     gap: 122px;
     position: relative;
+    z-index: 1;
 }
 
 .digit::before {
@@ -26,9 +27,20 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    width: 355.556px;
-    height: 200px;
     flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+.first {
+    width: 319px;
+}
+
+.second {
+    width: 310px;
+}
+
+.third {
+    width: 310px;
 }
 
 .digit__number {
@@ -43,7 +55,6 @@
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
-    margin-bottom: 22px;
 }
 
 .digit__image {
@@ -51,7 +62,7 @@
     height: 51.696px;
     position: absolute;
     top: 20px;
-    right: 50px;
+    right: 20px;
 }
 
 .digit__text {
@@ -66,20 +77,14 @@
 
 @media (max-width: 1350px) {
     .digit {
-        padding: 133px 100px 94px;
-        gap: 50px
-    }
-
-    .digit__container {
-        width: 355.556px;
-        height: 200px;
+        gap: 70px;
     }
 
     .digit__image {
         width: 61.416px;
         height: 51.696px;
         top: 20px;
-        right: 50px;
+        right: 30px;
     }
 
     .digit__text {
@@ -90,13 +95,11 @@
 
 @media (max-width: 1160px) {
     .digit {
-        padding: 56px 57px;
         gap: 30px;
     }
 
     .digit__container {
-        width: 244.2px;
-        height: 137.363px;
+        width: 254px;
     }
 
     .digit__number {
@@ -108,14 +111,14 @@
     .digit__image {
         width: 42.181px;
         height: 35.505px;
-        top: -10px;
-        right: 20px;
+        top: 15px;
+        right: 40px;
     }
 }
 
 @media (max-width: 834px) {
     .digit {
-        gap: 0px;
+        gap: 50px;
     }
 }
 
