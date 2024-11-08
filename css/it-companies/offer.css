@@ -1,0 +1,108 @@
+.offer__container-image2--it {
+    display: flex;
+    width: 216px;
+    height: 193px;
+    position: absolute;
+    left: 0;
+    top: 30px;
+    z-index: -1;
+    animation: rotateAndScaleRight 5s ease-in-out infinite;
+    transform-origin: center;
+}
+
+@keyframes rotateAndScaleRight {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(80deg) scale(1.5);
+    }
+
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+.svg-container--it {
+    position: absolute;
+    width: 244.055px;
+    height: 244.055px;
+    bottom: 0;
+    right: 0;
+}
+
+.svg-first,
+.svg-second {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+}
+
+@keyframes rotateClockwise {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(180deg) scale(1.3);
+    }
+
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+@keyframes rotateCounterClockwise {
+    0% {
+        transform: rotate(0deg) scale(1);
+        filter: brightness(0) saturate(100%) invert(21%) sepia(86%) saturate(4561%) hue-rotate(243deg) brightness(91%) contrast(101%);
+    }
+
+    50% {
+        transform: rotate(-180deg) scale(1.3);
+        filter: brightness(0) saturate(100%) invert(62%) sepia(93%) saturate(618%) hue-rotate(344deg) brightness(98%) contrast(98%);
+    }
+
+    100% {
+        transform: rotate(-360deg) scale(1);
+        filter: brightness(0) saturate(100%) invert(21%) sepia(86%) saturate(4561%) hue-rotate(243deg) brightness(91%) contrast(101%);
+    }
+}
+
+.svg-first {
+    animation: rotateClockwise 10s linear infinite;
+}
+
+.svg-second {
+    animation: rotateCounterClockwise 10s linear infinite;
+}
+
+@media (max-width: 1270px) {
+    .offer__container-image2--it {
+        width: 180.388px;
+        height: 170.887px;
+        top: 0px;
+    }
+
+    .svg-container--it {
+        width: 204.055px;
+        height: 204.055px;
+    }
+}
+
+@media (max-width: 475px) {
+    .offer__container-image2--it {
+        width: 130.388px;
+        height: 130.887px;
+        left: 10%;
+    }
+
+    .svg-container--it {
+        width: 150.055px;
+        height: 150.055px;
+    }
+}
