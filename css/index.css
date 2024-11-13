@@ -10,15 +10,6 @@
 @import url(contact.css);
 @import url(partners.css);
 @import url(footer.css);
-@import url(about-us/main.css);
-@import url(about-us/about.css);
-@import url(about-us/history.css);
-@import url(about-us/team.css);
-@import url(about-us/about-modal.css);
-@import url(about-us/contacts.css);
-@import url(about-us/partners.css);
-@import url(about-us/credentials.css);
-@import url(about-us/prefooter.css);
 @import url(industries/main.css);
 @import url(industries/industrial.css);
 @import url(industries-sections/main.css);
@@ -37,3 +28,5 @@
 @import url(it-companies/offer.css);
 @import url(industrial/main.css);
 @import url(industrial/offer.css);
+@import url(projects/main.css);
+@import url(projects/filter.css);

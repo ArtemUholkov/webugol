@@ -1,0 +1,449 @@
+.filter-section {
+    position: relative; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 86px 250px;
+    gap: 32px;
+    transition: height 2s ease;
+    box-sizing: border-box;
+    height: auto;
+    overflow: hidden;
+}
+
+.filter-section__selected-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    max-width: 841px;
+    min-height: 46px;
+    /* background-color: #1D1D1D; */
+    border-radius: 12px;
+}
+
+.filter-section__selected-container {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 8px; 
+    width: 600px; 
+    min-height: 46px;
+    background-color: #1D1D1D;
+    border-radius: 12px;
+    border: none;
+    padding: 8px;
+    box-sizing: border-box; 
+}
+
+.filter-section__selected-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.filter-section__selected-button--clear {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 114px;
+    height: 46px;
+    color: #FFF;
+    background-color: transparent;
+    border: none;
+    font-family: Raleway;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.filter-section__selected-button--search {
+    display: flex;
+    padding: 12px 22px;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+    background-color: #FFF;
+    color: #111;
+    font-family: Raleway;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.filter-section__dropdowns {
+    max-width: 841px;
+    width: 100%;
+    height: 48px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 29px;
+}
+
+.filter-section__dropdown {
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+
+.dropdown-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 112px;
+    width: 260px;
+    height: 48px;
+    padding: 12px 22px;
+    border-radius: 10px;
+    border: 1px solid #FFF;
+}
+
+.dropdown-button p {
+    color: #111;
+    font-family: Raleway;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.dropdown-button svg {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.dropdown-content {
+    position: absolute;
+    top: 70px; 
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #fff;
+    display: none;
+    flex-direction: row;
+    gap: 12px;
+    padding: 12px 0px 22px 0px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.industries {
+    width: 549px;
+    height: 196px;
+}
+
+.services {
+    width: 549px;
+    height: 312px;
+    left: -290px;
+}
+
+.sort {
+    width: 260px;
+    height: 138px;
+}
+
+.dropdown-content__column-first {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.dropdown-content__column-second {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.dropdown-content__one-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.custom-checkbox input[type="checkbox"] {
+    display: none;
+}
+
+.custom-checkbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px 22px;
+    gap: 22px;
+    color: #111;
+    font-family: Raleway;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    width: 100%;
+}
+
+.custom-checkbox input[type="checkbox"] + span::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: 2px solid #777;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    margin-right: 8px;
+    box-sizing: border-box;
+}
+
+.custom-checkbox input[type="checkbox"]:checked + span::before {
+    background-color: #FF8902;
+    border-color: #FF8902;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    content: '✔';
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+span {
+    display: flex;
+    align-items: center;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+
+.dropdown-content__one-column {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    padding: 12px 0px 22px 0px;
+    background-color: #FFF;
+    max-width: 260px;
+    width: 100%;
+    max-height: 138px;
+    height: 100%;
+    border-radius: 10px;
+    border: none;
+}
+
+.selected-tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background-color: #333;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-family: Raleway;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    width: fit-content;
+}
+
+.filter-section__selected-tags {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 8px; 
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+.selected-tag .remove-tag {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+}
+
+.dropdown-content.visible {
+    display: flex;
+}
+
+@media screen and (max-width: 1340px) {
+    .filter-section {
+        padding: 86px 150px;
+    }
+}
+
+@media screen and (max-width: 1140px) {
+    .filter-section {
+        padding: 90px 44px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 930px) {
+    .filter-section__selected-wrapper,
+    .filter-section__dropdowns {
+        width: 100%;
+        max-width: 746px;
+        gap: 28px;
+    }
+
+    .dropdown-button {
+       width: 230px; 
+       padding: 0;
+    }
+
+    .industries {
+        width: 490px;
+        height: auto;
+    }
+    
+    .services {
+        width: 490px;
+        height: auto;
+        left: -260px;
+        padding: 12px 0px 22px;
+    }
+    
+    .sort {
+        width: 230px;
+        height: 138px;
+    }
+}
+
+@media screen and (max-width: 845px) {
+    .filter-section {
+        padding: 40px 44px;
+        min-height: 500px; 
+        transition: height 0.5s ease; 
+    }
+
+    .filter-section__selected-wrapper {
+        flex-direction: row;
+        align-items: flex-start;
+        max-width: 500px;
+        width: 100%;
+    }
+
+    .filter-section__selected-container {
+        max-width: 250px;
+        align-items: flex-start;
+        width: 100%;
+        order: 1;
+    }
+
+    .filter-section__selected-buttons {
+        order: 2; 
+        width: 100%; 
+        max-width: 220px;
+        flex-direction: row; 
+        align-items: flex-start; 
+        gap: 12px; 
+
+    }
+
+    .filter-section__dropdowns {
+        max-width: 500px;
+        flex-direction: column;
+    }
+
+    .dropdown-button {
+        width: 250px;
+    }
+
+    .services {
+        width: 490px;
+        height: auto;
+        left: 0px;
+        padding: 12px 0px 22px;
+    }
+
+  .sort {
+        width: 490px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 632px) {
+    .filter-section {
+        padding: 40px 24px;
+    }
+
+    .filter-section__selected-wrapper {
+        flex-direction: column;
+        align-items: center;
+        max-width: 335px;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .filter-section__selected-container {
+        max-width: 335px;
+        align-items: flex-start;
+        width: 100%;
+        order: 1;
+    }
+
+    .filter-section__selected-button--search {
+        width: 161px;
+    }
+
+    .filter-section__selected-buttons {
+        order: 2; 
+        width: 100%; 
+        max-width: 335px;
+        flex-direction: column; 
+        align-items: center; 
+        gap: 12px; 
+    }
+
+    .dropdown-content {
+        flex-direction: column;
+        max-width: 260px;
+    }
+
+    .filter-section__dropdowns {
+        max-width: 260px;
+        flex-direction: column;
+    }
+
+    .filter-section__dropdown {
+        max-width: 260px;
+    }
+
+    .dropdown-button {
+        width: 260px;
+    }
+
+    .services {
+        width: 490px;
+        height: auto;
+        left: 0px;
+        padding: 12px 0px 22px;
+    }
+
+    .sort {
+        width: 490px;
+        height: auto;
+    }
+}
