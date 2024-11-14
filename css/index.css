@@ -12,12 +12,6 @@
 @import url(footer.css);
 @import url(industries/main.css);
 @import url(industries/industrial.css);
-@import url(industries-sections/main.css);
-@import url(industries-sections/digit.css);
-@import url(industries-sections/offer.css);
-@import url(industries-sections/result.css);
-@import url(industries-sections/testimonials.css);
-@import url(industries-sections/comments.css);
 @import url(construction/main.css);
 @import url(construction/offer.css);
 @import url(home-services/main.css);
@@ -28,5 +22,4 @@
 @import url(it-companies/offer.css);
 @import url(industrial/main.css);
 @import url(industrial/offer.css);
-@import url(projects/main.css);
-@import url(projects/filter.css);
+
