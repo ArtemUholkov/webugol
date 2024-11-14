@@ -69,17 +69,17 @@
 }
 
 .result__container-item:hover .one {
-    content: url('/img/health-and-wellness/result/img-1.png'); 
+    content: url('../health-and-wellness/assets/img/result/img-1.png'); 
     opacity: 0.9; 
 }
 
 .result__container-item:hover .two {
-    content: url('/img/health-and-wellness/result/img-2.png'); 
+    content: url('../health-and-wellness/assets/img/result/img-2.png'); 
     opacity: 0.9; 
 }
 
 .result__container-item:hover .three {
-    content: url('/img/health-and-wellness/result/img-3.png'); 
+    content: url('../health-and-wellness/assets/img/result/img-3.png'); 
     opacity: 0.9; 
 }
 
