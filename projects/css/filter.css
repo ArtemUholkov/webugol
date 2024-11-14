@@ -138,7 +138,7 @@
     box-sizing: border-box;
 }
 
-.industries {
+.industr {
     width: 549px;
     height: 196px;
 }
@@ -313,7 +313,7 @@ input[type="checkbox"] {
        padding: 0;
     }
 
-    .industries {
+    .industr {
         width: 490px;
         height: auto;
     }
@@ -378,7 +378,7 @@ input[type="checkbox"] {
         padding: 12px 0px 22px;
     }
 
-  .sort {
+    .sort {
         width: 490px;
         height: auto;
     }
