@@ -43,6 +43,7 @@
     backdrop-filter: blur(56.25337600708008px);
     box-sizing: border-box;
     overflow: hidden;
+    position: relative;
 }
 
 .offer__text-container--standart {
