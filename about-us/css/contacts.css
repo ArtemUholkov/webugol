@@ -93,11 +93,13 @@
     z-index: 2; 
     position: relative;
     cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .footer-contacts__button:hover {
     background-color: #6c01f6;
     color: white;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .footer-contacts__image-container {

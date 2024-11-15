@@ -33,3 +33,21 @@ document.querySelectorAll('.main-industry__vertical-navigation__item').forEach(i
 });
 
 
+document.addEventListener('DOMContentLoaded', function () {
+    const navItems = document.querySelectorAll('.main-industry__vertical-navigation__item');
+  
+    navItems.forEach(item => {
+      item.addEventListener('click', function (e) {
+        const targetPage = item.getAttribute('data-page');
+        const targetElement = document.getElementById(targetPage);
+  
+        if (targetElement) {
+          e.preventDefault(); 
+          targetElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      });
+    });
+  });
+  
+
+

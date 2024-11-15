@@ -397,6 +397,10 @@
     .offer {
         padding: 120px 20px 120px;
     }
+
+    .offer__title {
+        margin-bottom: 42px;
+    }
 }
 
 @media (max-width: 475px) {

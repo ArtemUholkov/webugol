@@ -29,8 +29,11 @@
   transition: all 0.3s;
 }
 .popup_links {
-  padding-left: 250px;
-  padding-top: 134px;
+  position: absolute;
+  left: 250px;
+  top: 20%;
+  /* padding-left: 250px;
+  padding-top: 134px; */
 }
 .navbar {
   display: flex;
@@ -116,8 +119,11 @@
 }
 
 .popup_content_wrapper {
-  padding-left: 120px;
-  padding-top: 262px;
+  /* padding-left: 120px;
+  padding-top: 262px; */
+  position: absolute;
+  left: 120px;
+  top: 20%;
 }
 .popup_title {
   color: #000;

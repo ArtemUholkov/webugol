@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
-    margin-top: 220px;
+    margin-top: 140px;
 }
 
 .history-section__title {
@@ -20,7 +20,8 @@
 
 .history-section__image-container {
     width: 100%;
-    overflow-x: auto;
+    display: flex;
+    justify-content: flex-end;
     padding-bottom: 20px; 
 }
 
@@ -48,10 +49,25 @@
     cursor: pointer;
 }
 
-@media screen and (max-width: 1800px) {
+@media screen and (max-width: 1810px) {
+    .history-section__image {
+        min-width: 1700px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 1810px) {
+    .history-section__image {
+        min-width: 1600px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 1500px) {
     .history-section__image-container {
         overflow-x: auto;
         white-space: nowrap;
+        justify-content: initial;
     }
 
     .history-section__image {

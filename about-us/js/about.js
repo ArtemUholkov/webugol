@@ -49,6 +49,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
   let activeContainer = null;
 
+  function adjustContainerHeight(containerClicked, numContainersInRow) {
+    const parentContainer = containerClicked.closest('.team-section');
+    if (!parentContainer) return;
+
+    const fixedHeightChange = numContainersInRow === 1 ? 800 : 500;
+  
+    if (containerClicked.classList.contains('open')) {
+      const currentHeight = parseInt(window.getComputedStyle(parentContainer).height, 10);
+      parentContainer.style.height = `${currentHeight + fixedHeightChange}px`;
+    } else {
+      const currentHeight = parseInt(window.getComputedStyle(parentContainer).height, 10);
+      parentContainer.style.height = `${currentHeight - fixedHeightChange}px`;
+    }
+  }
+  
   function resetContainers(startIndex, numContainersInRow) {
     for (let i = startIndex; i < startIndex + numContainersInRow; i++) {
       if (containers[i]) {
@@ -60,8 +75,16 @@ document.addEventListener('DOMContentLoaded', function () {
     containers.forEach((container) => {
       container.style.transform = 'translateY(0)';
     });
+  
+    const parentContainer = containers[0]?.closest('.team-section');
+    if (parentContainer) {
+      const defaultHeight = Array.from(parentContainer.children).reduce((acc, child) => {
+        return Math.max(acc, child.scrollHeight);
+      }, 0);
+      parentContainer.style.height = `${defaultHeight}px`;
+    }
   }
-
+  
   function handleClickForThree(containerClicked, startIndex, indexInRow) {
     if (activeContainer === containerClicked) {
       resetContainers(startIndex, 3);
@@ -88,17 +111,19 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  function handleClickForTwo(containerClicked, startIndex, indexInRow) {
+  function handleClickForTwo(containerClicked, startIndex, indexInRow, numContainersInRow) {
     if (activeContainer === containerClicked) {
+      adjustContainerHeight(containerClicked, numContainersInRow); 
       resetContainers(startIndex, 2);
       activeContainer = null;
     } else {
       resetContainers(startIndex, 2);
       containerClicked.classList.add('open');
-
+      adjustContainerHeight(containerClicked, numContainersInRow);
+  
       containers.forEach((container, i) => {
         if (i < startIndex || i >= startIndex + 2) return;
-
+  
         if (container === containerClicked) {
           if (window.innerWidth < 1000) {
             const containerRect = container.getBoundingClientRect();
@@ -111,10 +136,10 @@ document.addEventListener('DOMContentLoaded', function () {
           } else {
             container.style.transform = `translateX(-${indexInRow * 560}px)`;
           }
-
+  
           if (window.innerWidth < 1000) {
             for (let j = startIndex + 2; j < containers.length; j++) {
-              containers[j].style.transform = 'translateY(600px)';
+              containers[j].style.transform = 'translateY(450px)';
             }
           }
         } else if (i !== indexInRow + startIndex) {
@@ -122,29 +147,31 @@ document.addEventListener('DOMContentLoaded', function () {
           container.style.opacity = '0';
         }
       });
-
+  
       activeContainer = containerClicked;
     }
   }
-
-  function handleClickForOne(containerClicked, startIndex) {
+  
+  function handleClickForOne(containerClicked, startIndex, numContainersInRow) {
     if (activeContainer === containerClicked) {
+      adjustContainerHeight(containerClicked, numContainersInRow); 
       resetContainers(startIndex, 1);
       activeContainer = null;
     } else {
       resetContainers(startIndex, 1);
       containerClicked.classList.add('open');
-
+      adjustContainerHeight(containerClicked, numContainersInRow);
+  
       if (window.innerWidth < 641) {
         for (let j = startIndex + 1; j < containers.length; j++) {
-          containers[j].style.transform = 'translateY(800px)';
+          containers[j].style.transform = 'translateY(750px)';
         }
       }
-
+  
       activeContainer = containerClicked;
     }
   }
-
+  
   function updateLayout() {
     resetContainers(0, containers.length);
     activeContainer = null;
@@ -169,9 +196,9 @@ document.addEventListener('DOMContentLoaded', function () {
       if (numContainersInRow === 3) {
         handleClickForThree(container, startOfRow, indexInRow);
       } else if (numContainersInRow === 2) {
-        handleClickForTwo(container, startOfRow, indexInRow);
+        handleClickForTwo(container, startOfRow, indexInRow, numContainersInRow);
       } else {
-        handleClickForOne(container, startOfRow);
+        handleClickForOne(container, startOfRow, numContainersInRow);
       }
     });
   });

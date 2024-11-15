@@ -91,11 +91,13 @@
     top: 312px;
     right: 252px;
     z-index: 2;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .prefooter__button:hover {
     background-color: #6c01f6;
     color: white;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .prefooter__image-sphere {
