@@ -116,20 +116,21 @@
     }
 }
 
-@media (max-width: 834px) {
+@media (max-width: 850px) {
     .digit {
-        gap: 50px;
-    }
-}
-
-@media (max-width: 834px) {
-    .digit {
-        flex-direction: column;
-        gap: 50px;
+        gap: 0px;
+        padding: 57px 0;
     }
 
     .digit__text {
         font-size: 18px;
         line-height: 24.2px;
+    }
+}
+
+@media (max-width: 750px) {
+    .digit {
+        flex-direction: column;
+        gap: 50px;
     }
 }

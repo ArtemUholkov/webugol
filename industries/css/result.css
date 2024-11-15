@@ -126,7 +126,7 @@
     align-items: center;
     gap: 10px;
     border-radius: 10px;
-    border: 1px solid #FFF;
+    border: none;
     background: #FFF;
     color: #000;
     text-align: center;
@@ -136,11 +136,14 @@
     font-weight: 700;
     line-height: normal;
     text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .result__button:hover {
     background-color: #6c01f6;
     color: white;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 @media screen and (max-width: 1460px) {

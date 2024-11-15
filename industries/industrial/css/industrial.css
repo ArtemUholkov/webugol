@@ -128,11 +128,13 @@
     font-weight: 700;
     line-height: normal;
     text-transform: uppercase;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .industrial-section__button:hover {
     background-color: #6c01f6;
     color: white;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 @media screen and (max-width: 1600px) {
@@ -207,6 +209,8 @@
     .industrial-section__text,
     .industrial-section__subtitle {
         text-align: center;
+        max-width: 560px;
+        width: 100%;
     }
 }
 
@@ -258,5 +262,12 @@
     .industrial-section__button {
         width: 220px;
         height: 47px;
+    }
+
+    .industrial-section__text,
+    .industrial-section__subtitle {
+        text-align: center;
+        max-width: 335px;
+        width: 100%;
     }
 }

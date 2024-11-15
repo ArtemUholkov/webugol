@@ -62,7 +62,7 @@
     position: relative;
     top: 381px;
     left: 249px;
-    z-index: 1;
+    z-index: 2;
 }
 
 .main__title {
@@ -111,13 +111,14 @@
     text-transform: uppercase;
     color: black;
     z-index: 9999;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .main__button:hover {
     background-color: #6c01f6;
     color: white;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
-
 
 .main__bottom-image-container {
     position: absolute;
@@ -125,7 +126,7 @@
     right: 0;
     width: 100%;
     object-fit: cover;
-    z-index: -1;
+    z-index: 1;
     /* z-index: auto;  */
     min-height: 100%;
 }
@@ -280,14 +281,14 @@
 
 @media screen and (max-width: 500px) {
     .main__content-container {
-        left: 210px;
+        left: 220px;
     }
 }
 
 @media screen and (max-width: 420px) {
     .main__content-container {
         bottom: 0px;
-        left: 180px
+        left: 210px
     }
 
     .main__title {
