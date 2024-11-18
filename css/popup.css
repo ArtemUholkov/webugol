@@ -9,32 +9,36 @@
   padding-top: 32px;
   z-index: 4;
 }
+
 .open {
   left: 0;
   transition: all 0.5s;
 }
+
 .close-button,
 .search-button {
   height: 40px;
   width: 40px;
   transition: all 0.3s;
 }
+
 .close-button {
   margin-right: 20px;
 }
+
 .close-button:hover,
 .search-button:hover {
   cursor: pointer;
   opacity: 0.6;
   transition: all 0.3s;
 }
+
 .popup_links {
   position: absolute;
   left: 250px;
-  top: 20%;
-  /* padding-left: 250px;
-  padding-top: 134px; */
+  top: 30%;
 }
+
 .navbar {
   display: flex;
   flex-direction: column;
@@ -42,12 +46,14 @@
   justify-content: flex-start;
   gap: 32px;
 }
+
 .nav_link {
   display: flex;
   /* align-items: center; */
   justify-content: flex-start;
   gap: 32px;
 }
+
 .nav_number {
   color: #fff;
   font-family: 'Biryani';
@@ -56,6 +62,7 @@
   line-height: 160%;
   text-transform: uppercase;
 }
+
 .nav_text {
   color: #fff;
   font-family: 'Biryani', sans-serif;
@@ -64,6 +71,7 @@
   line-height: 160%;
   text-transform: uppercase;
 }
+
 .nav_icon {
   margin-left: auto;
   width: 30px;
@@ -73,6 +81,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .nav_icon img {
   width: 30px;
   height: 30px;
@@ -103,6 +112,7 @@
   transition: all 0.3s;
   background-color: #fff;
 }
+
 .appear_left {
   left: 45%;
   transition: all 0.3s;
@@ -116,23 +126,26 @@
 .popup_content_wrapper {
   position: absolute;
   left: 120px;
-  top: 20%;
+  top: 30%;
 }
+
 .popup_title {
   color: #000;
   font-family: 'Biryani', sans-serif;
   font-size: 24px;
   font-weight: 900;
-  line-height: 160%; 
+  line-height: 160%;
   text-transform: uppercase;
-  margin-bottom: 24px;
 }
+
 .popup_links_wrapper {
   padding-left: 30px;
   display: flex;
   flex-direction: column;
   gap: 22px;
+  margin-top: 24px;
 }
+
 .popup_links_item {
   color: #000;
   font-family: 'Biryani', sans-serif;
@@ -142,18 +155,22 @@
   text-decoration: none;
   transition: all 0.3s;
 }
+
 .popup_links_item:hover {
   opacity: 0.7;
   transition: all 0.3s;
 }
+
 .popup_burger {
   display: flex;
   align-items: center;
 }
+
 .popup_burger_wrapper {
   width: auto;
   padding-right: 83px;
 }
+
 .search_field {
   position: relative;
   width: 0px;
@@ -184,6 +201,7 @@
   border-radius: 15.999px;
   background: rgba(217, 217, 217, 0.4);
 }
+
 .change_color {
   color: black;
 }
@@ -206,30 +224,55 @@
   visibility: hidden;
   opacity: 0;
 }
+
 .hide_search-button {
   display: none;
 }
+
 .search-button {
   margin-right: 20px;
 }
+
 .field {
   width: 100%;
   height: 30px;
-  padding-right: 30px; /* Space for the close button */
+  padding-right: 30px;
+  /* Space for the close button */
   box-sizing: border-box;
-  border: none; /* Remove the default border */
-  border-bottom: 1px solid #fff; /* Add an underline */
-  outline: none; /* Remove the default outline on focus */
+  border: none;
+  /* Remove the default border */
+  border-bottom: 1px solid #fff;
+  /* Add an underline */
+  outline: none;
+  /* Remove the default outline on focus */
   font-size: 16px;
-  background-color: transparent; /* Transparent background */
-  color: #fff; /* Text color */
+  background-color: transparent;
+  /* Transparent background */
+  color: #fff;
+  /* Text color */
 }
+
 .come_black {
   color: black;
   border-bottom: 1px solid black;
 }
+
 .popup_arrow-back {
   display: none;
+}
+
+@media (max-height: 750px) {
+  .navbar {
+    gap: 22px;
+  }
+
+  .popup_links_wrapper {
+    gap: 16px;
+  }
+
+  .popup_content_wrapper {
+    top: 20%;
+  }
 }
 
 @media (max-width: 1395px) {
@@ -261,6 +304,7 @@
     justify-content: flex-start;
     height: 100%;
   }
+
   .popup_arrow-back {
     display: block;
     font-size: 16px;
@@ -271,18 +315,23 @@
     margin-bottom: 40px;
     transition: all 0.3s;
   }
+
   .popup_arrow-back:hover {
     opacity: 0.6;
     transition: all 0.3s;
   }
+  
 }
+
 @media (max-width: 800px) {
   .popup {
     padding-top: 0;
   }
+
   .close-button {
     margin-right: 0;
   }
+
   .popup_header {
     border-radius: 0px 0px 5px 5px;
     border-right: 1px solid rgba(254, 241, 225, 0.4);
@@ -292,11 +341,13 @@
     backdrop-filter: blur(27px);
   }
 }
+
 @media (max-width: 590px) {
 
   .popup_links {
     left: 80px;
   }
+
   .navbar {
     gap: 22px;
     max-width: 315px !important;

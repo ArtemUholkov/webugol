@@ -123,8 +123,8 @@
     position: absolute;
     right: 0;
     top: 1700px;
-    width: 1015.083px;
-    height: 1206.554px;
+    max-width: 869px;
+    max-height: 884px;
     flex-shrink: 0;
 }
 
