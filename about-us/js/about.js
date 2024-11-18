@@ -208,8 +208,3 @@ document.addEventListener('DOMContentLoaded', function () {
 
 const container = document.querySelector('.history-section__image-container');
 
-container.addEventListener('scroll', () => {
-    const scrollbar = container.querySelector('::after');
-    const scrollPercentage = (container.scrollLeft / (container.scrollWidth - container.clientWidth)) * 100;
-    scrollbar.style.transform = `translateX(${scrollPercentage}%)`;
-});
