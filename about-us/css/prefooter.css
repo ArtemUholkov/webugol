@@ -7,6 +7,7 @@
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(57px);
     position: relative;
+    margin-top: 220px;
 }
 
 .prefooter__title {
@@ -145,6 +146,10 @@
 }
 
 @media screen and (max-width: 834px) {
+    .prefooter {
+        margin-top: 140px;
+    }
+
     .prefooter__image-sphere {
         display: none;
     }
@@ -231,5 +236,9 @@
 @media screen and (max-width: 400px) {
     .prefooter__title {
         font-size: 12px;
+    }
+
+    .prefooter {
+        margin-top: 120px;
     }
 }
