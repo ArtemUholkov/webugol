@@ -31,6 +31,7 @@
 }
 
 .history-section__image-container::-webkit-scrollbar {
+    display: block;
     width: 10px; 
     height: 10px; 
 }
@@ -65,9 +66,10 @@
 
 @media screen and (max-width: 1500px) {
     .history-section__image-container {
-        overflow-x: auto;
+        overflow-x: scroll;
         white-space: nowrap;
         justify-content: initial;
+        scrollbar-width: thin;
     }
 
     .history-section__image {
