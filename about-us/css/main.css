@@ -60,7 +60,7 @@
     justify-content: center;
     align-items: flex-start;
     width: 100%;
-    position: relative;
+    position: absolute;
     top: 381px;
     left: 249px;
     z-index: 2;
@@ -176,6 +176,7 @@
     .main__content-container {
         align-items: center;
         margin-left: 0;
+        margin-right: auto;
     }
 
     .main__title {
@@ -263,7 +264,8 @@
     }
 
     .main__content-container {
-        bottom: -140px;
+        align-items: center;
+       margin: 0 auto;     
     }
 
     .main__title {
@@ -279,12 +281,13 @@
     .main__button {
         width: 220px;
         height: 47px;
+        padding: 0;
     }
 }
 
 @media screen and (max-width: 500px) {
     .main__content-container {
-        left: 220px;
+        /* left: 220px; */
     }
 }
 
