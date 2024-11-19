@@ -12,6 +12,8 @@ header {
   align-items: center;
   justify-content: space-between;
   backdrop-filter: blur(27px);
+  -webkit-backdrop-filter: blur(27px); /* Префикс для Safari */
+  background: rgba(255, 255, 255, 0.05); 
 }
 .header_logo-wrapper {
   display: flex;
