@@ -23,6 +23,9 @@
     display: flex;
     justify-content: flex-end;
     padding-bottom: 20px; 
+    overflow-x: hidden; /* Default state to hide overflow */
+    white-space: nowrap; /* Ensure horizontal content */
+    transition: overflow-x 0.3s ease-in-out; /* Smooth scroll toggle */
 }
 
 .history-section__image {
@@ -30,18 +33,27 @@
     height: auto;
 }
 
-.simplebar-track {
-    background-color: #7b7b7b;
-    margin: 15px; 
+/* .simplebar-content {
+    display: flex;
+    justify-content: flex-end;
+} */
+
+.simplebar-track.simplebar-horizontal {
+    height: 6px; 
+    background-color: #969696; 
+    border-radius: 3px; 
+    margin: 15px;
 }
 
 .simplebar-scrollbar:before {
-    background: linear-gradient(90deg, #ff7a00 0%, #ffdd00 100%);
+    background-color: #ff7a00;
+    border-radius: 3px; 
 }
 
 .simplebar-scrollbar:hover:before {
-    background: #ff7a00;
+    background: #ff7a00; 
 }
+
 
 @media screen and (max-width: 1810px) {
     .history-section__image {
@@ -50,22 +62,14 @@
     }
 }
 
-@media screen and (max-width: 1810px) {
-    .history-section__image {
-        min-width: 1600px;
-        height: auto;
-    }
-}
-
 @media screen and (max-width: 1500px) {
     .history-section__image-container {
-        overflow-x: auto;
-        white-space: nowrap;
+        overflow-x: auto; 
         justify-content: initial;
     }
 
     .history-section__image {
-        min-width: 1800px;
+        min-width: 1500px;
     }
 }
 
@@ -97,4 +101,9 @@
     .history-section__title {
        max-width: 330px;
     }
+
+    .history-section__image {
+        min-width: 1800px;
+    }
 }
+

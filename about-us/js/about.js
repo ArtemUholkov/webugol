@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
           if (window.innerWidth < 1000) {
             for (let j = startIndex + 2; j < containers.length; j++) {
-              containers[j].style.transform = 'translateY(450px)';
+              containers[j].style.transform = 'translateY(420px)';
             }
           }
         } else if (i !== indexInRow + startIndex) {
