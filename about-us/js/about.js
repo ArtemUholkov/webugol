@@ -52,37 +52,56 @@ document.addEventListener('DOMContentLoaded', function () {
     const parentContainer = containerClicked.closest('.team-section');
     if (!parentContainer) return;
 
-    const fixedHeightChange = numContainersInRow === 1 ? 800 : 500;
-
-    if (containerClicked.classList.contains('open')) {
-      const currentHeight = parseInt(window.getComputedStyle(parentContainer).height, 10);
-      parentContainer.style.height = `${currentHeight + fixedHeightChange}px`;
-    } else {
-      const currentHeight = parseInt(window.getComputedStyle(parentContainer).height, 10);
-      parentContainer.style.height = `${currentHeight - fixedHeightChange}px`;
+    if (!parentContainer.dataset.baseHeight) {
+      parentContainer.dataset.baseHeight = window.getComputedStyle(parentContainer).height;
+    }
+  
+    const baseHeight = parseInt(parentContainer.dataset.baseHeight, 10);
+  
+    if (window.innerWidth < 500) {
+      if (containerClicked.classList.contains('open')) {
+        parentContainer.style.height = `${baseHeight + 500}px`; 
+      } else {
+        parentContainer.style.height = `${baseHeight}px`; 
+      }
+    } else if (window.innerWidth < 640) {
+      if (containerClicked.classList.contains('open')) {
+        parentContainer.style.height = `${baseHeight + 400}px`;
+      } else {
+        parentContainer.style.height = `${baseHeight}px`; 
+      }
+    } else if (window.innerWidth < 1000) {
+      if (containerClicked.classList.contains('open')) {
+        parentContainer.style.height = `${baseHeight + 250}px`; 
+      } else {
+        parentContainer.style.height = `${baseHeight}px`; 
+      }
     }
   }
 
   function resetContainers() {
-    for (let i = 0; i <= containers.length; i++) {
-      if (containers[i]) {
-        containers[i].style.transform = 'translateX(0)';
-        containers[i].style.opacity = '1';
-        containers[i].classList.remove('open');
+    let parentContainer = null;
+  
+    for (let i = 0; i < containers.length; i++) {
+      const container = containers[i];
+      if (container) {
+        container.style.transform = 'translateX(0)';
+        container.style.opacity = '1';
+        container.classList.remove('open');
+  
+        if (!parentContainer) {
+          parentContainer = container.closest('.team-section');
+        }
       }
     }
-    // containers.forEach((container) => {
-    //   container.style.transform = 'translateY(0)';
-    // });
-
-    // const parentContainer = containers[0]?.closest('.team-section');
-    // if (parentContainer) {
-    //   const defaultHeight = Array.from(parentContainer.children).reduce((acc, child) => {
-    //     return Math.max(acc, child.scrollHeight);
-    //   }, 0);
-    //   parentContainer.style.height = `${defaultHeight}px`;
-    // }
+  
+    if (parentContainer) {
+      if (parentContainer.dataset.baseHeight) {
+        parentContainer.style.height = parentContainer.dataset.baseHeight;
+      }
+    }
   }
+  
 
   containers.forEach((container, i) => {
     container.addEventListener('click', () => {
@@ -170,9 +189,13 @@ document.addEventListener('DOMContentLoaded', function () {
       containerClicked.classList.add('open');
       adjustContainerHeight(containerClicked, numContainersInRow);
 
-      if (window.innerWidth < 641) {
+      if (window.innerWidth < 500) {
         for (let j = startIndex + 1; j < containers.length; j++) {
-          containers[j].style.transform = 'translateY(750px)';
+          containers[j].style.transform = 'translateY(800px)';
+        }
+      } else {
+        for (let j = startIndex + 1; j < containers.length; j++) {
+          containers[j].style.transform = 'translateY(600px)';
         }
       }
 
