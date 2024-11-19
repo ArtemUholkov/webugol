@@ -1,8 +1,6 @@
 .history-section {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
     margin-top: 140px;
 }
 
@@ -19,35 +17,34 @@
 }
 
 .history-section__image-container {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    padding-bottom: 20px; 
+    width: 100%; 
     overflow-x: hidden; 
-    white-space: nowrap;
-    transition: overflow-x 0.3s ease-in-out; 
-}
-
-.history-section__image {
-    min-width: 1800px;
-    height: 639px;
-}
-
-/* .simplebar-content {
+    white-space: nowrap; 
     display: flex;
     justify-content: flex-end;
-} */
+    position: relative; 
+}
 
 .simplebar-track.simplebar-horizontal {
     height: 6px; 
     background-color: #969696; 
     border-radius: 3px; 
-    margin: 15px;
+    position: absolute; 
+    bottom: 0; 
+    left: 0;
+    right: 0;
+    opacity: 1 !important; 
+    transition: none;
+    z-index: 10; 
 }
 
 .simplebar-scrollbar:before {
     background-color: #ff7a00;
     border-radius: 3px; 
+    content: ''; 
+    height: 100%;
+    width: auto;
+    display: block;
 }
 
 .simplebar-scrollbar:hover:before {
@@ -55,58 +52,60 @@
 }
 
 
-@media screen and (max-width: 1810px) {
+/* 
+@media screen and (max-width: 1800px) {
     .history-section__image {
-        min-width: 1700px;
-        height: auto;
+        width: 90%; 
     }
-}
+} */
 
 @media screen and (max-width: 1500px) {
-    .history-section__image-container {
+    .simplebar-content {
         overflow-x: auto; 
-        justify-content: initial;
+        justify-content: initial; 
+        white-space: nowrap; 
     }
 
     .history-section__image {
-        min-width: 1500px;
-        height: 539px;
+        width: auto; 
+    }
+
+    .history-section__title {
+        font-size: 60px;
     }
 }
 
 @media screen and (max-width: 1200px) {
     .history-section__title {
-        font-size: 60px;
+        font-size: 50px;
         line-height: 66px;
     }
 }
 
 @media screen and (max-width: 910px) {
     .history-section__title {
-        font-size: 48px;
+        font-size: 38px;
         line-height: 52.8px;
     }
 }
 
 @media screen and (max-width: 750px) {
-    .history-section {
-        margin-top: 120px;
-    }
-    .history-section__title {
-        font-size: 36px;
-        line-height: 52.8px;
+    .history-section__image {
+        height: 400px; 
     }
 }
 
 @media screen and (max-width: 570px) {
     .history-section__title {
-       max-width: 330px;
+       margin: 10px auto;
+       font-size: 36px;
+       width: 330px;
     }
+}
 
+@media screen and (max-width: 450px) {
     .history-section__image {
-        min-width: 1800px;
-        height: 460px;
+        height: 300px; 
     }
-
 }
 

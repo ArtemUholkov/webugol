@@ -303,5 +303,11 @@
         line-height: 25px;
         width: 282px;
     }
+}
 
+@media screen and (max-width: 380px) {
+    .main__content-container {
+        bottom: 0px;
+        left: 190px
+    }
 }
