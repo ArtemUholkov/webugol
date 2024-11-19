@@ -43,6 +43,11 @@ function handleEscapeKey(event) {
 
 //team section
 
+document.querySelectorAll('.team-section__image-container').forEach(container => {
+  container.addEventListener('touchstart', () => {}, { passive: true });
+});
+
+
 document.addEventListener('DOMContentLoaded', function () {
   const containers = document.querySelectorAll('.team-section__image-container');
 
