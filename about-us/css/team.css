@@ -231,7 +231,17 @@
     max-height: 2000px;
     z-index: 0;
 }
+@media (hover: none) and (pointer: coarse) {
+    .team-section__image-container:hover .team-section__image--hover {
+      opacity: 0; 
+    }
+  
+    .team-section__image-container:hover .team-section__image--default {
+      opacity: 1; 
+    }
+  }
 
+  
 @media screen and (max-width: 1460px) {
     .team-section {
         padding-left: 100px;

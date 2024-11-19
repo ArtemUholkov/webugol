@@ -11,9 +11,6 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  backdrop-filter: blur(27px);
-  -webkit-backdrop-filter: blur(27px); /* Префикс для Safari */
-  background: rgba(255, 255, 255, 0.05); 
 }
 .header_logo-wrapper {
   display: flex;
@@ -26,6 +23,7 @@ header {
   border: 1px solid rgba(254, 241, 225, 0.4);
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(27px);
+  -webkit-backdrop-filter: blur(27px); /* Префикс для Safari */
 }
 .header_logo_img {
   width: auto;
@@ -42,6 +40,7 @@ header {
   border: 1px solid rgba(254, 241, 225, 0.4);
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(27px);
+  -webkit-backdrop-filter: blur(27px); /* Префикс для Safari */
   transition: all 0.3s;
 }
 .burger_img {
