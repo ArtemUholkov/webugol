@@ -263,7 +263,7 @@
 
 @media (max-height: 750px) {
   .navbar {
-    gap: 22px;
+    gap: 15px;
   }
 
   .popup_links_wrapper {
@@ -320,7 +320,6 @@
     opacity: 0.6;
     transition: all 0.3s;
   }
-  
 }
 
 @media (max-width: 800px) {
@@ -343,13 +342,13 @@
 }
 
 @media (max-width: 590px) {
-
   .popup_links {
     left: 80px;
+    top: 25%;
   }
 
   .navbar {
-    gap: 22px;
+    gap: 15px;
     max-width: 315px !important;
   }
 
@@ -361,10 +360,6 @@
 @media (max-width: 400px) {
   .popup_links {
     left: 40px;
-  }
-
-  .appear_left {
-    left: 0;
   }
 
   .popup_content_wrapper {
