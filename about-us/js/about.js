@@ -1,34 +1,34 @@
-//Video - about us section 
+//Video - about us section
 function openModal() {
-  const modal = document.getElementById("video-modal");
-  const videoFrame = document.getElementById("video-frame");
+  const modal = document.getElementById('video-modal');
+  const videoFrame = document.getElementById('video-frame');
 
-  modal.style.display = "block";
-  videoFrame.src = "https://www.youtube.com/embed/WWSQqBuLfi0?autoplay=1&si=qXpxc9Q3cnV5jPw5";
+  modal.style.display = 'block';
+  videoFrame.src = 'https://www.youtube.com/embed/WWSQqBuLfi0?autoplay=1&si=qXpxc9Q3cnV5jPw5';
 
-  document.body.classList.add("no-scroll");
-  document.addEventListener("keydown", handleEscapeKey);
+  document.body.classList.add('no-scroll');
+  document.addEventListener('keydown', handleEscapeKey);
 }
 
 function closeModal() {
-  const modal = document.getElementById("video-modal");
-  const videoFrame = document.getElementById("video-frame");
+  const modal = document.getElementById('video-modal');
+  const videoFrame = document.getElementById('video-frame');
 
-  modal.style.display = "none";
-  videoFrame.src = "";
+  modal.style.display = 'none';
+  videoFrame.src = '';
 
-  document.body.classList.remove("no-scroll");
+  document.body.classList.remove('no-scroll');
 
-  document.removeEventListener("keydown", handleEscapeKey);
+  document.removeEventListener('keydown', handleEscapeKey);
 }
 
-document.querySelector(".close").onclick = function () {
+document.querySelector('.close').onclick = function () {
   closeModal();
 };
 
 window.onclick = function (event) {
-  const modal = document.getElementById("video-modal");
-  const modalContent = document.querySelector(".modal-content");
+  const modal = document.getElementById('video-modal');
+  const modalContent = document.querySelector('.modal-content');
 
   if (event.target === modal && !modalContent.contains(event.target)) {
     closeModal();
@@ -36,11 +36,10 @@ window.onclick = function (event) {
 };
 
 function handleEscapeKey(event) {
-  if (event.key === "Escape") {
+  if (event.key === 'Escape') {
     closeModal();
   }
 }
-
 
 //team section
 
@@ -53,38 +52,66 @@ document.addEventListener('DOMContentLoaded', function () {
     const parentContainer = containerClicked.closest('.team-section');
     if (!parentContainer) return;
 
-    const fixedHeightChange = numContainersInRow === 1 ? 800 : 500;
-  
-    if (containerClicked.classList.contains('open')) {
-      const currentHeight = parseInt(window.getComputedStyle(parentContainer).height, 10);
-      parentContainer.style.height = `${currentHeight + fixedHeightChange}px`;
-    } else {
-      const currentHeight = parseInt(window.getComputedStyle(parentContainer).height, 10);
-      parentContainer.style.height = `${currentHeight - fixedHeightChange}px`;
+    if (!parentContainer.dataset.baseHeight) {
+      parentContainer.dataset.baseHeight = window.getComputedStyle(parentContainer).height;
     }
-  }
   
-  function resetContainers(startIndex, numContainersInRow) {
-    for (let i = startIndex; i < startIndex + numContainersInRow; i++) {
-      if (containers[i]) {
-        containers[i].style.transform = 'translateX(0)';
-        containers[i].style.opacity = '1';
-        containers[i].classList.remove('open');
+    const baseHeight = parseInt(parentContainer.dataset.baseHeight, 10);
+  
+    if (window.innerWidth < 500) {
+      if (containerClicked.classList.contains('open')) {
+        parentContainer.style.height = `${baseHeight + 500}px`; 
+      } else {
+        parentContainer.style.height = `${baseHeight}px`; 
+      }
+    } else if (window.innerWidth < 640) {
+      if (containerClicked.classList.contains('open')) {
+        parentContainer.style.height = `${baseHeight + 400}px`;
+      } else {
+        parentContainer.style.height = `${baseHeight}px`; 
+      }
+    } else if (window.innerWidth < 1000) {
+      if (containerClicked.classList.contains('open')) {
+        parentContainer.style.height = `${baseHeight + 250}px`; 
+      } else {
+        parentContainer.style.height = `${baseHeight}px`; 
       }
     }
-    containers.forEach((container) => {
-      container.style.transform = 'translateY(0)';
-    });
+  }
+
+  function resetContainers() {
+    let parentContainer = null;
   
-    const parentContainer = containers[0]?.closest('.team-section');
+    for (let i = 0; i < containers.length; i++) {
+      const container = containers[i];
+      if (container) {
+        container.style.transform = 'translateX(0)';
+        container.style.opacity = '1';
+        container.classList.remove('open');
+  
+        if (!parentContainer) {
+          parentContainer = container.closest('.team-section');
+        }
+      }
+    }
+  
     if (parentContainer) {
-      const defaultHeight = Array.from(parentContainer.children).reduce((acc, child) => {
-        return Math.max(acc, child.scrollHeight);
-      }, 0);
-      parentContainer.style.height = `${defaultHeight}px`;
+      if (parentContainer.dataset.baseHeight) {
+        parentContainer.style.height = parentContainer.dataset.baseHeight;
+      }
     }
   }
   
+
+  containers.forEach((container, i) => {
+    container.addEventListener('click', () => {
+      if (container.classList.contains('open') == false) {
+        resetContainers(0, 3);
+        console.log('test');
+      }
+    });
+  });
+
   function handleClickForThree(containerClicked, startIndex, indexInRow) {
     if (activeContainer === containerClicked) {
       resetContainers(startIndex, 3);
@@ -113,21 +140,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function handleClickForTwo(containerClicked, startIndex, indexInRow, numContainersInRow) {
     if (activeContainer === containerClicked) {
-      adjustContainerHeight(containerClicked, numContainersInRow); 
+      adjustContainerHeight(containerClicked, numContainersInRow);
       resetContainers(startIndex, 2);
       activeContainer = null;
     } else {
       resetContainers(startIndex, 2);
       containerClicked.classList.add('open');
       adjustContainerHeight(containerClicked, numContainersInRow);
-  
+
       containers.forEach((container, i) => {
         if (i < startIndex || i >= startIndex + 2) return;
-  
+
         if (container === containerClicked) {
           if (window.innerWidth < 1000) {
             const containerRect = container.getBoundingClientRect();
-            const offset = (window.innerWidth / 2) - (containerRect.left + containerRect.width / 2);
+            const offset = window.innerWidth / 2 - (containerRect.left + containerRect.width / 2);
             container.style.transform = `translateX(${offset}px)`;
           } else if (indexInRow === 0) {
             container.style.transform = 'translateX(-100px)';
@@ -136,7 +163,7 @@ document.addEventListener('DOMContentLoaded', function () {
           } else {
             container.style.transform = `translateX(-${indexInRow * 560}px)`;
           }
-  
+
           if (window.innerWidth < 1000) {
             for (let j = startIndex + 2; j < containers.length; j++) {
               containers[j].style.transform = 'translateY(450px)';
@@ -147,31 +174,35 @@ document.addEventListener('DOMContentLoaded', function () {
           container.style.opacity = '0';
         }
       });
-  
+
       activeContainer = containerClicked;
     }
   }
-  
+
   function handleClickForOne(containerClicked, startIndex, numContainersInRow) {
     if (activeContainer === containerClicked) {
-      adjustContainerHeight(containerClicked, numContainersInRow); 
+      adjustContainerHeight(containerClicked, numContainersInRow);
       resetContainers(startIndex, 1);
       activeContainer = null;
     } else {
       resetContainers(startIndex, 1);
       containerClicked.classList.add('open');
       adjustContainerHeight(containerClicked, numContainersInRow);
-  
-      if (window.innerWidth < 641) {
+
+      if (window.innerWidth < 500) {
         for (let j = startIndex + 1; j < containers.length; j++) {
-          containers[j].style.transform = 'translateY(750px)';
+          containers[j].style.transform = 'translateY(800px)';
+        }
+      } else {
+        for (let j = startIndex + 1; j < containers.length; j++) {
+          containers[j].style.transform = 'translateY(600px)';
         }
       }
-  
+
       activeContainer = containerClicked;
     }
   }
-  
+
   function updateLayout() {
     resetContainers(0, containers.length);
     activeContainer = null;
@@ -207,4 +238,3 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 const container = document.querySelector('.history-section__image-container');
-

@@ -30,27 +30,9 @@
     height: auto;
 }
 
-/* .history-section__image-container::-webkit-scrollbar {
-    width: 10px; 
-    height: 10px; 
-}
-
-.history-section__image-container::-webkit-scrollbar-track {
-    background: #7b7b7b; 
-}
-
-.history-section__image-container::-webkit-scrollbar-thumb {
-    background: linear-gradient(90deg, #ff7a00 0%, #ffdd00 100%); 
-    border-radius: 5px; 
-}
-
-.history-section__image-container::-webkit-scrollbar-thumb:hover {
-    background: #ff7a00;
-    cursor: pointer;
-} */
-
 .simplebar-track {
     background-color: #7b7b7b;
+    margin: 15px; 
 }
 
 .simplebar-scrollbar:before {
@@ -60,7 +42,6 @@
 .simplebar-scrollbar:hover:before {
     background: #ff7a00;
 }
-
 
 @media screen and (max-width: 1810px) {
     .history-section__image {
