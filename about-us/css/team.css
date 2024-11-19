@@ -233,11 +233,11 @@
 }
 @media (hover: none) and (pointer: coarse) {
     .team-section__image-container:hover .team-section__image--hover {
-      opacity: 0; 
+      opacity: 1; 
     }
   
     .team-section__image-container:hover .team-section__image--default {
-      opacity: 1; 
+      opacity: 0; 
     }
   }
 
