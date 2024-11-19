@@ -23,14 +23,14 @@
     display: flex;
     justify-content: flex-end;
     padding-bottom: 20px; 
-    overflow-x: hidden; /* Default state to hide overflow */
-    white-space: nowrap; /* Ensure horizontal content */
-    transition: overflow-x 0.3s ease-in-out; /* Smooth scroll toggle */
+    overflow-x: hidden; 
+    white-space: nowrap;
+    transition: overflow-x 0.3s ease-in-out; 
 }
 
 .history-section__image {
     min-width: 1800px;
-    height: auto;
+    height: 639px;
 }
 
 /* .simplebar-content {
@@ -70,6 +70,7 @@
 
     .history-section__image {
         min-width: 1500px;
+        height: 539px;
     }
 }
 
@@ -104,6 +105,8 @@
 
     .history-section__image {
         min-width: 1800px;
+        height: 460px;
     }
+
 }
 
