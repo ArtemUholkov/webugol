@@ -24,6 +24,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    z-index: 1;
 }
 
 .servise-section__item-details {
@@ -184,6 +185,7 @@
     text-transform: uppercase;
     border-radius: 10px;
     background-color: #FFF;
+    border: none;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
@@ -191,6 +193,18 @@
     background-color: #6c01f6;
     color: white;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.top-image {
+    position: absolute;
+    top: 300px;
+    left: 0;
+}
+
+.bottom-image {
+    position: absolute;
+    bottom: 0;
+    z-index: 0;
 }
 
 @media screen and (max-width: 1525px) {
