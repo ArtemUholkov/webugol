@@ -240,7 +240,20 @@
     .team-section__image-container:hover .team-section__image--default {
       opacity: 0; 
     }
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .team-section__image-container:active .team-section__image--hover,
+    .team-section__image-container:focus .team-section__image--hover {
+      opacity: 1;
+    }
+  
+    .team-section__image-container:active .team-section__image--default,
+    .team-section__image-container:focus .team-section__image--default {
+      opacity: 0;
+    }
   }
+  
 
   
 @media screen and (max-width: 1460px) {
