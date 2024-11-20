@@ -240,14 +240,6 @@
     .team-section__image-container:hover .team-section__image--default {
       opacity: 0; 
     }
-
-    .team-section__image-container.open .team-section__image--hover {
-        opacity: 1 !important;
-    }
-
-    .team-section__image-container.open .team-section__image--default {
-        opacity: 0 !important;
-    }
   }
 
   
