@@ -47,29 +47,6 @@ document.querySelectorAll('.team-section__image-container').forEach(container =>
   container.addEventListener('touchstart', () => {}, { passive: true });
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-  const imageContainers = document.querySelectorAll('.team-section__image-container');
-
-  imageContainers.forEach((container) => {
-    container.addEventListener('click', () => {
-      const defaultImage = container.querySelector('.team-section__image--default');
-      const hoverImage = container.querySelector('.team-section__image--hover');
-
-      if (defaultImage && hoverImage) {
-        const isHoverVisible = window.getComputedStyle(hoverImage).opacity === '1';
-        
-        if (isHoverVisible) {
-          defaultImage.style.opacity = '1';
-          hoverImage.style.opacity = '0';
-        } else {
-          defaultImage.style.opacity = '0';
-          hoverImage.style.opacity = '1';
-        }
-      }
-    });
-  });
-});
-
 
 document.addEventListener('DOMContentLoaded', function () {
   const containers = document.querySelectorAll('.team-section__image-container');
