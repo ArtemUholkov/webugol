@@ -265,7 +265,8 @@
 
     .main__content-container {
         align-items: center;
-       margin: 0 auto;     
+        margin: 0 auto;  
+        left: 210px;   
     }
 
     .main__title {
@@ -287,14 +288,14 @@
 
 @media screen and (max-width: 500px) {
     .main__content-container {
-        /* left: 220px; */
+        left: 220px;
     }
 }
 
 @media screen and (max-width: 420px) {
     .main__content-container {
         bottom: 0px;
-        left: 210px
+        left: 200px
     }
 
     .main__title {
