@@ -271,11 +271,6 @@
 }
 
 @media (max-width: 500px) {
-    .footer-contacts__svg {
-        left: -60%;
-        top: 20%;
-    }
-
     .footer-contacts__button {
         width: 220px;
         height: 47px;
@@ -284,9 +279,11 @@
         font-size: 16px;
         padding: 0;
     }
-}
+    
+    .footer-contacts {
+        max-height: 305px;
+    }
 
-@media (max-width: 420px) {
     .footer-contacts__title {
         font-size: 18px;
     }
@@ -294,12 +291,6 @@
     .footer-contacts__svg {
         left: -40%;
         top: -50%;
-    }
-
-    .footer-contacts__image {
-        position: absolute;
-        bottom: -40%;
-        left: 40%;
     }
 
     .footer-contacts__gif {

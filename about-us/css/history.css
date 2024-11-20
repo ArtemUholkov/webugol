@@ -91,7 +91,11 @@
 
 @media screen and (max-width: 750px) {
     .history-section__image {
-        height: 400px; 
+        height: 500px; 
+    }
+
+    .history-section {
+        margin-top: 120px;
     }
 }
 
@@ -101,11 +105,16 @@
        font-size: 36px;
        width: 330px;
     }
+
+    .history-section {
+        margin-top: 100px;
+    }
+
+    .history-section__image {
+        height: 450px; 
+    }
 }
 
 @media screen and (max-width: 450px) {
-    .history-section__image {
-        height: 300px; 
-    }
 }
 
