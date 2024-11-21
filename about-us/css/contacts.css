@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: flex-start;
     padding: 20px;
-    border: 1px solid rgba(254, 241, 225, 0.40);
+    border: 1px solid rgba(254, 241, 225, 0.20);
     background-color: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(57px);
     overflow: hidden;

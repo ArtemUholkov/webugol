@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 180px 250px;
+    padding: 180px 250px 0;
 }
 
 .details__main-title {
@@ -335,13 +335,13 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 180px 100px;
+        padding: 180px 100px 0;
     }
 }
 
 @media screen and (max-width: 1200px) {
     .details {
-        padding: 140px 40px;
+        padding: 140px 40px 0;
     }
 
     .details__main-title {
@@ -422,7 +422,7 @@
 
 @media screen and (max-width: 600px) {
     .details {
-        padding: 120px 18px;
+        padding: 120px 18px 0;
     }
 
     .details__main-title {
@@ -446,7 +446,7 @@
 
 @media screen and (max-width: 500px) {
     .details {
-        padding: 120px 10px;
+        padding: 120px 10px 0;
     }
 
     .details__list-title,
