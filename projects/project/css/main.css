@@ -146,6 +146,11 @@
     height: auto;
 }
 
+video::-webkit-media-controls-panel {
+    display: none !important;
+    opacity: 1 !important;
+}
+
 @media screen and (max-width: 1870px) {
     .hw-main__main-image-container {
         max-width: 450px;

@@ -122,3 +122,8 @@ table {
 body {
   background-color: #111111;
 }
+
+video::-webkit-media-controls-panel {
+  display: none !important;
+  opacity: 1 !important;
+}

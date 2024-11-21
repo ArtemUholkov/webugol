@@ -9,24 +9,34 @@
     overflow: hidden;
 }
 
+.main-industry__text-container {
+    margin: 0; 
+    padding: 0;
+}
+.main-industry__image {
+    margin: 0; 
+    padding: 0;
+}
+
 .main-industry__image {
     position: absolute;
     bottom: 0;
-    width: 100%;
-    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
     max-width: 1420px;
-    max-height: 360px;
+    width: 100%;
+    height: auto;
 }
 
 .main-industry__text-container {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    /* align-items: center; */
-    /* justify-content: center; */
     margin-bottom: 100px; 
     position: absolute;
     top: 20%;
+    width: 100%; 
+    transform: translateY(-10%);
 }
 
 .main-industry__title {
@@ -64,6 +74,12 @@
     align-items: flex-end;
     cursor: pointer;
     position: relative;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.main-industry__vertical-navigation__item.active {
+    background-color: rgba(255, 255, 255, 0.1); 
+    transform: scale(1.05); 
 }
 
 .main-industry__vertical-navigation {
@@ -85,8 +101,9 @@
 }
 
 .main-industry__vertical-navigation.active {
-    padding-left: 50px; /* уменьшенное значение */
+    padding-left: 50px; 
 }
+
 .main-industry__vertical-navigation__number {
     color: #FFF;
     text-align: center;
@@ -108,7 +125,13 @@
     width: 20px;
     height: 102px;
     display: none;
-    transition: all 2s;
+    transform: translateY(-10px); 
+    transition: opacity 0.5s ease, transform 0.5s ease; 
+}
+
+.main-industry__vertical-navigation__item.active .main-industry__vertical-navigation__line {
+    opacity: 1; 
+    transform: translateY(0); 
 }
 
 .main-industry__page-name {
@@ -125,6 +148,13 @@
     max-width: 120px;
     word-wrap: break-word;
     overflow-wrap: break-word;
+    transform: translateY(-10px); 
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.main-industry__vertical-navigation__item.active .main-industry__page-name {
+    opacity: 1;
+    transform: translateY(0); 
 }
 
 .three, .six {
@@ -145,6 +175,11 @@
 
 .main-industry__image--mob {
     display: none;
+}
+
+.main-industry__vertical-navigation__item.active {
+    background: none; 
+    transform: translateY(0)
 }
 
 @media screen and (max-width: 1420px) {
