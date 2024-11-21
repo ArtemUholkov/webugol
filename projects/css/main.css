@@ -58,6 +58,11 @@
     text-transform: uppercase;
 }
 
+video::-webkit-media-controls-panel {
+    display: none !important;
+    opacity: 1 !important;
+}
+
 @media screen and (max-width: 850px) {
     .hw-main__title--projects,
     .hw-main__title--services {
