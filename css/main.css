@@ -266,7 +266,7 @@ h1 {
     background: var(--white, #fff);
     padding: 10px;
     padding-bottom: 5px;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: space-between;
     width: 300px;
@@ -422,15 +422,19 @@ h1 {
     padding-right: 20px;
     padding-top: 12px;
     padding-bottom: 12px;
+    backdrop-filter: initial;
+    -webkit-backdrop-filter: initial;
   }
   .header_logo-wrapper {
     border: 0;
     background: transparent;
-    backdrop-filter: none;
+
     width: auto;
     padding-left: 20px;
     padding-top: 15px;
     padding-bottom: 15px;
+    backdrop-filter: initial;
+    -webkit-backdrop-filter: initial;
   }
   header {
     padding-top: 0;
