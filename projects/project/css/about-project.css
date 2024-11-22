@@ -53,7 +53,7 @@
 
 .about-project__btn {
     margin-top: 20px;
-    display: flex;
+    display: block;
     width: 320px;
     height: 54px;
     padding: 20px 24px;

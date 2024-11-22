@@ -28,14 +28,13 @@
 
 .result__container {
     display: grid;
-    grid-template-columns: repeat(3, 460px);
-    /* justify-content: center; */
+    grid-template-columns: repeat(3, 455px);
     gap: 20px;
     row-gap: 120px;
 }
 
 .result__container-item {
-    width: 460px;
+    width: 455px;
     box-sizing: border-box;
     height: 100%;
     display: flex;

@@ -291,7 +291,7 @@
 }
 
 .details__bottom-design-button {
-    display: flex;
+    display: block;
     width: 320px;
     height: 54px;
     padding: 20px 24px;
