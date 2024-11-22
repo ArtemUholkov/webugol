@@ -102,6 +102,7 @@
 
 .main-industry__vertical-navigation.active {
     padding-left: 50px; 
+    width: 280px;
 }
 
 .main-industry__vertical-navigation__number {
