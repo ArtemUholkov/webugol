@@ -4,13 +4,25 @@ document.addEventListener('DOMContentLoaded', function () {
     let activeContainer = null;
 
     function resetContainers(startIndex, numContainersInRow) {
-        for (let i = startIndex; i < startIndex + numContainersInRow; i++) {
-            if (containers[i]) {
-                containers[i].style.transform = 'translateX(0)';
-                containers[i].style.opacity = '1';
-                containers[i].classList.remove('open');
+        // for (let i = startIndex; i < startIndex + numContainersInRow; i++) {
+        //     if (containers[i]) {
+        //         containers[i].style.transform = 'translateX(0)';
+        //         containers[i].style.opacity = '1';
+        //         containers[i].classList.remove('open');
+        //     }
+        // }
+
+        for (let i = 0; i < containers.length; i++) {
+            const container = containers[i];
+            if (container) {
+              container.style.transform = 'translateX(0)';
+              container.style.opacity = '1';
+              container.classList.remove('open');
+        
+              
             }
-        }
+          }
+
         containers.forEach((container) => {
             container.style.transform = 'translateY(0)';
         });
