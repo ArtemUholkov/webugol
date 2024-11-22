@@ -93,6 +93,8 @@
     width: 100%;
     max-width: 370px;
     display: flex;
+    position: relative;
+    z-index: 1;
 }
 
 .offer__container-image1 {

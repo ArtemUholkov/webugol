@@ -118,7 +118,7 @@
 }
 
 .result__button {
-    display: flex;
+    display: block;
     width: 245px;
     height: 54px;
     padding: 20px 24px;
