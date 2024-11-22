@@ -258,6 +258,8 @@
         transform: translateX(-50%);
         width: 220px;
         height: 47px;
+        padding: 0;
+        font-size: 16px;
     }
 }
 

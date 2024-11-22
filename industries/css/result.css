@@ -22,7 +22,7 @@
     text-transform: uppercase;
     margin-bottom: 80px;
     position: relative;
-    z-index: 2;
+    z-index: 1;
     max-width: 1440px;
 }
 
@@ -30,7 +30,7 @@
     display: grid;
     grid-template-columns: repeat(3, 460px);
     /* justify-content: center; */
-    gap: 22px;
+    gap: 20px;
     row-gap: 120px;
 }
 
