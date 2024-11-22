@@ -150,8 +150,8 @@
 
 .preference-section__white-item-img {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -100px;
+    left: -150px;
     max-width: 545.36px;
     max-height: 545.081px;
     transition: transform 1s ease, left 1s ease;
@@ -204,7 +204,7 @@
 
 .preference-section__white-item:hover .preference-section__white-item-img {
     transform: rotate(-180deg) translateX(calc(100% - 545.36px));
-    left: calc(100% - 545.36px); 
+    left: calc(100% - 370.36px); 
 }
 
 .preference-section__black-item {
@@ -258,8 +258,8 @@
 
 .preference-section__black-item-img {
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: -100px;
+    right: -50px;
     max-width: 666.694px;
     max-height: 664.265px;
 }
