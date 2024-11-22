@@ -38,7 +38,7 @@
 
 .hw-main__image--construction {
     position: absolute;
-    z-index: 10;
+    z-index: 2;
     right: 0;
     bottom: -100px;
     width: 639px;
