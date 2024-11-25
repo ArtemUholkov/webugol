@@ -142,6 +142,64 @@
   background: var(--Glass, rgba(255, 255, 255, 0.2));
   backdrop-filter: blur(37px);
   padding-top: 37px;
+  overflow: hidden;
+}
+
+.blinking-gradient {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
+  mask-image: url('../img/solutions/ct.png'); /* Replace with the path to your mask image */
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  -webkit-mask-image: url('../img/solutions/ct.png'); /* For Webkit browsers */
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  animation: gradient-sequence 6s ease-in-out infinite; /* Adjust timing as needed */
+  animation-play-state: paused;
+}
+@keyframes gradient-sequence {
+  0% {
+    opacity: 0.5; /* Start dimmed */
+    transform: scale(1); /* Default size */
+    filter: brightness(1); /* Normal brightness */
+  }
+  20% {
+    opacity: 0.5; /* Keep dimmed */
+    transform: scale(1.7); /* Scale up */
+    filter: brightness(1); /* No extra brightness yet */
+  }
+  30% {
+    opacity: 0.5; /* Pause at scaled state */
+    transform: scale(1.7);
+    filter: brightness(1);
+  }
+  50% {
+    opacity: 1; /* Glow effect */
+    transform: scale(1.7); /* Hold scale */
+    filter: brightness(2.5); /* Increased brightness */
+  }
+  60% {
+    opacity: 1; /* Pause with brightness */
+    transform: scale(1.7); /* Hold scale */
+    filter: brightness(2.5); /* Bright glow held */
+  }
+  80% {
+    opacity: 0.5; /* Start fading back */
+    transform: scale(1); /* Scale back to normal */
+    filter: brightness(1); /* Reset brightness */
+  }
+  100% {
+    opacity: 0.5; /* Pause again at the start state */
+    transform: scale(1);
+    filter: brightness(1);
+  }
+}
+.solutions_items__c_t:hover .blinking-gradient {
+  animation-play-state: running;
 }
 .solutions_items__c_t_title {
 }
@@ -269,6 +327,7 @@
   flex-direction: column;
   align-items: flex-end;
   justify-content: flex-end;
+  overflow: hidden;
 }
 
 .solutions_items__r_b_title {
@@ -680,5 +739,241 @@
   }
   100% {
     opacity: 0;
+  }
+}
+.rb_item_img {
+  position: absolute;
+  left: 25px;
+  bottom: 0;
+  width: 220px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 1));
+  background-size: 200% 200%; /* Make the gradient larger to create a noticeable movement */
+  -webkit-mask-image: url('../img/solutions/38.png');
+  -webkit-mask-size: cover;
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-image: url('../img/solutions/38.png');
+  mask-size: cover;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  animation: full-animation 6s ease-in-out infinite;
+  animation-play-state: paused;
+}
+
+@keyframes full-animation {
+  0% {
+    transform: scale(1); /* Start at normal scale */
+    background-position: 0% 0%; /* Background starts at initial position */
+    filter: brightness(1); /* Normal brightness */
+  }
+  25% {
+    transform: scale(1.3); /* Scale to 1.3 */
+    background-position: 0% 0%; /* Keep background in initial position */
+    filter: brightness(1); /* Maintain normal brightness */
+  }
+  40% {
+    background-position: 90% 90%; /* Rotate the background */
+    filter: brightness(1); /* No brightness change yet */
+  }
+  50% {
+    background-position: 0% 0%; /* Rotate background back */
+    filter: brightness(1.5); /* Increase brightness for glowing effect */
+  }
+  75% {
+    transform: scale(1.3); /* Keep the scale at 1.3 during the pause */
+    background-position: 0% 0%; /* Keep background in place */
+    filter: brightness(1.5); /* Maintain brightness */
+  }
+  90% {
+    transform: scale(1); /* Scale back to original size */
+    background-position: 0% 0%; /* Keep background in place */
+    filter: brightness(1); /* Return to normal brightness */
+  }
+  100% {
+    transform: scale(1); /* Keep back to original scale */
+    background-position: 0% 0%; /* Background back to initial position */
+    filter: brightness(1); /* Normal brightness */
+  }
+}
+.solutions_items__r_b:hover .rb_item_img {
+  animation-play-state: running;
+}
+.solutions_content_tab {
+  display: none;
+}
+.solutions_content_mob {
+  display: none;
+}
+@media (max-width: 1460px) {
+  .solutions_content_wrapper {
+    display: none;
+  }
+  .solutions_title {
+    font-size: 48px;
+    line-height: 110%;
+    margin-bottom: 42px;
+  }
+  .tab_tab {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  .solutions_content_tab {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  .solutions_items__l_t_l {
+    width: 360px;
+    height: 140px;
+  }
+  .solutions_items__l_t_r {
+    width: 370px;
+    height: 140px;
+  }
+  .solutions_items__l_t_r_text {
+    max-width: 182px;
+  }
+  .solutions_items_l_b_l {
+    width: 265px;
+    height: 400px;
+  }
+  .solutions_items__l_b_l_img {
+    left: 0;
+    margin: auto;
+    animation: none;
+  }
+  .solutions_items_l_b_r {
+    width: 465px;
+    height: 400px;
+  }
+  .solution_webd_img_gradient {
+    animation: none;
+  }
+  .soltion_webd_img {
+    top: 30px;
+    right: 100px;
+  }
+  .solutions_items__c_t {
+    width: 266px;
+    height: 350px;
+  }
+  .solutions_items__r_t_l {
+    width: 269px;
+    height: 350px;
+  }
+  .solutions_items__r_t_r_t {
+    height: 350px;
+    width: 175px;
+  }
+  .solutions_items__r_t_r_b {
+    width: 361px;
+    height: 170px;
+  }
+  .solutions_items__c_b {
+    width: 369px;
+    height: 170px;
+  }
+  .solutions_items__r_b {
+    width: 750px;
+    height: 190px;
+  }
+}
+@media (max-width: 819px) {
+  .solutions_content_tab {
+    display: none;
+  }
+  .solutions_content_mob {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .tab_mob {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  .solutions_items__l_t_l {
+    width: 338px;
+    height: 140px;
+  }
+  .solutions_items__l_t_r {
+    width: 338px;
+    height: 140px;
+  }
+  .solutions_items__c_t {
+    width: 158px;
+    height: 298px;
+  }
+  .solutions_items__r_t_l {
+    width: 158px;
+    height: 298px;
+  }
+  .solutions_items__r_t_r_t {
+    width: 335px;
+    height: 140px;
+  }
+  .solutions_items__r_t_r_b {
+    width: 335px;
+    height: 140px;
+  }
+  .solutions_items_l_b_l {
+    width: 158px;
+    height: 298px;
+  }
+  .solutions_items_l_b_r {
+    width: 158px;
+    height: 298px;
+  }
+  .solutions_items__c_b {
+    width: 335px;
+    height: 140px;
+  }
+  .solutions_items__r_b {
+    width: 335px;
+    height: 140px;
+  }
+  .solutions_title {
+    font-size: 36px;
+    margin-bottom: 32px;
+  }
+  .solutions {
+    padding-top: 120px;
+  }
+  .sol_item_title {
+    font-size: 20px;
+  }
+  .sol_item_text {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+  }
+  .solutions_items__r_t_l_img {
+    height: 240px;
+    width: 240px;
+  }
+  .solutions_items__l_b_l_img {
+    width: 178.936px;
+    height: 246.365px;
+    bottom: -50px;
+    left: -30px;
+  }
+  .soltion_webd_img {
+    right: 0;
+    top: -80px;
+  }
+  .solutions_items_l_b_r {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .rb_item_img {
+    width: 150px;
+    height: 105px;
+    left: 0;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 1));
   }
 }

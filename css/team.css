@@ -1,0 +1,186 @@
+.team {
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+.team_wrapper {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.wrap-cont-team {
+  overflow-x: auto;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+  margin: 0 auto;
+}
+.wrap-cont-team {
+  overflow-x: scroll; /* Enables horizontal scrolling */
+  -ms-overflow-style: none; /* Hides scrollbar in Internet Explorer and Edge */
+  scrollbar-width: none; /* Hides scrollbar in Firefox */
+}
+
+.wrap-cont-team::-webkit-scrollbar {
+  display: none; /* Hides scrollbar in Chrome, Safari, and other WebKit browsers */
+}
+.team__title {
+  color: #fff;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 72px;
+  font-weight: 800;
+  line-height: 110%;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.wrap-cont-team.active {
+  cursor: grabbing;
+}
+.team_subtitle {
+  color: #fff;
+  text-align: center;
+  font-family: 'Biryani', sans-serif;
+  font-size: 32px;
+  font-weight: 275;
+  line-height: 140%; /* 44.8px */
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+.team_text {
+  color: var(--white, #fff);
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 120%;
+  max-width: 920px;
+  margin-bottom: 52px;
+}
+.team_content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  width: max-content;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth; /* Smooth scrolling */
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+.team_content_item {
+  scroll-snap-align: start; /* Align items to the start of the container */
+  width: 220px;
+  height: 600px;
+  border-radius: 18px;
+  background: #000;
+  padding: 28px;
+  overflow: hidden;
+  position: relative;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  cursor: pointer;
+  transition: all 0.7s;
+}
+.team_content_item:hover {
+  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
+  transition: all 0.7s;
+}
+
+.team_content_item-textbox {
+  position: absolute;
+  bottom: 28px;
+  left: -400px;
+  padding: 22px 42px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 15px;
+  border: 1px solid #fff;
+  background: #1d1d1d;
+  transition: all 0.7s;
+}
+.team_content_item-textbox_name {
+  color: #fff;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.team_content_item-textbox_place {
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-size: 24px;
+  font-weight: 200;
+}
+.team_item1 {
+  background-image: url('../img/team/oksana.png');
+  background-size: 180%;
+}
+.team_item2 {
+  background-image: url('../img/team/eugene.png');
+  background-size: 180%;
+}
+.team_item3 {
+  background-image: url('../img/team/olena.png');
+  background-size: 180%;
+}
+.team_item4 {
+  background-image: url('../img/team/andrii.png');
+  background-size: 180%;
+}
+.team_item5 {
+  background-image: url('../img/team/oksanag.png');
+  background-size: 180%;
+}
+.team_see_button {
+  display: flex;
+  width: 320px;
+  height: 54px;
+  padding: 20px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background: var(--white, #fff);
+  color: #000;
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+.move-up {
+  position: relative;
+  top: 3px;
+}
+.team_see_button:hover {
+  background: var(--violet, #6c01f6);
+  color: #ffffff;
+  transition: all 0.3s;
+}
+.active-item {
+  width: 460px !important;
+  height: 600px;
+  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
+  background-size: 100%;
+}
+.active-item .team_content_item-textbox {
+  left: 28px;
+  transition: all 0.7s;
+}
+
+@media (max-width: 1470px) {
+  .team {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}

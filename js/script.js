@@ -200,3 +200,46 @@ function toggleAnswer(faqId) {
 // Optionally, trigger the first FAQ to open on page load
 document.querySelector('#faq-click').click();
 
+// TEAM MAIN
+const teamitems = document.querySelectorAll('.team_content_item');
+console.log(teamitems);
+teamitems.forEach((item) => {
+  item.addEventListener('click', () => {
+    if (!item.classList.contains('active-item')) {
+      teamitems.forEach((i) => {
+        i.classList.remove('active-item');
+      });
+      item.classList.add('active-item');
+    }
+  });
+});
+// Mouse drag scroll functionality
+const wrapContTeam = document.querySelector('.wrap-cont-team');
+let isDown = false;
+let startX;
+let scrollLeft;
+
+wrapContTeam.addEventListener('mousedown', (e) => {
+  isDown = true;
+  wrapContTeam.classList.add('active');
+  startX = e.pageX - wrapContTeam.offsetLeft;
+  scrollLeft = wrapContTeam.scrollLeft;
+});
+
+wrapContTeam.addEventListener('mouseleave', () => {
+  isDown = false;
+  wrapContTeam.classList.remove('active');
+});
+
+wrapContTeam.addEventListener('mouseup', () => {
+  isDown = false;
+  wrapContTeam.classList.remove('active');
+});
+
+wrapContTeam.addEventListener('mousemove', (e) => {
+  if (!isDown) return; // If mouse is not pressed, don't move
+  e.preventDefault();
+  const x = e.pageX - wrapContTeam.offsetLeft;
+  const walk = (x - startX) * 2; // Scroll faster with higher multiplier (2 here)
+  wrapContTeam.scrollLeft = scrollLeft - walk;
+});
