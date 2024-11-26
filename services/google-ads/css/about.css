@@ -1,0 +1,29 @@
+.service-margine {
+    margin-top: 0px !important;
+    margin-bottom: 56px;
+}
+
+.about-margine {
+    margin-bottom: 180px;
+}
+
+@media screen and (max-width: 1800px) {
+    .about-width {
+        margin-left: 150px !important;
+        margin-right: 150px !important;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .about-width {
+        margin-left: 100px !important;
+        margin-right: 100px !important;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .about-width {
+        margin-left: 50px !important;
+        margin-right: 50px !important;
+    }
+}

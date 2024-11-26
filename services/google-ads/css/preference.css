@@ -100,7 +100,7 @@
 }
 
 .preference-section__focus-item-text {
-    max-width: 181px;
+    max-width: 207px;
     color: #FFF;
     text-align: center;
     font-family: "Josefin Sans";
@@ -231,6 +231,8 @@
     align-items: center;
     position: relative;
     z-index: 1;
+    transform: translateY(0); 
+    transition: transform 0.8s ease; 
 }
 
 .preference-section__black-text-container-title {
@@ -262,6 +264,8 @@
     right: -50px;
     max-width: 666.694px;
     max-height: 664.265px;
+    transform: rotate(0) translateX(0); 
+    transition: transform 1s ease; 
 }
 
 .preference-section__black-item:hover .preference-section__black-text-container {
@@ -271,7 +275,6 @@
 .preference-section__black-item:hover .preference-section__black-item-img {
     transform: rotate(-180deg) translateX(calc(100% - 450px));
     left: calc(100% - 666.694px); 
-    transition: transform 1s ease; 
     z-index: 0;
 }
 
@@ -705,16 +708,17 @@
     
     .preference-section__black-item-img {
         position: absolute;
-        bottom: -70px;
+        bottom: -100px;
         right: -250px; 
         max-width: 666.694px;
         max-height: 664.265px;
         transform: rotate(0deg) translateX(0); 
-        transition: transform 1s ease; 
+        transition: transform 2s ease; 
     }
     
     .preference-section__black-item:hover .preference-section__black-item-img {
-        transform: rotate(90deg) translateY(-100%); 
+        transform: rotate(90deg) translateX(calc(100% - 400px));
+        left: calc(100% - 600px); 
     }
 
     .preference-section__last-item:hover .preference-section__last-text-container {

@@ -36,6 +36,7 @@
     font-style: normal;
     font-weight: 275;
     line-height: 28.8px;
+    margin-bottom: 22px;
 }
 
 @media screen and (max-width: 1500px) {
