@@ -16,6 +16,9 @@
       rel="stylesheet"
     />
     <!-- FONTS END -->
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- swiper -->
     <link rel="icon" href="img/global/favicon.png" />
     <title>Webugol - Moneymaking New Website</title>
     <link rel="stylesheet" href="css/index.css" />
@@ -1186,13 +1189,19 @@
         </p>
         <div class="wrap-cont-team">
           <div class="team_content">
-            <div class="team_content_item team_item1">
+            <div class="team_content_item team_item2 active-item mob_show_item">
               <div class="team_content_item-textbox">
                 <p class="team_content_item-textbox_name">Eugene Ugolkov</p>
                 <p class="team_content_item-textbox_place">CEO and Founder</p>
               </div>
             </div>
-            <div class="team_content_item team_item2 active-item">
+            <div class="team_content_item team_item1">
+              <div class="team_content_item-textbox">
+                <p class="team_content_item-textbox_name">Oksana Hevakovska</p>
+                <p class="team_content_item-textbox_place">Account Strategist</p>
+              </div>
+            </div>
+            <div class="team_content_item team_item2 active-item mob_hide_item">
               <div class="team_content_item-textbox">
                 <p class="team_content_item-textbox_name">Eugene Ugolkov</p>
                 <p class="team_content_item-textbox_place">CEO and Founder</p>
@@ -1200,23 +1209,72 @@
             </div>
             <div class="team_content_item team_item3">
               <div class="team_content_item-textbox">
-                <p class="team_content_item-textbox_name">Eugene Ugolkov</p>
-                <p class="team_content_item-textbox_place">CEO and Founder</p>
+                <p class="team_content_item-textbox_name">Olena Myts</p>
+                <p class="team_content_item-textbox_place">Head of SEO</p>
               </div>
             </div>
             <div class="team_content_item team_item4">
               <div class="team_content_item-textbox">
-                <p class="team_content_item-textbox_name">Eugene Ugolkov</p>
-                <p class="team_content_item-textbox_place">CEO and Founder</p>
+                <p class="team_content_item-textbox_name">Andrew Stozhuk</p>
+                <p class="team_content_item-textbox_place">Operations coordinator</p>
               </div>
             </div>
             <div class="team_content_item team_item5">
               <div class="team_content_item-textbox">
-                <p class="team_content_item-textbox_name">Eugene Ugolkov</p>
-                <p class="team_content_item-textbox_place">CEO and Founder</p>
+                <p class="team_content_item-textbox_name">Oksana Hlushko</p>
+                <p class="team_content_item-textbox_place">Head of Google Ads</p>
               </div>
             </div>
           </div>
+        </div>
+
+        <div class="slider_wrapper">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="team_content_item team_item2 active-item mob_show_item">
+                  <div class="team_content_item-textbox">
+                    <p class="team_content_item-textbox_name">Eugene Ugolkov</p>
+                    <p class="team_content_item-textbox_place">CEO and Founder</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="team_content_item team_item3">
+                  <div class="team_content_item-textbox">
+                    <p class="team_content_item-textbox_name">Olena Myts</p>
+                    <p class="team_content_item-textbox_place">Head of SEO</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="team_content_item team_item3">
+                  <div class="team_content_item-textbox">
+                    <p class="team_content_item-textbox_name">Olena Myts</p>
+                    <p class="team_content_item-textbox_place">Head of SEO</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="team_content_item team_item4">
+                  <div class="team_content_item-textbox">
+                    <p class="team_content_item-textbox_name">Andrew Stozhuk</p>
+                    <p class="team_content_item-textbox_place">Operations coordinator</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="team_content_item team_item5">
+                  <div class="team_content_item-textbox">
+                    <p class="team_content_item-textbox_name">Oksana Hlushko</p>
+                    <p class="team_content_item-textbox_place">Head of Google Ads</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next swiper-button-next-team"></div>
+          <div class="swiper-button-prev swiper-button-prev-team"></div>
         </div>
         <a href="/about-us/" class="team_see_button"><span class="move-up">see more</span></a>
       </div>
@@ -1226,4 +1284,17 @@
     <footer></footer>
   </body>
   <script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.mySwiper', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      navigation: {
+        nextEl: '.swiper-button-next-team',
+        prevEl: '.swiper-button-prev-team',
+      },
+    });
+  </script>
 </html>
