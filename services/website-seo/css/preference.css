@@ -8,6 +8,9 @@
     padding-right: 22px !important;
     padding-bottom: 98px !important;
 }
+.preference-section__focus-item-title--web-seo {
+    max-width: 340px !important;
+}
 
 .preference-section__focus-item:hover .preference-section__focus-item-title--web-seo {
     transform: translateY(0px) !important;
