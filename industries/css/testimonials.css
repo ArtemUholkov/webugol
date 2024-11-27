@@ -31,7 +31,7 @@
 .testimonials__container {
     display: grid;
     grid-template-columns: repeat(3, 460px);
-    gap: 10px;
+    gap: 15px;
     width: 100%;
     justify-content: center;
     /* max-width: 1450px;
