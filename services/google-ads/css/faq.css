@@ -118,10 +118,23 @@
 
 .faq-section__image {
     position: absolute;
-    top: 0;
+    top: -50px;
     left: 0;
-    width: 1015.083px;
-    height: 1206.554px;
+    /* width: 1015.083px;
+    height: 1206.554px; */
+    z-index: 1;
+}
+
+.faq-section__image--web-seo {
+    top: -300px !important;
+}
+
+.faq-section__image--local {
+    top: 0px !important;
+}
+
+.faq-section__image--influence {
+    top: -50px !important;
 }
 
 @media screen and (max-width: 1360px) {
