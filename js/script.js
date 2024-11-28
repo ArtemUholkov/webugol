@@ -136,7 +136,7 @@ indLinks.forEach((item, index) => {
         // Set timeout to hide after fading out
         setTimeout(() => {
           content.style.display = 'none'; // Hide the item after fade-out
-        }, 1000); // Match this with CSS transition duration
+        }, 200); // Match this with CSS transition duration
       }
     });
 
