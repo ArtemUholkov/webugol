@@ -201,18 +201,20 @@ function toggleAnswer(faqId) {
 document.querySelector('#faq-click').click();
 
 // TEAM MAIN
-const teamitems = document.querySelectorAll('.team_content_item');
-console.log(teamitems);
-teamitems.forEach((item) => {
-  item.addEventListener('click', () => {
-    if (!item.classList.contains('active-item')) {
-      teamitems.forEach((i) => {
-        i.classList.remove('active-item');
-      });
-      item.classList.add('active-item');
-    }
+if (innerWidth > 630) {
+  const teamitems = document.querySelectorAll('.team_content_item');
+  console.log(teamitems);
+  teamitems.forEach((item) => {
+    item.addEventListener('click', () => {
+      if (!item.classList.contains('active-item')) {
+        teamitems.forEach((i) => {
+          i.classList.remove('active-item');
+        });
+        item.classList.add('active-item');
+      }
+    });
   });
-});
+}
 // Mouse drag scroll functionality
 const wrapContTeam = document.querySelector('.wrap-cont-team');
 let isDown = false;
