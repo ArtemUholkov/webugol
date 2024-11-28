@@ -1,0 +1,11 @@
+.preference-section__focus-item--w-design {
+    padding: 111.5px 32px 112.5px 31px  !important;
+}
+
+.preference-section__focus-item-text--w-design {
+    max-width: 241px !important;
+}
+
+.preference-section__focus-item:hover .preference-section__focus-item-text--w-design{
+    transform: translateX(0) !important;
+}

@@ -8,3 +8,15 @@
     line-height: 110%;
     text-transform: uppercase;
 }
+
+@media screen and (max-width: 840px) {
+    .hw-main__title--service-detail {
+        font-size: 52px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .hw-main__title--service-detail {
+        font-size: 42px;
+    }
+}
