@@ -132,8 +132,8 @@
 
 .footer-business__gif {
     position: absolute;
-    top: 212px;
-    right: 252px;
+    top: 190px;
+    right: 230px;
     z-index: 1;
     width: 1200px;
 }
@@ -219,7 +219,6 @@
 
     .footer-business__gif {
         width: 700px;
-        top: 200px;
     }
 
     .prefooter__title {
@@ -239,7 +238,6 @@
 @media screen and (max-width: 720px) {
     .footer-business__gif {
         width: 600px;
-        top: 200px;
     }
 
 }
