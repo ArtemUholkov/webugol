@@ -10,6 +10,7 @@
 .pro {
     background-color: #111;
 }
+
 .result__title {
     color: #FFF;
     text-align: center;
@@ -81,7 +82,6 @@
     content: url('../health-and-wellness/assets/img/result/img-3.png'); 
     opacity: 0.9; 
 }
-
 
 .result__logo {
     position: absolute;
