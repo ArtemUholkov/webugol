@@ -15,6 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Biryani:wght@200;300;400;600;700;800;900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="js/aos.css" />
     <!-- FONTS END -->
     <!-- swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -186,29 +187,39 @@
       </video>
       <div class="main_wrapper">
         <div class="main_image_wrapper">
-          <img src="img/main/cell.webp" alt="cell" class="main_image" />
+          <img
+            src="img/main/cell.webp"
+            alt="cell"
+            class="main_image"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          />
         </div>
         <div class="main_text_wrapper">
-          <h1>performance-driven digital marketing</h1>
-          <p class="main_subtext">We turn your investments into revenue</p>
-          <a href="#" class="main_button">get started</a>
+          <h1 data-aos="fade-down" data-aos-duration="500">performance-driven digital marketing</h1>
+          <p data-aos="fade-down" data-aos-duration="500" data-aos-delay="500" class="main_subtext">
+            We turn your investments into revenue
+          </p>
+          <div data-aos="fade-down" data-aos-duration="500" data-aos-delay="1000">
+            <a href="#" class="main_button">get started</a>
+          </div>
         </div>
-        <div class="main_abs1">
+        <div class="main_abs1" data-aos="fade-up">
           <span class="main_abs_text">
             In-depth<br />
             Market Analysis
           </span>
         </div>
-        <div class="main_abs2">
+        <div class="main_abs2" data-aos="fade-down" data-aos-delay="200">
           <span class="main_abs_text text1">Strategic Planning</span>
         </div>
-        <div class="main_abs3">
+        <div class="main_abs3" data-aos="fade-left" data-aos-delay="400">
           <span class="main_abs_text text2">Effective Launch, Testing, and Optimization</span>
         </div>
-        <div class="main_abs4">
+        <div class="main_abs4" data-aos="fade-right" data-aos-delay="600">
           <span class="main_abs_text text3">Effective Launch, Testing, and Optimization</span>
         </div>
-        <div class="main_abs5">
+        <div class="main_abs5" data-aos="fade-up" data-aos-delay="800">
           <span class="main_abs_text text4">Strategic Planning</span>
         </div>
       </div>
@@ -480,7 +491,7 @@
     </section>
     <section class="numbers">
       <div class="numbers_wrapper">
-        <div class="numbers_item">
+        <div class="numbers_item" data-aos="fade-up" data-aos-delay="200">
           <div class="number_icon_wrapper">
             <p class="number_icon_number">250</p>
             <div class="number_icon_icon">
@@ -489,7 +500,7 @@
           </div>
           <p class="numbers_item_subtext">clients benefiting from our expertise</p>
         </div>
-        <div class="numbers_item">
+        <div class="numbers_item" data-aos="fade-up" data-aos-delay="400">
           <div class="number_icon_wrapper">
             <p class="number_icon_number">200</p>
             <img src="img/numbers/MM.svg" class="icon_mm" />
@@ -497,7 +508,7 @@
           </div>
           <p class="numbers_item_subtext">generated revenue</p>
         </div>
-        <div class="numbers_item">
+        <div class="numbers_item" data-aos="fade-up" data-aos-delay="600">
           <div class="number_icon_wrapper">
             <p class="number_icon_number">700</p>
             <div class="number_icon_icon plus_icon-last">
@@ -509,7 +520,7 @@
       </div>
       <a href="#" class="numbers_button">CHECK ALL PROJECTS</a>
     </section>
-    <section class="industries">
+    <section class="industries" data-aos="fade-up">
       <div class="industries_wrapper">
         <h2 class="section_title industries_title">Industries we serve</h2>
         <p class="section_subtitle industries_subtitle">Enhance Your Reach, Improve Your Results</p>
@@ -771,7 +782,9 @@
         </div>
       </div>
     </section>
-    <section class="solutions">
+    <section class="solutions" data-aos="fade-up">
+      <img src="img/solutions/bgright.png" alt="bg" class="sol_bg_right" />
+      <img src="img/solutions/bgleft.png" alt="bg" class="sol_bg_left" />
       <div class="solutions_wrapper">
         <h2 class="section_title solutions_title">We build digital solutions</h2>
         <div class="solutions_content_wrapper">
@@ -1178,7 +1191,7 @@
         </div>
       </div>
     </section>
-    <section class="team">
+    <section class="team" data-aos="fade-up">
       <div class="team_wrapper">
         <p class="team__title">Meet the Webugol team</p>
         <p class="team_subtitle">Your partners in achieving digital marketing success</p>
@@ -1287,7 +1300,7 @@
       </div>
     </section>
     <footer>
-      <section class="footer-contacts">
+      <section class="footer-contacts" data-aos="fade-up">
         <div class="footer-contacts__text-container">
           <img src="img/contacts/text.gif" alt="image" class="footer-contacts__gif" />
           <button class="footer-contacts__button">contact us</button>
@@ -1323,7 +1336,7 @@
           <img src="img/contacts/right-image.png" alt="image" class="footer-contacts__image" />
         </div>
       </section>
-      <section class="footer-partners">
+      <section class="footer-partners" data-aos="fade-up">
         <h2 class="footer-partners__title">partners</h2>
         <div class="footer-partners__wrap">
           <div
@@ -1427,6 +1440,10 @@
     </footer>
   </body>
   <script src="js/script.js"></script>
+  <script src="js/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
   <!-- Initialize Swiper -->

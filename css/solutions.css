@@ -1,11 +1,21 @@
 .solutions {
   padding-top: 180px;
-
+  position: relative;
   width: 100%;
 }
 .solutions_wrapper {
   width: 100%;
   margin: 0 auto;
+}
+.sol_bg_right {
+  position: absolute;
+  top: -50px;
+  right: 0;
+}
+.sol_bg_left {
+  position: absolute;
+  bottom: -300px;
+  left: 0;
 }
 
 .solutions_title {
@@ -354,6 +364,7 @@
   animation: GAmove 7s infinite;
   animation-play-state: paused;
 }
+
 .solutions_items__l_t_l:hover {
   cursor: pointer;
 }
@@ -375,6 +386,7 @@
   animation: GAbgmove 7s infinite;
   animation-play-state: paused;
 }
+
 .solutions_items__l_t_l:hover .solution_ggoleAds_img_gradient {
   animation-play-state: running;
 }
@@ -421,6 +433,7 @@
   animation: upShowBack 7s infinite;
   animation-play-state: paused;
 }
+
 .solutions_items__l_t_r:hover {
   cursor: pointer;
 }
@@ -456,6 +469,7 @@
   animation: upRotateBack 7s infinite;
   animation-play-state: paused;
 }
+
 .solutions_items_l_b_l:hover .solutions_items__l_b_l_img {
   animation-play-state: running;
 }
@@ -806,6 +820,31 @@
   display: none;
 }
 @media (max-width: 1460px) {
+  .blinking-gradient,
+  .soltion_googleAds_img,
+  .solution_ggoleAds_img_gradient,
+  .solutions_items__l_t_r_img,
+  .rb_item_img,
+  .solutions_items__r_t_r_t_img,
+  .solutions_items__r_t_r_b_img,
+  .solutions_items__r_t_l_img,
+  .solutions_items__c_b_img,
+  .solution_webd_img_gradient,
+  .soltion_webd_img,
+  .solutions_items__l_b_l_img {
+    animation-play-state: running;
+  }
+
+  .sol_bg_right {
+    position: absolute;
+    top: -50px;
+    right: -150px;
+  }
+  .sol_bg_left {
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+  }
   .solutions_content_wrapper {
     display: none;
   }
@@ -844,7 +883,6 @@
   .solutions_items__l_b_l_img {
     left: 0;
     margin: auto;
-    animation: none;
   }
   .solutions_items_l_b_r {
     width: 465px;
@@ -883,6 +921,18 @@
   }
 }
 @media (max-width: 819px) {
+  .sol_bg_right {
+    position: absolute;
+    top: -50px;
+    right: -300px;
+    transform: scale(0.6);
+  }
+  .sol_bg_left {
+    position: absolute;
+    bottom: -100px;
+    left: -100px;
+    transform: scale(0.6);
+  }
   .solutions_content_tab {
     display: none;
   }
@@ -975,5 +1025,31 @@
     height: 105px;
     left: 0;
     background: radial-gradient(circle, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 1));
+  }
+  @keyframes upRotateBack {
+    0% {
+      transform: scale(1);
+      right: 0;
+    }
+    1% {
+      transform: rotate(0deg);
+    }
+    25% {
+      right: 50px;
+    }
+    50% {
+      transform: rotate(60deg);
+    }
+    51% {
+      transform: rotate(60deg);
+    }
+
+    75% {
+      transform: rotate(0deg);
+      right: 50px;
+    }
+    100% {
+      right: 0;
+    }
   }
 }
