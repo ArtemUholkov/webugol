@@ -3,11 +3,16 @@
     width: 100%;
     height: 100%;
     min-height: 466px;
-    border: 1px solid rgba(254, 241, 225, 0.40);
+    border: 1px solid rgba(254, 241, 225, 0.20);
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(57px);
     position: relative;
     margin-top: 180px;
+    overflow: hidden;
+}
+
+.ads-section {
+    margin-top: 60px !important;
 }
 
 .ind {
@@ -73,7 +78,7 @@
 .prefooter__title span:nth-child(29) { animation-delay: 2.6s; }
 
 .prefooter__button {
-    display: flex;
+    display: block;
     width: 320px;
     height: 54px;
     padding: 20px 24px;
@@ -127,15 +132,19 @@
 
 .footer-business__gif {
     position: absolute;
-    top: 112px;
-    right: 252px;
+    top: 190px;
+    right: 230px;
     z-index: 1;
-
+    width: 1200px;
 }
 
 @media screen and (max-width: 1582px) {
     .prefooter__title {
         font-size: 40px;
+    }
+
+    .footer-business__gif {
+        width: 900px;
     }
 }
 
@@ -143,11 +152,24 @@
     .prefooter__title {
         font-size: 30px;
     }
+
+    .footer-business__gif {
+        width: 800px;
+    }
+}
+@media screen and (max-width: 1100px)  {
+    .footer-business__gif {
+        width: 700px;
+    }
 }
 
 @media screen and (max-width: 1058px) {
     .prefooter__title {
         font-size: 25px;
+    }
+
+    .footer-business__gif {
+        width: 600px;
     }
 }
 
@@ -196,7 +218,7 @@
     }
 
     .footer-business__gif {
-        max-width: 400px;
+        width: 700px;
     }
 
     .prefooter__title {
@@ -213,6 +235,13 @@
     }
 }
 
+@media screen and (max-width: 720px) {
+    .footer-business__gif {
+        width: 600px;
+    }
+
+}
+
 @media screen and (max-width: 600px) {
     .prefooter {
         min-height: 305px;
@@ -220,8 +249,8 @@
     }
 
     .footer-business__gif {
-        max-width: 300px;
-        top: 80px;
+        max-width: 500px;
+        top: 120px;
     }
 
     .prefooter__image-half-sphere {
@@ -258,12 +287,19 @@
         transform: translateX(-50%);
         width: 220px;
         height: 47px;
+        padding: 0;
+        font-size: 16px;
     }
 }
 
 @media screen and (max-width: 500px) {
     .prefooter__title {
         font-size: 14px;
+    }
+
+    .footer-business__gif {
+        max-width: 400px;
+        top: 120px;
     }
 
     .ind {
@@ -279,5 +315,9 @@
 
     .prefooter {
         margin-top: 120px;
+    }
+
+    .footer-business__gif {
+        max-width: 300px;
     }
 }

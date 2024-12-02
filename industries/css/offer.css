@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     padding: 100px 0 220px;
-    background-color: #1D1D1D;
+    background-color: #111;
 }
 
 .offer__title {
@@ -25,7 +25,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 80px;
+    gap: 75px;
     position: relative;
     z-index: 1;
 }
@@ -45,6 +45,7 @@
     overflow: hidden;
     position: relative;
 }
+
 
 .offer__text-container--standart {
     order: 1;
@@ -93,6 +94,8 @@
     width: 100%;
     max-width: 370px;
     display: flex;
+    position: relative;
+    z-index: 1;
 }
 
 .offer__container-image1 {

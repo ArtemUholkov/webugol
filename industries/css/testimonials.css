@@ -4,8 +4,8 @@
     align-items: center;
     justify-content: center;
     gap: 80px;
-    padding-bottom: 220px;
-    background-color: #1D1D1D;
+    padding-bottom: 120px;
+    background-color: #111;
     position: relative;
 }
 
@@ -31,7 +31,7 @@
 .testimonials__container {
     display: grid;
     grid-template-columns: repeat(3, 460px);
-    gap: 20px;
+    gap: 15px;
     width: 100%;
     justify-content: center;
     /* max-width: 1450px;

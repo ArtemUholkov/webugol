@@ -6,7 +6,7 @@
     padding: 116px 0;
     gap: 122px;
     position: relative;
-    z-index: 1;
+    z-index: 0;
 }
 
 .digit::before {

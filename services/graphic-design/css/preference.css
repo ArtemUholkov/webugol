@@ -1,0 +1,79 @@
+.preference-section__focus-item--design {
+    padding: 111.5px 47px 112.5px 46px !important;
+}
+
+.preference-section__white-item--design {
+    padding-left: 38px !important;
+    padding-right: 38px !important;
+    padding-bottom: 70px !important;
+    padding-top: 210px !important;
+}
+
+.preference-section__white-item-img--design {
+    top: -210px !important;
+}
+
+.preference-section__white-item:hover .preference-section__white-item-img--design {
+    transform: rotate(-180deg) translateX(calc(100% - 545.36px)) translateY(-150px) !important;
+    left: calc(100% - 370.36px); 
+}
+
+.preference-section__black-item--design {
+    padding-left: 45px !important;
+    padding-right: 300px !important;
+    padding-bottom: 193px !important;
+    padding-top: 86px !important;
+}
+
+.preference-section__black-item-img--design {
+    top: -140px !important;
+    right: -140px !important;
+}
+
+.preference-section__last-item--design {
+    padding-left: 23px !important;
+    padding-right: 22px !important;
+    padding-bottom: 43px !important;
+    padding-top: 203px !important;
+}
+
+.preference-section__last-text-container--design,
+.preference-section__last-text-container-title--design {
+    max-width: 535px !important;
+}
+
+.preference-section__black-item:hover .preference-section__black-text-container--design{
+    transform: translate(300px, 170px) !important;
+}
+
+@media screen and (max-width: 825px) {
+    .preference-section__black-item:hover .preference-section__black-text-container--design{
+        transform: translate(280px, 120px) !important;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .preference-section__black-item--design {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        padding-bottom: 193px !important;
+        padding-top: 86px !important;
+    }
+
+    .preference-section__black-item:hover .preference-section__black-text-container--design{
+        transform: translateY(20px) !important;
+    }
+
+    .preference-section__black-item:hover .preference-section__black-item-img--design {
+        transform: translate(-100px, 0px) !important;
+        left: calc(100% - 666.694px); 
+        z-index: 0;
+    }
+
+    .preference-section__last-item--design {
+        padding-left: 23px !important;
+        padding-right: 22px !important;
+        padding-bottom: 30px !important;
+        padding-top: 40px !important;
+    }
+}

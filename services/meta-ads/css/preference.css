@@ -1,0 +1,36 @@
+.preference-section__white-item--meta {
+    padding-left: 38px !important;
+    padding-top: 186px;
+    padding-right: 38px !important;
+    padding-bottom: 46px !important;
+}
+
+.preference-section__white-text-container--meta,
+.preference-section__white-text-container-title--meta {
+    max-width: 383px !important;
+    align-items: center;
+}
+
+.preference-section__focus-item:hover .preference-section__focus-item-title--meta {
+    transform: translateY(70px) !important;
+    font-size: 32px !important;
+}
+
+.preference-section__focus-item:hover .preference-section__focus-item-text--meta {
+    transform: translateY(40px);
+}
+
+.preference-section__white-item:hover .preference-section__white-text-container--meta {
+    transform: translateY(-100px) !important;
+    transition: transform 0.8s ease;
+}
+
+.preference-section__white-item:hover .preference-section__white-item-img--meta {
+    transform: rotate(-180deg) translateY(calc(100% - 645.36px)) !important;
+    left: calc(100% - 370.36px) !important; 
+}
+
+.preference-section__black-item-img--meta {
+    bottom: -200px !important;
+    right: -50px !important;
+}
