@@ -211,8 +211,7 @@
 .solutions_items__c_t:hover .blinking-gradient {
   animation-play-state: running;
 }
-.solutions_items__c_t_title {
-}
+
 .solutions_items__c_t_text {
   max-width: 181px;
 }
@@ -338,9 +337,6 @@
   align-items: flex-end;
   justify-content: flex-end;
   overflow: hidden;
-}
-
-.solutions_items__r_b_title {
 }
 
 .solutions_items__r_b_text {
