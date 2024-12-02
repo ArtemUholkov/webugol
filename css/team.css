@@ -1,0 +1,369 @@
+.team {
+  padding-top: 270px;
+  padding-bottom: 150px;
+}
+.team_wrapper {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.wrap-cont-team {
+  overflow-x: auto;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+  margin: 0 auto;
+}
+.wrap-cont-team {
+  overflow-x: scroll; /* Enables horizontal scrolling */
+  -ms-overflow-style: none; /* Hides scrollbar in Internet Explorer and Edge */
+  scrollbar-width: none; /* Hides scrollbar in Firefox */
+}
+
+.wrap-cont-team::-webkit-scrollbar {
+  display: none; /* Hides scrollbar in Chrome, Safari, and other WebKit browsers */
+}
+.team__title {
+  color: #fff;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 72px;
+  font-weight: 800;
+  line-height: 110%;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.wrap-cont-team.active {
+  cursor: grabbing;
+}
+.team_subtitle {
+  color: #fff;
+  text-align: center;
+  font-family: 'Biryani', sans-serif;
+  font-size: 32px;
+  font-weight: 275;
+  line-height: 140%; /* 44.8px */
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+.team_text {
+  color: var(--white, #fff);
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 120%;
+  max-width: 920px;
+  margin-bottom: 52px;
+}
+.team_content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  width: max-content;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth; /* Smooth scrolling */
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+.team_content_item {
+  scroll-snap-align: start; /* Align items to the start of the container */
+  width: 220px;
+  height: 600px;
+  border-radius: 18px;
+  background: #000;
+  padding: 28px;
+  overflow: hidden;
+  position: relative;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  cursor: pointer;
+  transition: all 0.7s;
+}
+.team_content_item:hover {
+  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
+  transition: all 0.7s;
+}
+
+.team_content_item-textbox {
+  position: absolute;
+  bottom: 28px;
+  left: -500px;
+  padding: 22px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 15px;
+  border: 1px solid #fff;
+  background: #1d1d1d;
+  transition: all 0.7s;
+}
+.team_content_item-textbox_name {
+  color: #fff;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.team_content_item-textbox_place {
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-size: 24px;
+  font-weight: 200;
+  white-space: nowrap;
+}
+.team_item1 {
+  background-image: url('../img/team/oksana.png');
+  background-size: 180%;
+}
+.team_item2 {
+  background-image: url('../img/team/eugene.png');
+  background-size: 180%;
+}
+.team_item3 {
+  background-image: url('../img/team/olena.png');
+  background-size: 180%;
+}
+.team_item4 {
+  background-image: url('../img/team/andrii.png');
+  background-size: 180%;
+}
+.team_item5 {
+  background-image: url('../img/team/oksanag.png');
+  background-size: 180%;
+}
+.team_see_button {
+  display: flex;
+  width: 320px;
+  height: 54px;
+  padding: 20px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background: var(--white, #fff);
+  color: #000;
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+.mob_show_item {
+  display: none;
+}
+.move-up {
+  position: relative;
+  top: 3px;
+}
+.team_see_button:hover {
+  background: var(--violet, #6c01f6);
+  color: #ffffff;
+  transition: all 0.3s;
+}
+.active-item {
+  width: 460px !important;
+  height: 600px;
+  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
+  background-size: 100%;
+}
+.active-item .team_content_item-textbox {
+  left: 50%;
+  transform: translateX(-50%);
+
+  transition: all 0.7s;
+}
+.slider_wrapper {
+  display: none;
+}
+.mob-team-text {
+  display: none;
+}
+.buttons_wrap {
+  display: none;
+}
+@media (max-width: 1470px) {
+  .mob_hide_item {
+    display: none;
+  }
+  .mob_show_item {
+    display: block;
+  }
+  .team {
+    padding-left: 50px;
+    padding-right: 0;
+    padding-top: 140px;
+  }
+  .team__title {
+    font-size: 48px;
+    padding-right: 50px;
+  }
+  .team_subtitle {
+    font-size: 22px;
+    padding-right: 50px;
+  }
+  .team_text {
+    font-size: 18px;
+    max-width: 689px;
+    padding-right: 50px;
+  }
+  .team_item5 {
+    margin-right: 50px;
+  }
+}
+@media (max-width: 630px) {
+  .team {
+    padding-top: 120px;
+  }
+  .team_content_item {
+    width: 335px !important;
+    height: 382px;
+    background-size: 85%;
+  }
+  .active-item {
+    width: 335px;
+    height: 382px;
+    background-size: 85%;
+  }
+  .team_content_item-textbox {
+    padding: 22px 12px;
+    left: -600px;
+
+    margin: auto;
+  }
+  .team_content_item-textbox_name {
+    font-size: 20px;
+  }
+  .team_content_item-textbox_place {
+    font-size: 16px;
+  }
+  .active-item .team_content_item-textbox {
+    /* left: 0;
+    transition: all 0.7s; */
+  }
+  .team {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .team__title {
+    font-size: 36px;
+    padding-right: 20px;
+    margin-bottom: 12px;
+    max-width: 335px;
+  }
+  .team_subtitle {
+    padding-right: 20px;
+    font-size: 20px;
+    max-width: 335px;
+    margin-bottom: 22px;
+  }
+  .team_text {
+    display: none;
+  }
+  .wrap-cont-team {
+    display: none;
+  }
+  .team_item5 {
+    margin-right: 0;
+  }
+  .team_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%; /* Ensure this takes up full available width */
+    overflow: hidden; /* Prevent horizontal scrolling issues */
+  }
+  .swiper-slide-active .team_content_item {
+    -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%);
+    transition: all 0.7s;
+  }
+  .swiper-slide-active .team_content_item .team_content_item-textbox {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .slider_wrapper {
+    display: block;
+  }
+  .mob-team-text {
+    display: block;
+    padding-right: 0;
+    max-width: 343px;
+    margin-bottom: 40px;
+  }
+  .buttons_wrap {
+    height: 54px;
+    width: 100%;
+    position: relative;
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: -20px;
+    gap: 20px;
+    max-width: 335px;
+  }
+  .swiper-button-next-team {
+    background-image: url('../img/team/Button-r.png');
+    width: 60px;
+    height: 54px;
+    border-radius: 10px;
+    position: relative;
+    left: initial;
+    right: initial;
+  }
+  .swiper-button-next-team::after {
+    content: '';
+  }
+  .swiper-button-prev-team::after {
+    content: '';
+  }
+  .swiper-button-prev-team {
+    background-image: url('../img/team/Button-l.png');
+    width: 60px;
+    height: 54px;
+    border-radius: 10px;
+    position: relative;
+    left: initial;
+    right: initial;
+  }
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #111111;
+  border-radius: 18px;
+  /* Remove the flex property */
+}
+.swiper-container {
+  width: 100%;
+  overflow: hidden; /* Hides overflowing content */
+}
+.swiper-wrapper {
+}
+.slider_wrapper {
+  width: 100%;
+}

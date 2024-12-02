@@ -166,7 +166,7 @@
 
 .fade-out {
   opacity: 0; /* Fade out to 0 */
-  transition: opacity 1s ease; /* Smooth transition for opacity */
+  transition: opacity 0.2s ease; /* Smooth transition for opacity */
   z-index: 0; /* Push behind */
 }
 .industries_mob_content_wrapper {

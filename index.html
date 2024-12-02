@@ -15,7 +15,11 @@
       href="https://fonts.googleapis.com/css2?family=Biryani:wght@200;300;400;600;700;800;900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="js/aos.css" />
     <!-- FONTS END -->
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- swiper -->
     <link rel="icon" href="img/global/favicon.png" />
     <title>Webugol - Moneymaking New Website</title>
     <link rel="stylesheet" href="css/index.css" />
@@ -41,7 +45,9 @@
           <p class="popup_arrow-back">Back to main menu</p>
           <a href="./industries/" class="popup_title">INDUSTRIES</a>
           <div class="popup_links_wrapper">
-            <a href="./industries/health-and-wellness/" class="popup_links_item">Health & Wellness</a>
+            <a href="./industries/health-and-wellness/" class="popup_links_item"
+              >Health & Wellness</a
+            >
             <a href="./industries/construction/" class="popup_links_item">Construction</a>
             <a href="./industries/home-services/" class="popup_links_item">Home Services</a>
             <a href="./industries/ecommerce/" class="popup_links_item">Ecommerce</a>
@@ -60,10 +66,14 @@
             <a href="./services/website-seo/" class="popup_links_item">Website SEO</a>
             <a href="./services/local-seo/" class="popup_links_item">Local SEO</a>
             <a href="./services/email-marketing/" class="popup_links_item">Email Marketing</a>
-            <a href="./services/influencer-marketing/" class="popup_links_item">Influencer Marketing</a>
+            <a href="./services/influencer-marketing/" class="popup_links_item"
+              >Influencer Marketing</a
+            >
             <a href="./services/graphic-design/" class="popup_links_item">Graphic Design</a>
             <a href="./services/web-design/" class="popup_links_item">UX Design / Web Design</a>
-            <a href="./services/website-development/" class="popup_links_item">Website Development</a>
+            <a href="./services/website-development/" class="popup_links_item"
+              >Website Development</a
+            >
             <a href="./services/advanced-analytics/" class="popup_links_item">Advanced Analytics</a>
           </div>
         </div>
@@ -177,29 +187,39 @@
       </video>
       <div class="main_wrapper">
         <div class="main_image_wrapper">
-          <img src="img/main/cell.webp" alt="cell" class="main_image" />
+          <img
+            src="img/main/cell.webp"
+            alt="cell"
+            class="main_image"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          />
         </div>
         <div class="main_text_wrapper">
-          <h1>performance-driven digital marketing</h1>
-          <p class="main_subtext">We turn your investments into revenue</p>
-          <a href="#" class="main_button">get started</a>
+          <h1 data-aos="fade-down" data-aos-duration="500">performance-driven digital marketing</h1>
+          <p data-aos="fade-down" data-aos-duration="500" data-aos-delay="500" class="main_subtext">
+            We turn your investments into revenue
+          </p>
+          <div data-aos="fade-down" data-aos-duration="500" data-aos-delay="1000">
+            <a href="#" class="main_button">get started</a>
+          </div>
         </div>
-        <div class="main_abs1">
+        <div class="main_abs1" data-aos="fade-up">
           <span class="main_abs_text">
             In-depth<br />
             Market Analysis
           </span>
         </div>
-        <div class="main_abs2">
+        <div class="main_abs2" data-aos="fade-down" data-aos-delay="200">
           <span class="main_abs_text text1">Strategic Planning</span>
         </div>
-        <div class="main_abs3">
+        <div class="main_abs3" data-aos="fade-left" data-aos-delay="400">
           <span class="main_abs_text text2">Effective Launch, Testing, and Optimization</span>
         </div>
-        <div class="main_abs4">
+        <div class="main_abs4" data-aos="fade-right" data-aos-delay="600">
           <span class="main_abs_text text3">Effective Launch, Testing, and Optimization</span>
         </div>
-        <div class="main_abs5">
+        <div class="main_abs5" data-aos="fade-up" data-aos-delay="800">
           <span class="main_abs_text text4">Strategic Planning</span>
         </div>
       </div>
@@ -471,7 +491,7 @@
     </section>
     <section class="numbers">
       <div class="numbers_wrapper">
-        <div class="numbers_item">
+        <div class="numbers_item" data-aos="fade-up" data-aos-delay="200">
           <div class="number_icon_wrapper">
             <p class="number_icon_number">250</p>
             <div class="number_icon_icon">
@@ -480,7 +500,7 @@
           </div>
           <p class="numbers_item_subtext">clients benefiting from our expertise</p>
         </div>
-        <div class="numbers_item">
+        <div class="numbers_item" data-aos="fade-up" data-aos-delay="400">
           <div class="number_icon_wrapper">
             <p class="number_icon_number">200</p>
             <img src="img/numbers/MM.svg" class="icon_mm" />
@@ -488,7 +508,7 @@
           </div>
           <p class="numbers_item_subtext">generated revenue</p>
         </div>
-        <div class="numbers_item">
+        <div class="numbers_item" data-aos="fade-up" data-aos-delay="600">
           <div class="number_icon_wrapper">
             <p class="number_icon_number">700</p>
             <div class="number_icon_icon plus_icon-last">
@@ -500,7 +520,7 @@
       </div>
       <a href="#" class="numbers_button">CHECK ALL PROJECTS</a>
     </section>
-    <section class="industries">
+    <section class="industries" data-aos="fade-up">
       <div class="industries_wrapper">
         <h2 class="section_title industries_title">Industries we serve</h2>
         <p class="section_subtitle industries_subtitle">Enhance Your Reach, Improve Your Results</p>
@@ -762,7 +782,9 @@
         </div>
       </div>
     </section>
-    <section class="solutions">
+    <section class="solutions" data-aos="fade-up">
+      <img src="img/solutions/bgright.png" alt="bg" class="sol_bg_right" />
+      <img src="img/solutions/bgleft.png" alt="bg" class="sol_bg_left" />
       <div class="solutions_wrapper">
         <h2 class="section_title solutions_title">We build digital solutions</h2>
         <div class="solutions_content_wrapper">
@@ -823,6 +845,7 @@
           <div class="solutions_items__c">
             <div class="solutions_items__c_t">
               <div class="text_wrap">
+                <div class="blinking-gradient"></div>
                 <p class="sol_item_title solutions_items__c_t_title">Website SEO</p>
                 <p class="sol_item_text solutions_items__c_t_text">
                   Improve search rankings with expert optimization
@@ -890,6 +913,273 @@
               </div>
             </div>
             <div class="solutions_items__r_b">
+              <div class="rb_item_img"></div>
+              <div class="text_wrap">
+                <p class="sol_item_title solutions_items__r_b_title">Advanced analytics</p>
+                <p class="sol_item_text solutions_items__r_b_text">
+                  Gain deep insights with comprehensive data solutions
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="solutions_content_tab">
+          <div class="solutions_content_top-1tab tab_tab">
+            <div class="solutions_items__l_t_l">
+              <div class="soltion_googleAds_img">
+                <div class="solution_ggoleAds_img_gradient"></div>
+              </div>
+              <div class="text_wrap">
+                <p class="sol_item_title solutions_items__l_t_l_title">Google Ads</p>
+                <p class="sol_item_text solutions_items__l_t_l_text">
+                  Drive targeted traffic with optimized campaigns
+                </p>
+              </div>
+            </div>
+            <div class="solutions_items__l_t_r">
+              <img
+                src="img/solutions/metaads.png"
+                alt="meta ads bg"
+                class="solutions_items__l_t_r_img"
+              />
+              <div class="text_wrap">
+                <p class="sol_item_title solutions_items__l_t_r_title">Meta Ads</p>
+                <p class="sol_item_text solutions_items__l_t_r_text">
+                  Enhance brand visibility through tailored strategies
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="solutions_content_top-2tab tab_tab">
+            <div class="solutions_items_l_b_l">
+              <img
+                src="img/solutions/graphicdesign.png"
+                alt="graphic design bg"
+                class="solutions_items__l_b_l_img"
+              />
+              <div class="text_wrap">
+                <p class="sol_item_title solutions_items__l_b_l_title">Graphic design</p>
+                <p class="sol_item_text solutions_items__l_b_l_text">
+                  Captivate with innovative and eye-catching visuals
+                </p>
+              </div>
+            </div>
+            <div class="solutions_items_l_b_r">
+              <div class="soltion_webd_img">
+                <div class="solution_webd_img_gradient"></div>
+              </div>
+              <div class="text_wrap">
+                <p class="sol_item_title solutions_items__l_b_r_title">Web design</p>
+                <p class="sol_item_text solutions_items__l_b_r_text">
+                  Create stunning and user-friendly websites
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="solutions_content_top-3tab tab_tab">
+            <div class="solutions_items__c_t">
+              <div class="text_wrap">
+                <div class="blinking-gradient"></div>
+                <p class="sol_item_title solutions_items__c_t_title">Website SEO</p>
+                <p class="sol_item_text solutions_items__c_t_text">
+                  Improve search rankings with expert optimization
+                </p>
+              </div>
+            </div>
+            <div class="solutions_items__r_t_l">
+              <img
+                src="img/solutions/localseo.png"
+                alt="graphic design bg"
+                class="solutions_items__r_t_l_img"
+              />
+              <div class="text_wrap">
+                <p class="sol_item_title solutions_items__r_t_l_title">Local SEO</p>
+                <p class="sol_item_text solutions_items__r_t_l_text">
+                  Boost local presence with effective tactics
+                </p>
+              </div>
+            </div>
+            <div class="solutions_items__r_t_r_t">
+              <img
+                src="img/solutions/email-mark.png"
+                alt="web development bg"
+                class="solutions_items__r_t_r_t_img"
+              />
+              <div class="text_wrap">
+                <p class="sol_item_title solutions_items__r_t_r_t_title">Email marketing</p>
+                <p class="sol_item_text solutions_items__r_t_r_t_text">
+                  Engage your audience with personalized campaigns
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="solutions_content_top-4tab tab_tab">
+            <div class="solutions_items__r_t_r_b">
+              <img
+                src="img/solutions/influencer.png"
+                alt="web development bg"
+                class="solutions_items__r_t_r_b_img"
+              />
+              <div class="text_wrap">
+                <p class="sol_item_title solutions_items__r_t_r_b_title">Influencer marketing</p>
+                <p class="sol_item_text solutions_items__r_t_r_b_text">
+                  Amplify reach through strategic partnerships
+                </p>
+              </div>
+            </div>
+            <div class="solutions_items__c_b">
+              <img
+                src="img/solutions/webdev.png"
+                alt="web development bg"
+                class="solutions_items__c_b_img"
+              />
+              <div class="text_wrap">
+                <p class="sol_item_title solutions_items__c_b_title">Website development</p>
+                <p class="sol_item_text solutions_items__c_b_text">
+                  Build robust and scalable online platforms
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="solutions_content_top-5tab tab_tab">
+            <div class="solutions_items__r_b">
+              <div class="rb_item_img"></div>
+              <div class="text_wrap">
+                <p class="sol_item_title solutions_items__r_b_title">Advanced analytics</p>
+                <p class="sol_item_text solutions_items__r_b_text">
+                  Gain deep insights with comprehensive data solutions
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="solutions_content_mob">
+          <div class="solutions_content_top-1tab tab_mob">
+            <div class="solutions_items__l_t_l">
+              <div class="soltion_googleAds_img">
+                <div class="solution_ggoleAds_img_gradient"></div>
+              </div>
+              <div class="text_wrap">
+                <p class="sol_item_title solutions_items__l_t_l_title">Google Ads</p>
+                <p class="sol_item_text solutions_items__l_t_l_text">
+                  Drive targeted traffic with optimized campaigns
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="solutions_content_top-1tab tab_mob">
+            <div class="solutions_items__l_t_r">
+              <img
+                src="img/solutions/metaads.png"
+                alt="meta ads bg"
+                class="solutions_items__l_t_r_img"
+              />
+              <div class="text_wrap">
+                <p class="sol_item_title solutions_items__l_t_r_title">Meta Ads</p>
+                <p class="sol_item_text solutions_items__l_t_r_text">
+                  Enhance brand visibility through tailored strategies
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="solutions_content_top-1tab tab_mob">
+            <div class="solutions_items__c_t">
+              <div class="text_wrap">
+                <div class="blinking-gradient"></div>
+                <p class="sol_item_title solutions_items__c_t_title">Website SEO</p>
+                <p class="sol_item_text solutions_items__c_t_text">
+                  Improve search rankings with expert optimization
+                </p>
+              </div>
+            </div>
+            <div class="solutions_items__r_t_l">
+              <img
+                src="img/solutions/localseo.png"
+                alt="graphic design bg"
+                class="solutions_items__r_t_l_img"
+              />
+              <div class="text_wrap">
+                <p class="sol_item_title solutions_items__r_t_l_title">Local SEO</p>
+                <p class="sol_item_text solutions_items__r_t_l_text">
+                  Boost local presence with effective tactics
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="solutions_content_top-1tab tab_mob">
+            <div class="solutions_items__r_t_r_t">
+              <img
+                src="img/solutions/email-mark.png"
+                alt="web development bg"
+                class="solutions_items__r_t_r_t_img"
+              />
+              <div class="text_wrap">
+                <p class="sol_item_title solutions_items__r_t_r_t_title">Email marketing</p>
+                <p class="sol_item_text solutions_items__r_t_r_t_text">
+                  Engage your audience with personalized campaigns
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="solutions_content_top-1tab tab_mob">
+            <div class="solutions_items__r_t_r_b">
+              <img
+                src="img/solutions/influencer.png"
+                alt="web development bg"
+                class="solutions_items__r_t_r_b_img"
+              />
+              <div class="text_wrap">
+                <p class="sol_item_title solutions_items__r_t_r_b_title">Influencer marketing</p>
+                <p class="sol_item_text solutions_items__r_t_r_b_text">
+                  Amplify reach through strategic partnerships
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="solutions_content_top-1tab tab_mob">
+            <div class="solutions_items_l_b_l">
+              <img
+                src="img/solutions/graphicdesign.png"
+                alt="graphic design bg"
+                class="solutions_items__l_b_l_img"
+              />
+              <div class="text_wrap">
+                <p class="sol_item_title solutions_items__l_b_l_title">Graphic design</p>
+                <p class="sol_item_text solutions_items__l_b_l_text">
+                  Captivate with innovative and eye-catching visuals
+                </p>
+              </div>
+            </div>
+            <div class="solutions_items_l_b_r">
+              <div class="soltion_webd_img">
+                <div class="solution_webd_img_gradient"></div>
+              </div>
+              <div class="text_wrap">
+                <p class="sol_item_title solutions_items__l_b_r_title">Web design</p>
+                <p class="sol_item_text solutions_items__l_b_r_text">
+                  Create stunning and user-friendly websites
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="solutions_content_top-1tab tab_mob">
+            <div class="solutions_items__c_b">
+              <img
+                src="img/solutions/webdev.png"
+                alt="web development bg"
+                class="solutions_items__c_b_img"
+              />
+              <div class="text_wrap">
+                <p class="sol_item_title solutions_items__c_b_title">Website development</p>
+                <p class="sol_item_text solutions_items__c_b_text">
+                  Build robust and scalable online platforms
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="solutions_content_top-1tab tab_mob">
+            <div class="solutions_items__r_b">
+              <div class="rb_item_img"></div>
               <div class="text_wrap">
                 <p class="sol_item_title solutions_items__r_b_title">Advanced analytics</p>
                 <p class="sol_item_text solutions_items__r_b_text">
@@ -901,10 +1191,270 @@
         </div>
       </div>
     </section>
-    <section class="team"></section>
-    <section class="contact"></section>
-    <section class="partners"></section>
-    <footer></footer>
+    <section class="team" data-aos="fade-up">
+      <div class="team_wrapper">
+        <p class="team__title">Meet the Webugol team</p>
+        <p class="team_subtitle">Your partners in achieving digital marketing success</p>
+        <p class="team_text">
+          Our team of experts brings together innovative strategies and creative solutions tailored
+          to your business needs. Let us help you grow your business and achieve impressive digital
+          marketing results.
+        </p>
+        <div class="wrap-cont-team">
+          <div class="team_content">
+            <div class="team_content_item team_item2 active-item mob_show_item">
+              <div class="team_content_item-textbox">
+                <p class="team_content_item-textbox_name">Eugene Ugolkov</p>
+                <p class="team_content_item-textbox_place">CEO and Founder</p>
+              </div>
+            </div>
+            <div class="team_content_item team_item1">
+              <div class="team_content_item-textbox">
+                <p class="team_content_item-textbox_name">Oksana Hevakovska</p>
+                <p class="team_content_item-textbox_place">Account Strategist</p>
+              </div>
+            </div>
+            <div class="team_content_item team_item2 active-item mob_hide_item">
+              <div class="team_content_item-textbox">
+                <p class="team_content_item-textbox_name">Eugene Ugolkov</p>
+                <p class="team_content_item-textbox_place">CEO and Founder</p>
+              </div>
+            </div>
+            <div class="team_content_item team_item3">
+              <div class="team_content_item-textbox">
+                <p class="team_content_item-textbox_name">Olena Myts</p>
+                <p class="team_content_item-textbox_place">Head of SEO</p>
+              </div>
+            </div>
+            <div class="team_content_item team_item4">
+              <div class="team_content_item-textbox">
+                <p class="team_content_item-textbox_name">Andrew Stozhuk</p>
+                <p class="team_content_item-textbox_place">Operations coordinator</p>
+              </div>
+            </div>
+            <div class="team_content_item team_item5">
+              <div class="team_content_item-textbox">
+                <p class="team_content_item-textbox_name">Oksana Hlushko</p>
+                <p class="team_content_item-textbox_place">Head of Google Ads</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slider_wrapper">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="team_content_item team_item2 mob_show_item">
+                  <div class="team_content_item-textbox">
+                    <p class="team_content_item-textbox_name">Eugene Ugolkov</p>
+                    <p class="team_content_item-textbox_place">CEO and Founder</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="team_content_item team_item1">
+                  <div class="team_content_item-textbox">
+                    <p class="team_content_item-textbox_name">Oksana Hevakovska</p>
+                    <p class="team_content_item-textbox_place">Account Strategist</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="team_content_item team_item3">
+                  <div class="team_content_item-textbox">
+                    <p class="team_content_item-textbox_name">Olena Myts</p>
+                    <p class="team_content_item-textbox_place">Head of SEO</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="team_content_item team_item4">
+                  <div class="team_content_item-textbox">
+                    <p class="team_content_item-textbox_name">Andrew Stozhuk</p>
+                    <p class="team_content_item-textbox_place">Operations coordinator</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="team_content_item team_item5">
+                  <div class="team_content_item-textbox">
+                    <p class="team_content_item-textbox_name">Oksana Hlushko</p>
+                    <p class="team_content_item-textbox_place">Head of Google Ads</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="buttons_wrap">
+          <div class="swiper-button-next swiper-button-next-team"></div>
+          <div class="swiper-button-prev swiper-button-prev-team"></div>
+        </div>
+        <p class="team_text mob-team-text">
+          Our team of experts brings together innovative strategies and creative solutions tailored
+          to your business needs. Let us help you grow your business and achieve impressive digital
+          marketing results.
+        </p>
+        <a href="/about-us/" class="team_see_button"><span class="move-up">see more</span></a>
+      </div>
+    </section>
+    <footer>
+      <section class="footer-contacts" data-aos="fade-up">
+        <div class="footer-contacts__text-container">
+          <img src="img/contacts/text.gif" alt="image" class="footer-contacts__gif" />
+          <button class="footer-contacts__button">contact us</button>
+        </div>
+
+        <div class="footer-contacts__image-container">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="565"
+            height="464"
+            viewBox="0 0 565 464"
+            fill="none"
+            class="footer-contacts__svg"
+          >
+            <path
+              d="M435.985 520.832C365.152 526.247 300.358 532.594 241.603 539.874C182.848 547.153 148.655 519.306 139.023 456.332C129.392 393.357 99.7141 342.03 49.9908 302.348C0.267498 262.667 -11.6141 214.881 14.3461 158.988C40.3063 103.096 83.2244 75.1076 143.101 75.0238C202.977 74.94 262.602 57.0866 321.976 21.4635C381.349 -14.1596 429.402 -4.87143 466.133 49.3281C502.863 103.528 530.076 159.53 547.771 217.335C565.465 275.14 568.966 338.82 558.274 408.376C547.581 477.932 506.819 515.417 435.985 520.832Z"
+              fill="url(#paint0_linear_792_3285)"
+            />
+            <defs>
+              <linearGradient
+                id="paint0_linear_792_3285"
+                x1="449.723"
+                y1="28.4445"
+                x2="210.271"
+                y2="559.172"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#9E00FF" />
+                <stop offset="1" stop-color="#6C01F6" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <img src="img/contacts/right-image.png" alt="image" class="footer-contacts__image" />
+        </div>
+      </section>
+      <section class="footer-partners" data-aos="fade-up">
+        <h2 class="footer-partners__title">partners</h2>
+        <div class="footer-partners__wrap">
+          <div
+            class="footer-partners__logo-container footer-partners__row footer-partners__row--small"
+          >
+            <img src="img/partners/facebook-logo.svg" alt="image" class="footer-partners__logo" />
+            <img src="img/partners/google-logo.png" alt="image" class="footer-partners__logo" />
+            <img src="img/partners/shopify-logo.svg" alt="image" class="footer-partners__logo" />
+          </div>
+          <div
+            class="footer-partners__logo-container footer-partners__row footer-partners__row--large"
+          >
+            <img src="img/partners/figma-logo.svg" alt="image" class="footer-partners__logo" />
+            <img src="img/partners/klaviyo-logo.svg" alt="image" class="footer-partners__logo" />
+            <img src="img/partners/looker-logo.svg" alt="image" class="footer-partners__logo" />
+          </div>
+        </div>
+      </section>
+      <section class="footer-credentials">
+        <img src="img/credentials/cone.png" alt="image" class="footer-credentials__cone" />
+        <div class="footer-credentials__contact-container">
+          <h4 class="footer-credentials__contact-title">Our Contacts</h4>
+          <div class="footer-credentials__contact-us">
+            <h5 class="footer-credentials__contact-us-title">us:</h5>
+            <div class="footer-credentials__contact-us-container">
+              <p>133-01 Cross Bay Blvd,</p>
+              <p>Howard Beach</p>
+              <p>NY 11414</p>
+              <a href="tel:+13478979373">+1 347 897 9373</a>
+              <a href="mailto:contact@webugol.com">contact@webugol.com</a>
+            </div>
+          </div>
+          <div class="footer-credentials__contact-ukraine">
+            <h5 class="footer-credentials__contact-ukraine-title">ukraine:</h5>
+            <div class="footer-credentials__contact-ukraine-container">
+              <p>145a Chornovola Av.</p>
+              <p>Lviv 79035</p>
+              <p>Ukraine</p>
+              <a href="tel:+380938826500">+38 093 882 6500</a>
+              <a href="mailto:contact@webugol.com">contact@webugol.com</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-credentials__social-container">
+          <h5 class="footer-credentials__social-title">social media</h5>
+          <div class="footer-credentials__social-icons">
+            <a href="https://www.instagram.com/webugol/" target="_blank">
+              <img
+                src="img/credentials/instagram.png"
+                alt="image"
+                class="footer-credentials__icon"
+              />
+            </a>
+            <a href="https://www.facebook.com/webugol/" target="_blank">
+              <img
+                src="img/credentials/uit_facebook-f.png"
+                alt="image"
+                class="footer-credentials__icon"
+              />
+            </a>
+            <a href="https://www.linkedin.com/company/webugol/" target="_blank">
+              <img
+                src="img/credentials/linkedin.png"
+                alt="image"
+                class="footer-credentials__icon"
+              />
+            </a>
+            <a
+              href="https://www.google.com/maps/place/Webugol+-+Маркетингова+агенція/@49.8523671,24.0207104,17z/data=!3m1!4b1!4m5!3m4!1s0x473add9a181694ad:0x36b4b7078b0aac35!8m2!3d49.8523671!4d24.0228991"
+              target="_blank"
+            >
+              <img src="img/credentials/gmail.png" alt="image" class="footer-credentials__icon" />
+            </a>
+            <a href="https://clutch.co/profile/webugol#summary" target="_blank">
+              <img
+                src="img/credentials/arcticons.png"
+                alt="image"
+                class="footer-credentials__icon"
+              />
+            </a>
+            <a href="https://www.youtube.com/channel/UCTz9pjgaffPnINNaLWF-gOQ" target="_blank">
+              <img src="img/credentials/youtube.png" alt="image" class="footer-credentials__icon" />
+            </a>
+          </div>
+          <button class="footer-credentials__button">contact us</button>
+          <a href="/">
+            <img src="img/credentials/logo.png" alt="image" class="footer-credentials__logo" />
+          </a>
+        </div>
+        <img
+          src="img/credentials/right-image.png"
+          alt="image"
+          class="footer-credentials__pattern"
+        />
+        <img
+          src="img/credentials/pattern-mob.png"
+          alt="image"
+          class="footer-credentials__pattern-mob"
+        />
+      </section>
+    </footer>
   </body>
   <script src="js/script.js"></script>
+  <script src="js/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.mySwiper', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      navigation: {
+        nextEl: '.swiper-button-next-team',
+        prevEl: '.swiper-button-prev-team',
+      },
+    });
+  </script>
 </html>
