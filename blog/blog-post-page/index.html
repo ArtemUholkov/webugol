@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/global/favicon.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="img/global/favicon.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="img/global/favicon.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="img/global/favicon.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="img/global/favicon.png" />
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Biryani:wght@200;300;400;600;700;800;900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+    <!-- FONTS END -->
+    <link rel="icon" href="../../img/global/favicon.png" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="../../css/index.css" />
+    <link rel="stylesheet" href="../../about-us/css/index.css" />
+    <title>Blog post</title>
+</head>
+
+<body>
+    <header>
+        <div class="header_wrapper">
+            <div class="header_logo-wrapper">
+                <a href="/">
+                    <img src="../../img/global/main-logo.svg" alt="logo" class="header_logo_img" />
+                </a>
+            </div>
+            <div class="header_burger-wrapper">
+                <div class="header_burger">
+                    <img src="../../img/main/burger.svg" alt="burger" class="burger_img" />
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="popup">
+        <div class="sec_popup">
+            <div class="popup_content_wrapper">
+                <p class="popup_arrow-back">Back to main menu</p>
+                <a href="../../industries/" class="popup_title">INDUSTRIES</a>
+                <div class="popup_links_wrapper">
+                    <a href="../../industries/health-and-wellness/" class="popup_links_item">Health & Wellness</a>
+                    <a href="../../industries/construction/" class="popup_links_item">Construction</a>
+                    <a href="../../industries/home-services/" class="popup_links_item">Home Services</a>
+                    <a href="../../industries/ecommerce/" class="popup_links_item">Ecommerce</a>
+                    <a href="../../industries/it-companies/" class="popup_links_item">IT Companies</a>
+                    <a href="../../industries/industrial/" class="popup_links_item">Industrial</a>
+                </div>
+            </div>
+        </div>
+        <div class="trd_popup">
+            <div class="popup_content_wrapper">
+                <p class="popup_arrow-back">Back to main menu</p>
+                <a href="../../services/" class="popup_title">Services</a>
+                <div class="popup_links_wrapper">
+                    <a href="../../services/google-ads/" class="popup_links_item">Google Ads</a>
+                    <a href="../../services/meta-ads/" class="popup_links_item">Meta Ads</a>
+                    <a href="../../services/website-seo/" class="popup_links_item">Website SEO</a>
+                    <a href="../../services/local-seo/" class="popup_links_item">Local SEO</a>
+                    <a href="../../services/email-marketing/" class="popup_links_item">Email Marketing</a>
+                    <a href="../../services/influencer-marketing/" class="popup_links_item">Influencer Marketing</a>
+                    <a href="../../services/graphic-design/" class="popup_links_item">Graphic Design</a>
+                    <a href="../../services/web-design/" class="popup_links_item">UX Design / Web Design</a>
+                    <a href="../../services/website-development/" class="popup_links_item">Website Development</a>
+                    <a href="../../services/advanced-analytics/" class="popup_links_item">Advanced Analytics</a>
+                </div>
+            </div>
+        </div>
+        <div class="popup_wrapper">
+            <div class="popup_header">
+                <div class="header_wrapper">
+                    <div class="header_logo-wrapper">
+                        <a href="/">
+                            <img src="../../img/global/white-logo.svg" alt="logo" class="header_logo_img" />
+                        </a>
+                    </div>
+                    <div class="header_burger-wrapper popup_burger_wrapper">
+                        <div class="popup_burger">
+                            <svg class="close-button" xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                                viewBox="0 0 40 40" fill="none">
+                                <path id="mypath_one" d="M8 8.00049L31 31.0005M8 31.0005L31 8.00049" stroke="white"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <svg class="search-button desk_search" xmlns="http://www.w3.org/2000/svg" width="40"
+                                height="40" viewBox="0 0 40 40" fill="none">
+                                <path id="mypath_two"
+                                    d="M35.0003 35L27.762 27.7616M27.762 27.7616C29.0002 26.5235 29.9823 25.0536 30.6524 23.4359C31.3225 21.8182 31.6674 20.0843 31.6674 18.3333C31.6674 16.5823 31.3225 14.8484 30.6524 13.2307C29.9823 11.613 29.0002 10.1431 27.762 8.90498C26.5239 7.66683 25.054 6.68468 23.4363 6.0146C21.8185 5.34452 20.0847 4.99963 18.3337 4.99963C16.5827 4.99963 14.8488 5.34452 13.2311 6.0146C11.6134 6.68468 10.1435 7.66683 8.90534 8.90498C6.40479 11.4055 5 14.797 5 18.3333C5 21.8696 6.40479 25.2611 8.90534 27.7616C11.4059 30.2622 14.7974 31.667 18.3337 31.667C21.87 31.667 25.2615 30.2622 27.762 27.7616Z"
+                                    stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <div class="search_field">
+                                <input type="text" class="field" />
+                                <button class="close-search">&times;</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="popup_links">
+                <nav class="navbar">
+                    <a href="../../index.html" class="nav_link" id="removeit"><span class="nav_number">01</span><span
+                            class="nav_text">MAIN</span></a>
+                    <a href="../../about-us/" class="nav_link" id="removeit"><span class="nav_number">02</span><span
+                            class="nav_text">about us</span></a>
+                    <a href="#" class="nav_link" id="fstlink"><span class="nav_number">03</span><span
+                            class="nav_text">industries</span><span class="nav_icon nav_icon_one"><img
+                                src="../../img/main/arrow.svg" alt="icon" /></span></a>
+                    <a href="#" class="nav_link" id="sndlink"><span class="nav_number">04</span><span
+                            class="nav_text">services</span><span class="nav_icon nav_icon_two"><img
+                                src="../../img/main/arrow.svg" alt="icon" /></span></a>
+                    <a href="../../projects/" class="nav_link" id="removeit"><span class="nav_number">05</span><span
+                            class="nav_text">projects</span></a>
+                    <a href="../../blog/" class="nav_link" id="removeit"><span class="nav_number">06</span><span
+                            class="nav_text">blog</span></a>
+                    <a href="../../contact-us/" class="nav_link" id="removeit"><span class="nav_number">07</span><span
+                            class="nav_text">contacts</span></a>
+                    <div class="mob_search_wrapper">
+                        <svg class="mob_search" xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                            viewBox="0 0 40 40" fill="none">
+                            <path id="mypath_two"
+                                d="M35.0003 35L27.762 27.7616M27.762 27.7616C29.0002 26.5235 29.9823 25.0536 30.6524 23.4359C31.3225 21.8182 31.6674 20.0843 31.6674 18.3333C31.6674 16.5823 31.3225 14.8484 30.6524 13.2307C29.9823 11.613 29.0002 10.1431 27.762 8.90498C26.5239 7.66683 25.054 6.68468 23.4363 6.0146C21.8185 5.34452 20.0847 4.99963 18.3337 4.99963C16.5827 4.99963 14.8488 5.34452 13.2311 6.0146C11.6134 6.68468 10.1435 7.66683 8.90534 8.90498C6.40479 11.4055 5 14.797 5 18.3333C5 21.8696 6.40479 25.2611 8.90534 27.7616C11.4059 30.2622 14.7974 31.667 18.3337 31.667C21.87 31.667 25.2615 30.2622 27.762 27.7616Z"
+                                stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <div class="mob_field">
+                            <input type="text" class="field_mob" />
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </section>
+    <section class="summary-section">
+        <!-- <div class="summary-section__video-container">
+            <video autoplay playsinline muted loop id="myVideo" class="summary-section__video">
+                <source src="../assets/img/main/video.mp4" type="video/mp4" />
+            </video>
+        </div> -->
+        <div class="summary-section__left-container">
+            <div class="summary-section__title-container">
+                <div class="summary-section__minute-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        class="summary-section__minute-svg">
+                        <path
+                            d="M12.0003 18.8831C10.0172 18.9087 8.06528 18.3878 6.35865 17.3774C4.65202 16.367 3.25657 14.9062 2.32532 13.1551C2.14731 12.7961 2.05469 12.4008 2.05469 12.0001C2.05469 11.5994 2.14731 11.2041 2.32532 10.8451C3.25657 9.09404 4.65202 7.63321 6.35865 6.62282C8.06528 5.61242 10.0172 5.09148 12.0003 5.11711C13.9835 5.09148 15.9354 5.61242 17.642 6.62282C19.3486 7.63321 20.7441 9.09404 21.6753 10.8451C21.8533 11.2041 21.9459 11.5994 21.9459 12.0001C21.9459 12.4008 21.8533 12.7961 21.6753 13.1551C20.7441 14.9062 19.3486 16.367 17.642 17.3774C15.9354 18.3878 13.9835 18.9087 12.0003 18.8831ZM12.0003 6.11711C10.2027 6.0905 8.43239 6.55942 6.88363 7.47245C5.33488 8.38548 4.06744 9.70735 3.22032 11.2931C3.11108 11.513 3.05423 11.7551 3.05423 12.0006C3.05423 12.2461 3.11108 12.4883 3.22032 12.7081C4.06758 14.2937 5.33507 15.6154 6.88382 16.5282C8.43256 17.441 10.2028 17.9098 12.0003 17.8831C13.798 17.9097 15.5682 17.4408 17.117 16.5278C18.6658 15.6148 19.9332 14.2929 20.7803 12.7071C20.8901 12.4876 20.9473 12.2456 20.9473 12.0001C20.9473 11.7547 20.8901 11.5126 20.7803 11.2931C19.9332 9.70735 18.6658 8.38548 17.117 7.47245C15.5682 6.55942 13.798 6.0905 12.0003 6.11711Z"
+                            fill="white" />
+                        <path
+                            d="M12.0021 16.0489C11.2013 16.0489 10.4185 15.8115 9.75262 15.3665C9.08677 14.9216 8.5678 14.2893 8.26134 13.5494C7.95488 12.8096 7.8747 11.9954 8.03093 11.21C8.18716 10.4246 8.57279 9.70312 9.13905 9.13685C9.70531 8.57059 10.4268 8.18496 11.2122 8.02873C11.9976 7.8725 12.8118 7.95268 13.5516 8.25914C14.2915 8.5656 14.9238 9.08457 15.3687 9.75043C15.8137 10.4163 16.0511 11.1991 16.0511 11.9999C16.0498 13.0734 15.6228 14.1025 14.8637 14.8615C14.1047 15.6206 13.0756 16.0476 12.0021 16.0489ZM12.0021 8.94893C11.3992 8.94893 10.8098 9.1277 10.3084 9.46264C9.80704 9.79758 9.41624 10.2737 9.18541 10.8307C8.95458 11.3877 8.89408 12.0006 9.01157 12.592C9.12905 13.1834 9.41924 13.7267 9.84545 14.1532C10.2717 14.5797 10.8148 14.8702 11.4061 14.9881C11.9974 15.106 12.6104 15.0459 13.1675 14.8154C13.7247 14.5849 14.201 14.1945 14.5363 13.6933C14.8716 13.1922 15.0507 12.6029 15.0511 11.9999C15.0509 11.1914 14.7295 10.416 14.1578 9.84425C13.5861 9.27251 12.8107 8.9512 12.0021 8.95093V8.94893Z"
+                            fill="white" />
+                        <path
+                            d="M11.9967 14.0279C13.1168 14.0279 14.0247 13.12 14.0247 11.9999C14.0247 10.8799 13.1168 9.97192 11.9967 9.97192C10.8767 9.97192 9.96875 10.8799 9.96875 11.9999C9.96875 13.12 10.8767 14.0279 11.9967 14.0279Z"
+                            fill="white" />
+                    </svg>
+                    <p class="summary-section__minute-num">7</p>
+                    <p class="summary-section__minute-text">min</p>
+                </div>
+                <h3 class="summary-section__title">How to Choose the Best CBD Keywords for Your SEO Strategy</h3>
+                <p class="summary-section__tag">#Seo optimization</p>
+                <p class="summary-section__date">sep 20, 2024</p>
+            </div>
+            <div class="summary-section__expert-container">
+                <h4 class="summary-section__expert-title">let our experts help you</h4>
+                <div class="summary-section__expert-wrapper">
+                    <div class="summary-section__image-container">
+                        <img src="./assets/img/summary/expert.png" alt="photo" class="summary-section__image" />
+                    </div>
+                    <div class="summary-section__text-container">
+                        <p class="summary-section__name">Eugene Ugolkov</p>
+                        <p class="summary-section__job">Sales Consultant</p>
+                    </div>
+                </div>
+                <button class="summary-section__expert-btn">Contact Sales</button>
+            </div>
+        </div>
+        <div class="summary-section__right-container">
+            <h2 class="summary-section__right-container-title">Table of content</h2>
+            <div class="summary-section__right-text-container">
+                <div class="summary-section__item-container">
+                    <div class="summary-section__main-item">
+                        <img src="./assets/img/summary/triangle.png" alt="photo" class="small-triangle" />
+                        <p class="summary-section__main-item-title">Understanding CBD SEO keywords</p>
+                    </div>
+                    <div class="summary-section__secondary-item">
+                        <img src="./assets/img/summary/dot.png" alt="photo" class="small-triangle" />
+                        <p class="summary-section__secondary-item-title">Different kinds of CBD Keywords</p>
+                    </div>
+                    <div class="summary-section__secondary-item">
+                        <img src="./assets/img/summary/dot.png" alt="photo" class="small-triangle" />
+                        <p class="summary-section__secondary-item-title">Broad Short-Tail CBD Keywords</p>
+                    </div>
+                    <div class="summary-section__secondary-item">
+                        <img src="./assets/img/summary/dot.png" alt="photo" class="small-triangle" />
+                        <p class="summary-section__secondary-item-title">CBD Keywords with a Longer, More Specific
+                            Phrase</p>
+                    </div>
+                    <div class="summary-section__main-item">
+                        <img src="./assets/img/summary/triangle.png" alt="photo" class="small-triangle" />
+                        <p class="summary-section__main-item-title">Why CBD Keywords are Unique</p>
+                    </div>
+                    <div class="summary-section__main-item">
+                        <img src="./assets/img/summary/triangle.png" alt="photo" class="small-triangle" />
+                        <p class="summary-section__main-item-title">Intent Behind CBD Searches</p>
+                    </div>
+                    <div class="summary-section__main-item">
+                        <img src="./assets/img/summary/triangle.png" alt="photo" class="small-triangle" />
+                        <p class="summary-section__main-item-title">Researching CBD Keywords</p>
+                    </div>
+                    <div class="summary-section__secondary-item">
+                        <img src="./assets/img/summary/dot.png" alt="photo" class="small-triangle" />
+                        <p class="summary-section__secondary-item-title">Use CBD Keyword Research Tools</p>
+                    </div>
+                    <div class="summary-section__secondary-item">
+                        <img src="./assets/img/summary/dot.png" alt="photo" class="small-triangle" />
+                        <p class="summary-section__secondary-item-title">Focus on Long-Tail CBD Keywords</p>
+                    </div>
+                    <div class="summary-section__secondary-item">
+                        <img src="./assets/img/summary/dot.png" alt="photo" class="small-triangle" />
+                        <p class="summary-section__secondary-item-title">Competitor CBD Keywords Analysis</p>
+                    </div>
+                    <div class="summary-section__main-item">
+                        <img src="./assets/img/summary/triangle.png" alt="photo" class="small-triangle" />
+                        <p class="summary-section__main-item-title">Analyzing Search Volume and Difficulty</p>
+                    </div>
+                    <div class="summary-section__secondary-item">
+                        <img src="./assets/img/summary/dot.png" alt="photo" class="small-triangle" />
+                        <p class="summary-section__secondary-item-title">Search Volume CBD Keywords</p>
+                    </div>
+                    <div class="summary-section__secondary-item">
+                        <img src="./assets/img/summary/dot.png" alt="photo" class="small-triangle" />
+                        <p class="summary-section__secondary-item-title">Keyword Difficulty CBD Keywords</p>
+                    </div>
+                    <div class="summary-section__secondary-item">
+                        <img src="./assets/img/summary/dot.png" alt="photo" class="small-triangle" />
+                        <p class="summary-section__secondary-item-title">Trends and Seasonality CBD Keywords</p>
+                    </div>
+                    <div class="summary-section__secondary-item">
+                        <img src="./assets/img/summary/dot.png" alt="photo" class="small-triangle" />
+                        <p class="summary-section__secondary-item-title">Identifying User Intent: Understanding What
+                            Customers Want</p>
+                    </div>
+                </div>
+
+                <div class="summary-section__item-container">
+                    <div class="summary-section__main-item">
+                        <img src="./assets/img/summary/triangle.png" alt="photo" class="small-triangle" />
+                        <p class="summary-section__main-item-title">Optimizing for Local SEO</p>
+                    </div>
+                    <div class="summary-section__secondary-item">
+                        <img src="./assets/img/summary/dot.png" alt="photo" class="small-triangle" />
+                        <p class="summary-section__secondary-item-title">The Role of Local SEO in CBD Sales</p>
+                    </div>
+                    <div class="summary-section__secondary-item">
+                        <img src="./assets/img/summary/dot.png" alt="photo" class="small-triangle" />
+                        <p class="summary-section__secondary-item-title">Choosing Geo-Specific CBD Keywords</p>
+                    </div>
+                    <div class="summary-section__main-item">
+                        <img src="./assets/img/summary/triangle.png" alt="photo" class="small-triangle" />
+                        <p class="summary-section__main-item-title">Avoiding Pitfalls in CBD Keyword Strategy</p>
+                    </div>
+                    <div class="summary-section__secondary-item">
+                        <img src="./assets/img/summary/dot.png" alt="photo" class="small-triangle" />
+                        <p class="summary-section__secondary-item-title">CBD Keywords Stuffing</p>
+                    </div>
+                    <div class="summary-section__secondary-item">
+                        <img src="./assets/img/summary/dot.png" alt="photo" class="small-triangle" />
+                        <p class="summary-section__secondary-item-title">Staying Compliant with Advertising Restrictions
+                        </p>
+                    </div>
+                    <div class="summary-section__main-item">
+                        <img src="./assets/img/summary/triangle.png" alt="photo" class="small-triangle" />
+                        <p class="summary-section__main-item-title">Tracking and Adjusting Your Keyword Strategy</p>
+                    </div>
+                    <div class="summary-section__secondary-item">
+                        <img src="./assets/img/summary/dot.png" alt="photo" class="small-triangle" />
+                        <p class="summary-section__secondary-item-title">Keep track of performance</p>
+                    </div>
+                    <div class="summary-section__secondary-item">
+                        <img src="./assets/img/summary/dot.png" alt="photo" class="small-triangle" />
+                        <p class="summary-section__secondary-item-title">Adapting to shifts in the market</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="blog-section">
+        <div class="blog-section__scroll">
+            <a>
+                <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="scroll-up">
+                    <g clip-path="url(#clip0_5317_11993)">
+                        <path
+                            d="M31.5 0H10.5C9.10761 0 7.77226 0.553123 6.78769 1.53769C5.80312 2.52226 5.25 3.85761 5.25 5.25V36.75C5.25 38.1424 5.80312 39.4777 6.78769 40.4623C7.77226 41.4469 9.10761 42 10.5 42H31.5C32.8924 42 34.2277 41.4469 35.2123 40.4623C36.1969 39.4777 36.75 38.1424 36.75 36.75V5.25C36.75 3.85761 36.1969 2.52226 35.2123 1.53769C34.2277 0.553123 32.8924 0 31.5 0ZM19.6875 17.6059L16.6793 20.6168C16.4328 20.8632 16.0985 21.0017 15.75 21.0017C15.4015 21.0017 15.0672 20.8632 14.8207 20.6168C14.5743 20.3703 14.4358 20.036 14.4358 19.6875C14.4358 19.339 14.5743 19.0047 14.8207 18.7582L20.0707 13.5082C20.1927 13.386 20.3375 13.289 20.497 13.2229C20.6564 13.1567 20.8274 13.1227 21 13.1227C21.1726 13.1227 21.3436 13.1567 21.503 13.2229C21.6625 13.289 21.8073 13.386 21.9293 13.5082L27.1793 18.7582C27.3013 18.8803 27.3981 19.0252 27.4641 19.1846C27.5302 19.344 27.5642 19.5149 27.5642 19.6875C27.5642 19.8601 27.5302 20.031 27.4641 20.1904C27.3981 20.3498 27.3013 20.4947 27.1793 20.6168C27.0572 20.7388 26.9123 20.8356 26.7529 20.9016C26.5935 20.9677 26.4226 21.0017 26.25 21.0017C26.0774 21.0017 25.9065 20.9677 25.7471 20.9016C25.5877 20.8356 25.4428 20.7388 25.3207 20.6168L22.3125 17.6059V27.5625C22.3125 27.9106 22.1742 28.2444 21.9281 28.4906C21.6819 28.7367 21.3481 28.875 21 28.875C20.6519 28.875 20.3181 28.7367 20.0719 28.4906C19.8258 28.2444 19.6875 27.9106 19.6875 27.5625V17.6059Z"
+                            fill="white" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_5317_11993">
+                            <rect width="42" height="42" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </a>
+        </div>
+        <div class="wrap">
+            <div class="blog-section__first-column">
+                <div class="blog-section__wrapper">
+                    <h3 class="blog-section__title">
+                        How to Choose the Best CBD Keywords for Your SEO Strategy
+                    </h3>
+                    <p class="blog-section__text">
+                        In a crowded market, such as the CBD industry, it's imperative to utilize effective Search
+                        Engine
+                        Optimization (SEO) in order to rise above competitors. Essentially SEO involves enhancing online
+                        content
+                        with keywords and links that improve search engine rankings for potential customers seeking CBD
+                        products. Due to legal restraints surrounding advertising of said items, traditional marketing
+                        avenues
+                        are often inadequate; therefore investing time into strategic SEO tactics is crucial in
+                        generating
+                        organic traffic flow towards one's brand - while simultaneously establishing its authority
+                        status
+                        within
+                        the field by means of quality webpage content infused with rich keyword variations and
+                        trustworthy
+                        backlinks. This digital approach enhances visibility for businesses hoping target audiences will
+                        take
+                        notice resulting ultimately not only added sales but also securing customer loyalty moving
+                        forward.
+                    </p>
+                </div>
+                <h3 class="blog-section__title">Understanding CBD SEO keywords</h3>
+                <img src="./assets/img/blog/img-1.png" alt="photo" class="blog-section__img" />
+                <h4 class="blog-section__subtitle">Different kinds of CBD Keywords</h4>
+                <p class="blog-section__text">
+                    It is essential to comprehend the various keyword classifications for successful search engine
+                    optimization (SEO) in CBD digital marketing. Short-tail and long-tail keywords are the two major
+                    categories of keywords that must be comprehended.
+                </p>
+                <h4 class="blog-section__subtitle">
+                    Broad Short-Tail CBD Keywords
+                </h4>
+                <p class="blog-section__text">
+                    Short-tail keywords are typically one or two words and have a broad scope, appealing to a vast
+                    audience
+                    with high search volumes. However, these kinds of keywords commonly encounter notable competition
+                    for
+                    ranking purposes. Examples include "CBD oil" or "CBD benefits," which can generate substantial
+                    traffic
+                    but present difficulties due to their general categorization and fierce rivalry within the market
+                    space.
+                </p>
+                <h4 class="blog-section__subtitle">
+                    CBD Keywords with a Longer, More Specific Phrase
+                </h4>
+                <p class="blog-section__text">
+                    Long-tail keywords consist of three or more words and tend to be highly specific. They cater to
+                    niche
+                    markets, with lower search volumes than broad terms but higher chances for conversion rates.
+                    Examples
+                    include "full-spectrum CBD tinctures" or "best CBD oil for anxiety." By prioritizing long-tail
+                    keywords,
+                    businesses can generate more relevant traffic that has a better chance converting into customers.
+                </p>
+            </div>
+            <div class="blog-section__second-column">
+                <div class="blog-section__wrapper">
+                    <h3 class="blog-section__title">
+                        Why CBD Keywords are Unique
+                    </h3>
+                    <p class="blog-section__text">
+                        The CBD industry's use of keywords poses unique obstacles due to legal restrictions. Unlike
+                        other
+                        sectors, stringent federal and local laws regulate how businesses market their products in
+                        compliance
+                        with guidelines like the FDA's prohibition on unauthorized health-related claims about CBD
+                        benefits.
+                        Advertising channels such as Google or Facebook impose further constraints by banning paid
+                        advertisements for these items outright. Therefore, companies must be astute when selecting
+                        search
+                        terms
+                        that conform to regulations while appealing effectively to target audiences – a challenging
+                        balance
+                        requiring sophisticated techniques combining compliant terminology with innovative marketing
+                        strategies
+                        aimed at maximizing visibility within this tightly controlled arena.
+                    </p>
+                </div>
+                <h3 class="blog-section__title">
+                    Intent Behind CBD Searches
+                </h3>
+                <img src="./assets/img/blog/img-2.png" alt="photo" class="blog-section__img" />
+                <p class="blog-section__text">
+                    CBD product searches on the internet can be broadly classified into three distinct categories-
+                    informational, transactional and navigational - based on users’ search intent.
+                </p>
+                <p class="blog-section__text">
+                    Intent for Gathering Information: Those who are seeking information about CBD products might be
+                    interested in learning more about how they work, potential benefits and side effects, as well as the
+                    distinctions between different available options. These individuals may not yet have made a decision
+                    to
+                    purchase but instead are conducting research so that they can make informed purchases at a later
+                    time.
+                </p>
+                <p class="blog-section__text">
+                    Users who exhibit transactional intent are poised to complete a purchase. They commonly search for
+                    keywords such as "CBD oil buying", "nearby CBD products," or even "most excellent CBD gummies." Such
+                    users have likely gone through extensive research and settled on specific items or product
+                    categories
+                    that they intend to acquire. Their top priorities when shopping include trustworthy vendors,
+                    favourable
+                    pricing options, and convenient purchasing processes.
+                </p>
+                <p class="blog-section__text">
+                    Users with a navigational intent aim to locate a particular website or brand associated with CBD
+                    products. They search for specific terms such as "Medterra official site" or "Charlotte's Web CBD,"
+                    knowing exactly where they want to go and utilizing search engines for fast access of their target
+                    destination. Often, these users seek further information, read reviews, or make direct purchases
+                    from
+                    familiar sources already recognized by them.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="blog-section">
+        <div class="blog-divider">
+            <img src="./assets/img/summary/triangle.png" alt="photo" class="triangle" />
+            <h5 class="blog-divider__title">SEO Strategies for Doctors: How to Rank Higher and Attract More Patients
+            </h5>
+        </div>
+        <div class="wrap">
+            <div class="blog-section__first-column">
+                <h3 class="blog-section__title">
+                    Researching CBD Keywords
+                </h3>
+                <img src="./assets/img/blog/img-3.png" alt="photo" class="blog-section__img" />
+                <h4 class="blog-section__subtitle">Use CBD Keyword Research Tools</h4>
+                <p class="blog-section__text">
+                    In the tremendously competitive CBD industry, thorough keyword research is crucial to optimize your
+                    content. There are valuable resources available such as Google Keyword Planner and Ahrefs that can
+                    assist in identifying relevant keywords. By using Google Keyword Planner, you can gain insights into
+                    search volume trends for various terms which aid in recognizing potential consumer terminology.
+                    Alternatively, with Ahrefs' comprehensive metrics on factors like difficulty level and related
+                    phrases
+                    indicating search volumes it assists immensely. The benefit of utilizing these tools enables a
+                    strongly
+                    compiled list of targeted keywords pertaining to both marketing strategies and written materials
+                    warrants consideration.
+                </p>
+            </div>
+            <div class="blog-section__second-column">
+                <div class="blog-section__wrapper">
+                    <h4 class="blog-section__subtitle">Focus on Long-Tail CBD Keywords</h4>
+                    <p class="blog-section__text">
+                        In CBD markets, prioritizing longer and more specific phrases known as long-tail keywords can
+                        prove
+                        more successful than opting for broad, heavily contested ones. People use these unique phrases
+                        to
+                        search for products they're interested in purchasing or learning about with a higher intent.
+                        Rather
+                        than focusing on a general keyword like "CBD oil," choosing an example such as "top-rated
+                        anxiety-reducing CBD oil" could result in bringing more qualified visitors your way. By using
+                        this
+                        tactic, you'll have less competition overall but also achieve improved conversion rates from the
+                        attentive audience that's drawn towards it - making them worthwhile investments when trying to
+                        reach
+                        precise customers who know what they want.
+                    </p>
+                </div>
+                <h4 class="blog-section__subtitle">Competitor CBD Keywords Analysis</h4>
+                <p class="blog-section__text">
+                    Refining your keyword strategy also entails scrutinizing the keywords used by competitors. Utilizing
+                    tools such as Ahrefs, you can input a competitor's URL and assess their ranking for particular
+                    keywords.
+                    This assessment reveals deficiencies in one's own content approach while it exposes prospects to
+                    concentrate on untapped or underutilised target words that competitors might be overlooking.
+                    Understanding successful tactics of rivals assists in creating an informed and competitive plan
+                    around
+                    essential terms that ultimately boosts visibility and search engine rankings alike.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="blog-section">
+        <div class="wrap">
+            <div class="blog-section__first-column">
+                <h3 class="blog-section__title">
+                    Analyzing Search Volume and Difficulty
+                </h3>
+                <img src="./assets/img/blog/img-4.png" alt="photo" class="blog-section__img" />
+                <h4 class="blog-section__subtitle">Search Volume CBD Keywords</h4>
+                <p class="blog-section__text">
+                    It's essential to focus on keywords that have a substantial search volume in order to draw a
+                    considerable amount of traffic to your website. The higher the number of people looking for specific
+                    terms, the better chances you have at attracting visitors as long as those targeted keywords are
+                    carefully integrated into your content strategy. Nevertheless, it's crucial to make sure that such
+                    efforts align with both audience and business objectives while focusing not only on keyword quantity
+                    but
+                    also quality; this will ultimately guarantee relevant traffic interested in purchasing or using the
+                    products / services offered by your site.
+                </p>
+                <h4 class="blog-section__subtitle">Keyword Difficulty CBD Keywords</h4>
+                <p class="blog-section__text">
+                    To design a fruitful SEO approach, it is important to maintain equilibrium between high-volume and
+                    low-competition keywords. Keywords with higher volume are often highly competitive which can be
+                    challenging for newer or smaller websites in ranking them positively. Conversely, low-competition
+                    keywords may have limited search volumes but they provide more accessible prospects of enhancing the
+                    website's rankings on search engines. An effective strategy involves targeting both categories by
+                    focusing on some exceedingly competitive yet rewarding terms as well as relatively easy-to-rank-for
+                    less
+                    demanding ones that heighten chances of success in SERPs for businesses striving towards maximum
+                    exposure online.
+                </p>
+                <h4 class="blog-section__subtitle">Trends and Seasonality CBD Keywords</h4>
+                <p class="blog-section__text">
+                    The process of selecting keywords involves taking into account current trends and seasonal
+                    fluctuations,
+                    both of which have a substantial impact. Trends like the increased demand for pet CBD products or
+                    novel
+                    beauty items can lead to temporary surges in keyword searches that present opportunities for
+                    creating
+                    timely content. Furthermore, grasping seasonality enables companies to anticipate popular keyword
+                    phrases during peak search periods; this ensures their material stays pertinent and visible as
+                    required.
+                    For example, leading up to holiday seasons gift-related vocabulary tends to skyrocket — careful
+                    planning
+                    is crucial if businesses hope not miss out on those highly searched terms.
+                </p>
+            </div>
+            <div class="blog-section__second-column">
+                <div class="blog-section__wrapper">
+                    <h4 class="blog-section__subtitle">Identifying User Intent: Understanding What Customers Want</h4>
+                    <p class="blog-section__text pad-small">
+                        It is essential to pick appropriate keywords that match the user's purpose as it drives
+                        significant
+                        traffic and meets their requirements. User intent has three fundamental categories, including
+                        educational, product-centric or navigational searches. Realizing what a user wants helps in
+                        creating
+                        content that resonates with their needs while searching for relevant information on your site.
+                    </p>
+                    <p class="blog-section__text pad-small">
+                        The intention behind education-oriented searches is to seek information or solutions for
+                        queries.
+                        Words such as "how-to," "tips on," and "benefits of" are indicators that the user seeks an
+                        educational outcome.
+                    </p>
+                    <p class="blog-section__text pad-small">
+                        Users with product-related intent are in the process of examining or investigating various goods
+                        and
+                        services. Commonly used keywords for this category include "highest quality [product],"
+                        "feedback,"
+                        and "[service] recommendations."</p>
+                    <p class="blog-section__text pad-small">
+                        Users have a navigational intent when they attempt to locate a precise website or page, with
+                        possible keywords being brand names, company names, or certain product monikers.
+                        Matching keywords to the phases of a prospective customer's purchasing process.
+                        Strategic incorporation of various types of keywords is vital in each stage - awareness,
+                        consideration and decision-making - throughout the buyer's journey
+                    </p>
+                </div>
+                <img src="./assets/img/blog/img-5.png" alt="photo" class="blog-section__img" />
+                <p class="blog-section__text pad-small">
+                    In the awareness stage, prospective customers recognize their dilemma but lack knowledge of any
+                    remedies. To target these users effectively, use keyword phrases that are informative and emphasize
+                    the
+                    customer's concerns and inquiries. Illustrative samples may comprise "reasons for [concern]" or
+                    "ways to
+                    tackle [challenge]."</p>
+                <p class="blog-section__text pad-small">
+                    At the Consideration Stage, users conduct research on prospective solutions. The keywords employed
+                    should reflect a comparison, evaluation or exploration of available options while phrases such as
+                    "best
+                    [solution]" and "reviews of [service]" are commonly used in this phase.
+                </p>
+                <p class="blog-section__text pad-small">
+                    During the decision-making stage, users express their intent to make a purchase or commit to
+                    something
+                    specific. They tend to use transactional terms such as "buy," 'purchase" and "discount." In
+                    addition,
+                    brand-specific keywords indicating preference towards a particular company or product are also
+                    important.</p>
+                <p class="blog-section__text pad-small">
+                    Businesses can enhance their chances of conversion and customer satisfaction by accurately linking
+                    keywords with user intent along with the various stages of a buyer's journey, ultimately attracting
+                    suitable visitors at appropriate times.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="blog-section">
+        <div class="blog-divider">
+            <img src="./assets/img/summary/triangle.png" alt="photo" class="triangle" />
+            <h5 class="blog-divider__title">Can You Advertise CBD on Google Ads? Here's What You Need to Know</h5>
+        </div>
+        <div class="wrap">
+            <div class="blog-section__first-column">
+                <h3 class="blog-section__title">
+                    Optimizing for Local SEO
+                </h3>
+                <h4 class="blog-section__subtitle">The Role of Local SEO in CBD Sales</h4>
+                <p class="blog-section__text">
+                    CBD dispensaries and local shops rely heavily on Local SEO to attract foot traffic and enhance their
+                    online visibility. This optimization technique for location-based searches guarantees that potential
+                    customers in close proximity are able to easily locate the business establishment. It is especially
+                    crucial within the CBD industry, which has widely varying regulations and accessibility across
+                    different
+                    locales. When clients conduct a search query such as "CBD dispensary near me" or "CBD oil in [City
+                    Name]," implementing an efficient local SEO strategy will significantly boost your chances of
+                    appearing
+                    at the top of search engine results, leading to increased patronage from locals around you!
+                </p>
+                <h4 class="blog-section__subtitle">Choosing Geo-Specific CBD Keywords</h4>
+                <p class="blog-section__text">
+                    To attract local search traffic for your CBD business, it's crucial to incorporate geo-specific
+                    keywords
+                    into your keyword strategy. This involves adding city names, neighborhoods and even zip codes
+                    alongside
+                    relevant product-related keywords to optimize search results. Rather than using generic terms such
+                    as
+                    "CBD oil," try targeting specific locations like "Chicago" or "Los Angeles." Similarly,
+                    incorporating
+                    phrases such as "near me" in searches - i.e., “CBD dispensary near me” or “best CBD products near
+                    me”-
+                    can also be highly effective due their increasing popularity amongst consumers. By adapting your
+                    approach according to the customer’s location-based needs you will enhance brand visibility on
+                    Google
+                    whilst appealing directly towards those most interested in visiting a corresponding physical store
+                    with
+                    optimal engagement potential.
+                </p>
+                <h3 class="blog-section__title">
+                    Avoiding Pitfalls in CBD Keyword Strategy
+                </h3>
+                <img src="./assets/img/blog/img-6.png" alt="photo" class="blog-section__img" />
+                <h4 class="blog-section__subtitle">CBD Keywords Stuffing</h4>
+                <p class="blog-section__text">
+                    Keyword stuffing is a prevalent blunder in the realm of SEO. It refers to excessively using keywords
+                    in
+                    your content with the intention of improving search engine rankings, which may seem like an
+                    effective
+                    method but can ultimately damage your ranking instead. Advanced algorithms utilized by top-tier
+                    search
+                    engines such as Google are capable of detecting keyword stuffing and will impose penalties on
+                    websites
+                    employing this strategy. This practice compromises not only readability but also user experience;
+                    ergo,
+                    incorporating keywords naturally and contextually should be prioritized instead. Strive for optimal
+                    keyword density equilibrium while producing valuable information that caters to audience needs
+                    accordingly.
+                </p>
+                <h4 class="blog-section__subtitle">Staying Compliant with Advertising Restrictions</h4>
+                <p class="blog-section__text">
+                    The CBD sector faces stringent regulations that encompass advertising and keywords. Laws concerning
+                    the
+                    promotion of CBD products make specific words and phrases taboo or subject to close inspection. To
+                    illustrate, terms that suggest medical advantages without FDA authorization are forbidden for use in
+                    ads. This makes selecting appropriate keywords a critical task necessitating compliance with legal
+                    protocols through careful selection processes. Up-to-date knowledge on current laws is essential
+                    while
+                    seeking guidance from legal experts can ensure alignment between keyword strategies and lawful
+                    mandates.
+                    Abiding by these standards not only prevents any potential legal pitfalls but also promotes
+                    trustworthiness amongst audiences you intend to reach out to effectively towards successful outcomes
+                    within your industry's scope.
+                </p>
+                <h4 class="blog-section__subtitle">Eugene Ugolkov, Ph.D.</h4>
+            </div>
+            <div class="blog-section__second-column">
+                <div class="blog-section__wrapper">
+                    <h3 class="blog-section__title">
+                        Tracking and Adjusting Your Keyword Strategy
+                    </h3>
+                    <h4 class="blog-section__subtitle">Keep track of performance</h4>
+                    <img src="./assets/img/blog/img-7.png" alt="photo" class="blog-section__img" />
+                    <p class="blog-section__text">
+                        It's essential to track keyword rankings and traffic for the success of your SEO endeavors. You
+                        can
+                        leverage tools such as Google Analytics and Search Console to keep an eye on how well your
+                        keywords
+                        perform over time. By analyzing various metrics like click-through rates, impressions, user
+                        behavior, you can get valuable insights into which terms are generating conversions and driving
+                        organic traffic. Frequently reviewing this data enables you to identify poorly performing
+                        keywords
+                        that require optimization or replacement while ensuring that your search engine optimization
+                        strategy is always effective in alignment with business objectives.
+                    </p>
+                </div>
+                <h4 class="blog-section__subtitle">Adapting to shifts in the market</h4>
+                <p class="blog-section__text">
+                    As market trends constantly shift in the ever-evolving digital landscape, it is crucial to regularly
+                    update your keywords for relevance and competitiveness. Your keyword strategy must adapt with
+                    changing
+                    user search behavior and emerging trends by researching new ones, optimizing current choices, or
+                    discontinuing ineffective terms. By proactively responding to these shifts, you can maintain a
+                    strong
+                    SEO presence that readily attracts valuable traffic to your site.
+                </p>
+                <h4 class="blog-section__subtitle">In summary</h4>
+                <p class="blog-section__text pad-small">
+                    Selecting the right keywords is crucial for a digital marketing plan to succeed, especially in CBD's
+                    cut-throat competition. The process entails comprehending your audience, studying pertinent keywords
+                    and
+                    adapting based on performance metrics regularly. Strategic keyword selection boosts search engine
+                    rankings resulting in increased organic traffic and augmented sales alongside brand presence.
+                </p>
+                <p class="blog-section__text">
+                    Take action now by applying this knowledge. Start your CBD keyword research today and uncover the
+                    specific terms that your potential customers are searching for. If you feel overwhelmed or want to
+                    guarantee optimal outcomes, seek assistance from SEO experts who specialize in navigating the
+                    intricacies of the CBD industry. By implementing these practical measures with Webugol, you can
+                    create a
+                    comprehensive and potent keyword strategy that establishes enduring success for your business.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="next-blog-section">
+        <div class="next-blog-section__wrapper">
+            <h4 class="next-blog-section__title">Next BLOG POST</h4>
+            <div class="next-blog-section__container">
+                <p class="next-blog-section__text">
+                    Digital Marketing vs Affiliate Marketing
+                </p>
+                <a class="next-blog-section__btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="42" height="43" viewBox="0 0 42 43" fill="none">
+                        <g clip-path="url(#clip0_5325_12129)">
+                            <path
+                                d="M42 32.25L42 11.25C42 9.85761 41.4469 8.52226 40.4623 7.53769C39.4777 6.55312 38.1424 6 36.75 6L5.25 6C3.85761 6 2.52225 6.55312 1.53769 7.53769C0.553123 8.52225 -1.68622e-07 9.85761 -2.29485e-07 11.25L-1.14742e-06 32.25C-1.20829e-06 33.6424 0.553122 34.9777 1.53769 35.9623C2.52225 36.9469 3.85761 37.5 5.25 37.5L36.75 37.5C38.1424 37.5 39.4777 36.9469 40.4623 35.9623C41.4469 34.9777 42 33.6424 42 32.25ZM24.3941 20.4375L21.3832 17.4292C21.1368 17.1828 20.9983 16.8485 20.9983 16.5C20.9983 16.1515 21.1368 15.8172 21.3832 15.5707C21.6297 15.3243 21.964 15.1858 22.3125 15.1858C22.661 15.1858 22.9953 15.3243 23.2418 15.5707L28.4918 20.8207C28.614 20.9427 28.711 21.0875 28.7771 21.247C28.8433 21.4064 28.8773 21.5774 28.8773 21.75C28.8773 21.9226 28.8433 22.0936 28.7771 22.253C28.711 22.4125 28.614 22.5573 28.4917 22.6793L23.2417 27.9292C23.1197 28.0513 22.9748 28.1481 22.8154 28.2141C22.656 28.2802 22.4851 28.3142 22.3125 28.3142C22.1399 28.3142 21.969 28.2802 21.8096 28.2141C21.6502 28.1481 21.5053 28.0513 21.3832 27.9292C21.2612 27.8072 21.1644 27.6623 21.0984 27.5029C21.0323 27.3435 20.9983 27.1726 20.9983 27C20.9983 26.8274 21.0323 26.6565 21.0984 26.4971C21.1644 26.3377 21.2612 26.1928 21.3832 26.0707L24.3941 23.0625L14.4375 23.0625C14.0894 23.0625 13.7556 22.9242 13.5094 22.6781C13.2633 22.4319 13.125 22.0981 13.125 21.75C13.125 21.4019 13.2633 21.0681 13.5094 20.8219C13.7556 20.5758 14.0894 20.4375 14.4375 20.4375L24.3941 20.4375Z"
+                                fill="white" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_5325_12129">
+                                <rect width="42" height="42" fill="white" transform="translate(42 0.5) rotate(90)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="prefooter">
+        <img src="../../about-us/assets/img/prefooter/sphere.png" alt="shape" class="prefooter__image-sphere" />
+        <img src="../../about-us/assets/img/prefooter/half-sphere.png" alt="shape"
+            class="prefooter__image-half-sphere" />
+        <img src="../../about-us/assets/img/prefooter/mobile-sphere.png" alt="shape"
+            class="prefooter__image-mobile-sphere" />
+        <img src="../../about-us/assets/img/prefooter/svg.png" alt="shape" class="prefooter__image-svg" />
+        <img src="../../about-us/assets/img/prefooter/mobile-svg.png" alt="shape" class="prefooter__image-mobile-svg" />
+        <img src="../../industries/assets/industries/desktop.gif" alt="image" class="footer-business__gif" />
+        <button class="prefooter__button">get started</button>
+    </section>
+    <!-- <section class="footer-credentials">
+        <div class="footer-credentials__contact-container">
+            <img src="../../about-us/assets/img/credentials/cone.png" alt="image" class="footer-credentials__cone" />
+            <h4 class="footer-credentials__contact-title">Our Contacts</h4>
+            <div class="footer-credentials__contact-us">
+                <h5 class="footer-credentials__contact-us-title">us:</h5>
+                <div class="footer-credentials__contact-us-container">
+                    <p>133-01 Cross Bay Blvd,</p>
+                    <p>Howard Beach.</p>
+                    <p>NY 11414</p>
+                    <p>+1 347 897 9373</p>
+                    <p>contact@webugol.com</p>
+                </div>
+            </div>
+            <div class="footer-credentials__contact-ukraine">
+                <h5 class="footer-credentials__contact-ukraine-title">ukraine:</h5>
+                <div class="footer-credentials__contact-ukraine-container">
+                    <p>145a Chornovola Av.</p>
+                    <p>Lviv 79035</p>
+                    <p>Ukraine</p>
+                    <p>+38 093 882 6500</p>
+                    <p>contact@webugol.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-credentials__social-container">
+            <h5 class="footer-credentials__social-title">social media</h5>
+            <div class="footer-credentials__social-icons">
+                <img src="../../about-us/assets/img/credentials/instagram.png" alt="image"
+                    class="footer-credentials__icon"
+                    onclick="window.open('https://www.instagram.com/webugol/', '_blank')" />
+                <img src="../../about-us/assets/img/credentials/uit_facebook-f.png" alt="image"
+                    class="footer-credentials__icon"
+                    onclick="window.open('https://www.facebook.com/webugol/', '_blank')" />
+                <img src="../../about-us/assets/img/credentials/linkedin.png" alt="image"
+                    class="footer-credentials__icon"
+                    onclick="window.open('https://www.linkedin.com/company/webugol/', '_blank')" />
+                <img src="../../about-us/assets/img/credentials/gmail.png" alt="image" class="footer-credentials__icon"
+                    onclick="window.open('https://www.google.com/maps/place/Webugol+-+Маркетингова+агенція/@49.8523671,24.0207104,17z/data=!3m1!4b1!4m5!3m4!1s0x473add9a181694ad:0x36b4b7078b0aac35!8m2!3d49.8523671!4d24.0228991', '_blank')" />
+                <img src="../../about-us/assets/img/credentials/arcticons.png" alt="image"
+                    class="footer-credentials__icon"
+                    onclick="window.open('https://clutch.co/profile/webugol#summary', '_blank')" />
+                <img src="../../about-us/assets/img/credentials/youtube.png" alt="image"
+                    class="footer-credentials__icon"
+                    onclick="window.open('https://www.youtube.com/channel/UCTz9pjgaffPnINNaLWF-gOQ', '_blank')" />
+            </div>
+            <button class="footer-credentials__button">contact us</button>
+            <img src="../../about-us/assets/img/credentials/logo.png" alt="image" class="footer-credentials__logo" />
+        </div>
+        <img src="../../about-us/assets/img/credentials/right-image.png" alt="image"
+            class="footer-credentials__pattern" />
+        <img src="../../about-us/assets/img/credentials/pattern-mob.png" alt="image"
+            class="footer-credentials__pattern-mob" />
+    </section> -->
+    <script src="./js/index.js"></script>
+    <script src="../../js/script.js"></script>
+</body>
+
+</html>

@@ -43,6 +43,11 @@
     font-weight: 275;
     line-height: 120%;
     text-transform: capitalize;
+    cursor: pointer;
+}
+
+.location__text:hover {
+    color: #FFF;
 }
 
 .text-first {
@@ -58,6 +63,7 @@
     line-height: 110%;
     text-transform: uppercase;
     padding-top: 10px;
+    margin-bottom: 10px;
 }
 
 .map-section__image-container {
