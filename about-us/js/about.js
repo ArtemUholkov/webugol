@@ -93,6 +93,7 @@ document.addEventListener('DOMContentLoaded', function () {
         container.style.transform = 'translateX(0)';
         container.style.opacity = '1';
         container.classList.remove('open');
+         container.style.transition = 'all 1.7s'
   
         if (!parentContainer) {
           parentContainer = container.closest('.team-section');
@@ -107,7 +108,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
   
-
   containers.forEach((container, i) => {
     container.addEventListener('click', () => {
       if (container.classList.contains('open') == false) {

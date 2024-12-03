@@ -16,6 +16,7 @@
         href="https://fonts.googleapis.com/css2?family=Biryani:wght@200;300;400;600;700;800;900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet" />
     <!-- FONTS END -->
+    <link rel="stylesheet" href="../js/aos.css" />
     <link rel="icon" href="../img/global/favicon.png" />
     <link rel="stylesheet" href="../projects/css/index.css" />
     <link rel="stylesheet" href="../industries/css/index.css" />
@@ -181,8 +182,9 @@
                 <source src="../projects/assets/img/main/video.mp4" type="video/mp4" />
             </video>
         </div>
-        <div class="hw-main__text-container--projects">
-            <h1 class="hw-main__title--projects">Projects</h1>
+        <div class="hw-main__text-container--projects" >
+            <h1 class="hw-main__title--projects" data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom">Projects</h1>
         </div>
     </section>
     <section class="filter-section">
@@ -315,7 +317,7 @@
         </div>
     </section>
     <section class="result pro">
-        <h2 class="result__title">Check the results of cooperation with Webugol</h2>
+        <h2 class="result__title" data-aos="zoom-in">Check the results of cooperation with Webugol</h2>
         <div class="result__container">
             <div class="result__container-item">
                 <div class="result__image-container">
@@ -400,7 +402,7 @@
         <img src="../about-us/assets/img/prefooter/mobile-sphere.png" alt="shape" class="prefooter__image-mobile-sphere" />
         <img src="../about-us/assets/img/prefooter/svg.png" alt="shape" class="prefooter__image-svg" />
         <img src="../about-us/assets/img/prefooter/mobile-svg.png" alt="shape" class="prefooter__image-mobile-svg" />
-        <img src="../assets/industries/desktop.gif" alt="image" class="footer-business__gif" />
+        <img src="../industries/assets/industries/desktop.gif" alt="image" class="footer-business__gif" />
         <button class="prefooter__button">get started</button>
     </section>
     <!-- <section class="footer-credentials">
@@ -468,7 +470,10 @@
         <img src="../about-us/assets/img/credentials/pattern-mob.png" alt="image" class="footer-credentials__pattern-mob" />
     </section> -->
     <script src="../projects/js/projects.js"></script>
-    <script src="../js/script.js"></script>
+    <script src="../js/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
