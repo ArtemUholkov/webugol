@@ -43,9 +43,9 @@ function handleEscapeKey(event) {
 
 //team section
 
-document.querySelectorAll('.team-section__image-container').forEach(container => {
-  container.addEventListener('touchstart', () => {}, { passive: true });
-});
+// document.querySelectorAll('.team-section__image-container').forEach(container => {
+//   container.addEventListener('touchstart', () => {}, { passive: true });
+// });
 
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -84,7 +84,15 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
+  let isScrolling = false;
+
+window.addEventListener('scroll', () => {
+  isScrolling = true;
+  setTimeout(() => (isScrolling = false), 100);
+});
+
   function resetContainers() {
+    if (isScrolling) return;
     let parentContainer = null;
   
     for (let i = 0; i < containers.length; i++) {
