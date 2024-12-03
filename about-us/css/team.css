@@ -130,18 +130,6 @@
 }
 
 .team-section__image {
-    /* width: 100%;
-    height: 100%;
-    margin-bottom: 15px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: opacity 0.8s ease-in;
-    cursor: pointer;
-    z-index: 0;
-    -webkit-filter: grayscale(100%); 
-    filter: grayscale(100%);
-    transition: all 0.7s; */
     width: 100%;
     height: 100%;
     margin-bottom: 15px;
@@ -237,11 +225,15 @@
 
 @media (hover: none) and (pointer: coarse) {
     .team-section__image-container:hover .team-section__image--hover {
-      opacity: 0; 
+        filter: grayscale(0%);
+        -webkit-filter: grayscale(0%);
+        opacity: 1; 
     }
-  
+
     .team-section__image-container:hover .team-section__image--default {
-      opacity: 1; 
+        filter: grayscale(100%);
+        -webkit-filter: grayscale(100%);
+        opacity: 1; 
     }
 }
 
