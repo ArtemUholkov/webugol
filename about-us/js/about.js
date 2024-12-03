@@ -66,13 +66,13 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     } else if (window.innerWidth < 640) {
       if (containerClicked.classList.contains('open')) {
-        parentContainer.style.height = `${baseHeight + 400}px`;
+        parentContainer.style.height = `${baseHeight + 450}px`;
       } else {
         parentContainer.style.height = `${baseHeight}px`;
       }
     } else if (window.innerWidth < 1000) {
       if (containerClicked.classList.contains('open')) {
-        parentContainer.style.height = `${baseHeight + 250}px`;
+        parentContainer.style.height = `${baseHeight + 300}px`;
       } else {
         parentContainer.style.height = `${baseHeight}px`;
       }
@@ -173,10 +173,18 @@ document.addEventListener('DOMContentLoaded', function () {
           }
 
           if (window.innerWidth < 1000) {
-            for (let j = startIndex + 2; j < containers.length; j++) {
-              containers[j].style.transform = 'translateY(420px)';
-            }
+            const expandedDescription = containerClicked.querySelector('.team-section__description-container');
+            setTimeout(() => {
+              const descriptionHeight = expandedDescription
+                ? expandedDescription.scrollHeight 
+                : 0;
+          
+              for (let j = startIndex + 2; j < containers.length; j++) {
+                containers[j].style.transform = `translateY(${descriptionHeight + 50}px)`; 
+              }
+            }, 300); 
           }
+          
         } else if (i !== indexInRow + startIndex) {
           container.style.transform = 'translateX(460px)';
           container.style.opacity = '0';
@@ -188,28 +196,39 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function handleClickForOne(containerClicked, startIndex, numContainersInRow) {
-    if (activeContainer === containerClicked) {
-      adjustContainerHeight(containerClicked, numContainersInRow);
-      resetContainers(startIndex, 1);
-      activeContainer = null;
-    } else {
-      resetContainers(startIndex, 1);
-      containerClicked.classList.add('open');
-      adjustContainerHeight(containerClicked, numContainersInRow);
+  if (activeContainer === containerClicked) {
+    containerClicked.classList.remove('open');
+    resetContainers(startIndex, 1);
+    activeContainer = null;
+  } else {
+    resetContainers(startIndex, 1);
+    containerClicked.classList.add('open');
+    adjustContainerHeight(containerClicked, numContainersInRow);
 
-      if (window.innerWidth < 500) {
-        for (let j = startIndex + 1; j < containers.length; j++) {
-          containers[j].style.transform = 'translateY(800px)';
-        }
-      } else {
-        for (let j = startIndex + 1; j < containers.length; j++) {
-          containers[j].style.transform = 'translateY(600px)';
+    containers.forEach((container, i) => {
+      if (i < startIndex || i >= startIndex + 1) return;
+
+      if (container === containerClicked) {
+        if (window.innerWidth < 640) {
+          const expandedDescription = containerClicked.querySelector('.team-section__description-container');
+          setTimeout(() => {
+            const descriptionHeight = expandedDescription
+              ? expandedDescription.scrollHeight
+              : 0;
+
+            for (let j = startIndex + 1; j < containers.length; j++) {
+              containers[j].style.transform = `translateY(${descriptionHeight + 120}px)`;
+            }
+          }, 300); 
         }
       }
+    });
 
-      activeContainer = containerClicked;
-    }
+    activeContainer = containerClicked;
   }
+}
+
+
 
   function updateLayout() {
     resetContainers(0, containers.length);
