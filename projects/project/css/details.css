@@ -89,6 +89,7 @@
     width: 100%;
     position: relative;
     z-index: 1;
+    cursor: pointer;
 }
 
 .details__top-marker.active .details__marker-text {
@@ -299,6 +300,7 @@
     align-items: center;
     gap: 10px;
     border-radius: 10px;
+    border: none;
     background-color: #FFF;
     color: #000;
     text-align: center;
@@ -309,6 +311,7 @@
     line-height: normal;
     text-transform: uppercase;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .details__bottom-design-button:hover {

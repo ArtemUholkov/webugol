@@ -16,6 +16,7 @@
         href="https://fonts.googleapis.com/css2?family=Biryani:wght@200;300;400;600;700;800;900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet" />
     <!-- FONTS END -->
+    <link rel="stylesheet" href="../../js/aos.css" />
     <link rel="icon" href="../../img/global/favicon.png" />
     <link rel="stylesheet" href="../construction/css/main.css" />
     <link rel="stylesheet" href="../construction/css/offer.css" />
@@ -143,31 +144,31 @@
             </video>
         </div>
         <img src="../construction/assets/img/main/main-mage.png" alt="health-and-wellness-main"
-            class="hw-main__image--construction" />
+            class="hw-main__image--construction" data-aos="flip-right" />
         <div class="hw-main__text-container--construction">
-            <h1 class="hw-main__title--construction">Improving Construction Business with <br />Digital Marketing</h1>
-            <button class="hw-main__button">Get Started</button>
+            <h1 class="hw-main__title--construction" data-aos="fade-down">Improving Construction Business with <br />Digital Marketing</h1>
+            <button class="hw-main__button" data-aos="fade-down" data-aos-delay="300">Get Started</button>
         </div>
     </section>
     <section class="digit">
-        <div class="digit__container first">
+        <div class="digit__container first" data-aos="fade-down">
             <img src="../health-and-wellness/assets/img/digit/svg.png" alt="digit" class="digit__image" />
             <p class="digit__number">30</p>
             <p class="digit__text">increase in conversion rate</p>
         </div>
-        <div class="digit__container second">
+        <div class="digit__container second" data-aos="fade-down" data-aos-delay="300">
             <img src="../health-and-wellness/assets/img/digit/svg.png" alt="digit" class="digit__image" />
             <p class="digit__number">40</p>
             <p class="digit__text">growth in patient engagement</p>
         </div>
-        <div class="digit__container third">
+        <div class="digit__container third" data-aos="fade-down" data-aos-delay="600">
             <img src="../health-and-wellness/assets/img/digit/svg.png" alt="digit" class="digit__image" />
             <p class="digit__number last">50</p>
             <p class="digit__text">improvement in ROI from marketing spends</p>
         </div>
     </section>
     <section class="offer">
-        <h2 class="offer__title">what we offer</h2>
+        <h2 class="offer__title" data-aos="zoom-in">what we offer</h2>
         <div class="offer__container-wrapper">
             <div class="offer__container">
                 <div class="offer__text-container--standart">
@@ -316,7 +317,7 @@
         <img src="../construction/assets/img/offer/bg.png" alt="offer" class="offer__image-bg--construction" />
     </section>
     <section class="result">
-        <h2 class="result__title">Check the results of cooperation with Webugol</h2>
+        <h2 class="result__title" data-aos="zoom-in">Check the results of cooperation with Webugol</h2>
         <div class="result__container">
             <div class="result__container-item">
                 <div class="result__image-container">
@@ -400,7 +401,7 @@
         </div>
     </section>
     <section class="testimonials">
-        <h2 class="testimonials__title">See what our partners say</h2>
+        <h2 class="testimonials__title" data-aos="zoom-in">See what our partners say</h2>
         <div class="testimonials__container" id="testimonials-container">
             <div class="testimonials__container-item">
                 <img src="../health-and-wellness/assets/img/testimonials/1.png" alt="testimonials"
@@ -507,7 +508,9 @@
         <button class="prefooter__button">get started</button>
     </section>
     <section class="comments">
-        <div class="commets__top-left-block">
+        <div class="commets__top-left-block" data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000">
             <h3 class="commets__title">
                 Customized Digital Strategies for the Health and Wellness Industry
             </h3>
@@ -530,7 +533,9 @@
                 in a rise in client retention, more bookings, and overall business success.
             </p>
         </div>
-        <div class="commets__top-right-block">
+        <div class="commets__top-right-block" data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000">
             <h3 class="commets__title">
                 Why your business needs Webugol?
             </h3>
@@ -601,6 +606,10 @@
     </section> -->
     <script src="../health-and-wellness/js/health-and-wellness.js"></script>
     <script src="../../js/script.js"></script>
+    <script src="../../js/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 
 </html>
