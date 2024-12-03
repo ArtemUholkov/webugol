@@ -43,11 +43,6 @@ function handleEscapeKey(event) {
 
 //team section
 
-// document.querySelectorAll('.team-section__image-container').forEach(container => {
-//   container.addEventListener('touchstart', () => {}, { passive: true });
-// });
-
-
 document.addEventListener('DOMContentLoaded', function () {
   const containers = document.querySelectorAll('.team-section__image-container');
 
@@ -60,62 +55,62 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!parentContainer.dataset.baseHeight) {
       parentContainer.dataset.baseHeight = window.getComputedStyle(parentContainer).height;
     }
-  
+
     const baseHeight = parseInt(parentContainer.dataset.baseHeight, 10);
-  
+
     if (window.innerWidth < 500) {
       if (containerClicked.classList.contains('open')) {
-        parentContainer.style.height = `${baseHeight + 500}px`; 
+        parentContainer.style.height = `${baseHeight + 500}px`;
       } else {
-        parentContainer.style.height = `${baseHeight}px`; 
+        parentContainer.style.height = `${baseHeight}px`;
       }
     } else if (window.innerWidth < 640) {
       if (containerClicked.classList.contains('open')) {
         parentContainer.style.height = `${baseHeight + 400}px`;
       } else {
-        parentContainer.style.height = `${baseHeight}px`; 
+        parentContainer.style.height = `${baseHeight}px`;
       }
     } else if (window.innerWidth < 1000) {
       if (containerClicked.classList.contains('open')) {
-        parentContainer.style.height = `${baseHeight + 250}px`; 
+        parentContainer.style.height = `${baseHeight + 250}px`;
       } else {
-        parentContainer.style.height = `${baseHeight}px`; 
+        parentContainer.style.height = `${baseHeight}px`;
       }
     }
   }
 
   let isScrolling = false;
 
-window.addEventListener('scroll', () => {
-  isScrolling = true;
-  setTimeout(() => (isScrolling = false), 100);
-});
+  window.addEventListener('scroll', () => {
+    isScrolling = true;
+    setTimeout(() => (isScrolling = false), 100);
+  });
 
   function resetContainers() {
     if (isScrolling) return;
     let parentContainer = null;
-  
+
     for (let i = 0; i < containers.length; i++) {
       const container = containers[i];
       if (container) {
         container.style.transform = 'translateX(0)';
         container.style.opacity = '1';
         container.classList.remove('open');
-         container.style.transition = 'all 1.7s'
-  
+        container.style.transition = 'all 1.7s'
+
         if (!parentContainer) {
           parentContainer = container.closest('.team-section');
         }
       }
     }
-  
+
     if (parentContainer) {
       if (parentContainer.dataset.baseHeight) {
         parentContainer.style.height = parentContainer.dataset.baseHeight;
       }
     }
   }
-  
+
   containers.forEach((container, i) => {
     container.addEventListener('click', () => {
       if (container.classList.contains('open') == false) {
@@ -220,6 +215,18 @@ window.addEventListener('scroll', () => {
     resetContainers(0, containers.length);
     activeContainer = null;
   }
+
+  let resizeTimeout;
+
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+      if (window.innerHeight !== document.documentElement.clientHeight) {
+        return;
+      }
+      updateLayout();
+    }, 100);
+  });
 
   containers.forEach((container, index) => {
     container.addEventListener('click', function () {
