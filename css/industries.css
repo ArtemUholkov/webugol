@@ -77,14 +77,14 @@
   font-size: 18px;
   font-weight: 275;
   line-height: 160%;
-  margin-bottom: 82px;
+  /* margin-bottom: 82px; */
   max-width: 445px;
 }
 .industries_content_button {
   display: flex;
   width: 245px;
   height: 54px;
-  padding: 20px 24px;
+  padding-top: 3px;
   justify-content: center;
   align-items: center;
   gap: 10px;
@@ -96,7 +96,8 @@
   font-size: 18px;
   font-weight: 700;
   text-transform: uppercase;
-  margin-bottom: 184px;
+  margin-bottom: 210px;
+  margin-top: auto;
   transition: all 0.3s;
 }
 .industries_content_button:hover {

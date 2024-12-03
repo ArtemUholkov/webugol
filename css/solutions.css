@@ -833,7 +833,8 @@
 
   .sol_bg_right {
     position: absolute;
-    top: -50px;
+    top: 0;
+    z-index: -99;
     right: -150px;
   }
   .sol_bg_left {
