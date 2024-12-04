@@ -61,24 +61,6 @@
         scrollbar-width: thin;
         padding-bottom: 40px;
     }
-
-    .history-section__image-container::-webkit-scrollbar {
-        height: 6px;
-        background-color: #96969698;
-    }
-
-    .history-section__image-container::-webkit-scrollbar-thumb {
-        background-color: #ff7a00;
-        border-radius: 3px;
-    }
-
-    .history-section__image-container::-webkit-scrollbar-thumb:hover {
-        background-color: #ff5500;
-    }
-
-    .history-section__image-container {
-        -ms-overflow-style: scrollbar;
-    }
 }
 
 @media screen and (max-width: 1200px) {
@@ -120,4 +102,26 @@
     .history-section__image {
         height: 450px;
     }
+
+    .history-section__image-container {
+        -webkit-overflow-scrolling: touch; 
+        overflow-x: scroll; 
+        display: flex;
+        white-space: nowrap;
+    }
+    
+    .history-section__image-container::-webkit-scrollbar {
+        height: 6px; 
+        background-color: #9696966c;
+    }
+    
+    .history-section__image-container::-webkit-scrollbar-thumb {
+        background-color: #ff7a00; 
+        border-radius: 3px;
+    }
+    
+    .history-section__image-container::-webkit-scrollbar-thumb:hover {
+        background-color: #ff5500;
+    }
+    
 }
