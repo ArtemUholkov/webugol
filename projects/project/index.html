@@ -16,6 +16,7 @@
         href="https://fonts.googleapis.com/css2?family=Biryani:wght@200;300;400;600;700;800;900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet" />
     <!-- FONTS END -->
+    <link rel="stylesheet" href="../../js/aos.css" />
     <link rel="icon" href="../../img/global/favicon.png" />
     <link rel="stylesheet" href="../../projects/css/index.css" />
     <link rel="stylesheet" href="../../industries/css/index.css" />
@@ -44,7 +45,7 @@
         <div class="sec_popup">
             <div class="popup_content_wrapper">
                 <p class="popup_arrow-back">Back to main menu</p>
-                <a href="../industries/" class="popup_title">INDUSTRIES</a>
+                <a href="../../industries/" class="popup_title">INDUSTRIES</a>
                 <div class="popup_links_wrapper">
                     <a href="../../industries/health-and-wellness/" class="popup_links_item">Health &
                         Wellness</a>
@@ -59,7 +60,7 @@
         <div class="trd_popup">
             <div class="popup_content_wrapper">
                 <p class="popup_arrow-back">Back to main menu</p>
-                <a href="../services/" class="popup_title">Services</a>
+                <a href="../../services/" class="popup_title">Services</a>
                 <div class="popup_links_wrapper">
                     <a href="../../services/google-ads/" class="popup_links_item">Google Ads</a>
                     <a href="../../services/meta-ads/" class="popup_links_item">Meta Ads</a>
@@ -112,10 +113,10 @@
                             class="nav_text">MAIN</span></a>
                     <a href="../about-us/index.html" class="nav_link" id="removeit"><span
                             class="nav_number">02</span><span class="nav_text">about us</span></a>
-                    <a href="../industries/index.html" class="nav_link" id="fstlink"><span
+                    <a href="#" class="nav_link" id="fstlink"><span
                             class="nav_number">03</span><span class="nav_text">industries</span><span
                             class="nav_icon nav_icon_one"><img src="../../img/main/arrow.svg" alt="icon" /></span></a>
-                    <a href="../services/index.html" class="nav_link" id="sndlink"><span
+                    <a href="#" class="nav_link" id="sndlink"><span
                             class="nav_number">04</span><span class="nav_text">services</span><span
                             class="nav_icon nav_icon_two"><img src="../../img/main/arrow.svg" alt="icon" /></span></a>
                     <a href="../projects/index.html" class="nav_link" id="removeit"><span
@@ -146,25 +147,25 @@
             </video>
         </div>
         <div class="hw-main__text-container--project">
-            <h1 class="hw-main__title--project">Dr Telx</h1>
-            <h2 class="hw-main__subtitle--project">USA</h2>
+            <h1 class="hw-main__title--project" data-aos="fade-down">Dr Telx</h1>
+            <h2 class="hw-main__subtitle--project" data-aos="fade-down">USA</h2>
         </div>
         <div class="hw-main__digit">
             <div class="hw-main__digit-wraper">
-                <div class="hw-main__digit-container first-cont">
-                    <img src="../../industries/health-and-wellness/assets/img/digit/svg.svg" alt="digit"
+                <div class="hw-main__digit-container first-cont" data-aos="fade-up">
+                    <img src="../../industries/health-and-wellness/assets/img/digit/svg.png" alt="digit"
                         class="hw-main__digit-image left" />
                     <p class="hw-main__digit-number">1000</p>
                     <p class="hw-main__digit-text">increase in new calls</p>
                 </div>
-                <div class="hw-main__digit-container second-cont">
-                    <img src="../../industries/health-and-wellness/assets/img/digit/svg.svg" alt="digit"
+                <div class="hw-main__digit-container second-cont" data-aos="fade-up">
+                    <img src="../../industries/health-and-wellness/assets/img/digit/svg.png" alt="digit"
                         class="hw-main__digit-image center" />
                     <p class="hw-main__digit-number">235</p>
                     <p class="hw-main__digit-text">increase in new leads</p>
                 </div>
-                <div class="hw-main__digit-container third-cont">
-                    <img src="../../industries/health-and-wellness/assets/img/digit/svg.svg" alt="digit"
+                <div class="hw-main__digit-container third-cont" data-aos="fade-up">
+                    <img src="../../industries/health-and-wellness/assets/img/digit/svg.png" alt="digit"
                         class="hw-main__digit-image right" />
                     <p class="hw-main__digit-number">70</p>
                     <p class="hw-main__digit-text">decrease in CPL</p>
@@ -177,9 +178,11 @@
     </section>
     <section class="about-project" id="main">
         <div class="about-project__image-container">
-            <img src="../project/assets/img/main-image.png" alt="macbook" class="about-project__image" />
+            <img src="../project/assets/img/main-image.png" alt="macbook" class="about-project__image" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000" />
         </div>
-        <div class="about-project__text-container">
+        <div class="about-project__text-container" data-aos="flip-right" data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000">
             <h2 class="about-project__title">Dr Telx</h2>
             <p class="about-project__text">
                 Dr Telx, a pioneering online medical platform, offers a unique experience, seamlessly linking patients
@@ -202,9 +205,10 @@
         </div>
     </section>
     <section class="services-project" id="services">
-        <h2 class="services__title">Services provided</h2>
+        <h2 class="services__title" data-aos="fade-up"
+        data-aos-duration="3000">Services provided</h2>
         <div class="services__container-wrapper">
-            <div class="services__container">
+            <div class="services__container" data-aos="flip-left">
                 <div class="services__text-container--standart">
                     <h3 class="services__container-title">Google Ads</h3>
                     <p class="services__container-text">
@@ -228,7 +232,7 @@
                     </svg>
                 </div>
             </div>
-            <div class="services__container">
+            <div class="services__container" data-aos="flip-left" data-aos-delay="300">
                 <div class="services__text-container--standart">
                     <h3 class="services__container-title">Meta Ads</h3>
                     <p class="services__container-text">
@@ -239,7 +243,7 @@
                     <img src="../project/assets/img/image-second.png" alt="offer" class="services__container-image2" />
                 </div>
             </div>
-            <div class="services__container">
+            <div class="services__container" data-aos="flip-left" data-aos-delay="600">
                 <div class="services__text-container--standart">
                     <h3 class="services__container-title">Website SEO</h3>
                     <p class="services__container-text">
@@ -292,7 +296,7 @@
                     </svg>
                 </div>
             </div>
-            <div class="services__container">
+            <div class="services__container" data-aos="flip-left" data-aos-delay="900">
                 <div class="services__text-container--standart">
                     <h3 class="services__container-title">Graphic design</h3>
                     <p class="services__container-text">
@@ -307,8 +311,10 @@
         <img src="../project/assets/img/bg.png" alt="offer" class="services__image-bg" />
     </section>
     <section class="details" id="details">
-        <h2 class="details__main-title">projects details</h2>
-        <div class="details__description-container">
+        <h2 class="details__main-title" data-aos="fade-up"
+        data-aos-duration="3000">projects details</h2>
+        <div class="details__description-container" data-aos="fade-up"
+        data-aos-duration="3000">
             <h3 class="details__description-title">Business Description: </h3>
             <p class="details__description-text">Invigor Medical is an online health and wellness clinic based in
                 Kennewick, Washington, specializing in a
@@ -644,7 +650,7 @@
             class="prefooter__image-mobile-sphere" />
         <img src="../../about-us/assets/img/prefooter/svg.png" alt="shape" class="prefooter__image-svg" />
         <img src="../../about-us/assets/img/prefooter/mobile-svg.png" alt="shape" class="prefooter__image-mobile-svg" />
-        <img src="../assets/industries/desktop.gif" alt="image" class="footer-business__gif" />
+        <img src="../../industries/assets/industries/desktop.gif" alt="image" class="footer-business__gif" />
         <button class="prefooter__button">get started</button>
     </section>
     <!-- <section class="footer-credentials">
@@ -704,6 +710,10 @@
     <script src="../project/js/script.js"></script>
     <script src="../projects/js/projects.js"></script>
     <script src="../../js/script.js"></script>
+    <script src="../../js/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

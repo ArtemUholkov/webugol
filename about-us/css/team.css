@@ -61,13 +61,15 @@
     overflow: hidden;
 }
 
-.team-section__image-container.open .team-section__description-container {
+/* .team-section__image-container.open .team-section__description-container {
     height: auto; 
     max-height: none; 
     opacity: 1;
     overflow: visible; 
     transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out;
-}
+} */
+
+
 
 .team-section__image-container:not(.open) .team-section__description-container {
     max-height: 0;
@@ -88,7 +90,8 @@
 
 .team-section__description-container {
     position: absolute;
-    top: -30px;
+    /* position: relative; */
+    top: 0px;
     left: 0;
     transform: translate(50%);
     display: flex;
@@ -101,11 +104,14 @@
     border-radius: 10px;
     border: 1px solid #777;
     background-color: rgba(255, 255, 255, 0.20);
-    height: 0;
     z-index: -1;
     opacity: 0;
     box-sizing: border-box;
     transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.team-section__image-container.open .team-section__description-container {
+    opacity: 1;
 }
 
 .team-section__description {
@@ -136,29 +142,20 @@
     position: absolute;
     top: 0;
     left: 0;
-    transition: opacity 0.8s ease-in;
-    cursor: pointer;
     z-index: 0;
-}
-
-.team-section__image--hover {
-    opacity: 0;
-}
-
-.team-section__image-container.open .team-section__image--hover {
-    opacity: 1; 
-}
-
-.team-section__image-container.open .team-section__image--default {
-    opacity: 0; 
-}
-
-.team-section__image-container:hover .team-section__image--hover {
+    cursor: pointer;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    transition: filter 0.7s ease, opacity 0.7s ease;
     opacity: 1;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
 }
 
-.team-section__image-container:hover .team-section__image--default {
-    opacity: 0;
+.team-section__image:hover, 
+.team-section__image-container.open .team-section__image--hover {
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
 }
 
 .team-section__name {
@@ -230,16 +227,6 @@
     height: 100%;
     max-height: 2000px;
     z-index: 0;
-}
-
-@media (hover: none) and (pointer: coarse) {
-    .team-section__image-container:hover .team-section__image--hover {
-      opacity: 0; 
-    }
-  
-    .team-section__image-container:hover .team-section__image--default {
-      opacity: 1; 
-    }
 }
 
 @media screen and (max-width: 1460px) {
@@ -352,21 +339,30 @@
 }
 
 @media screen and (max-width: 999px) {
+    .team-section__image-container {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        z-index: 1;
+        flex-shrink: 0; 
+    }
+    
     .team-section__description-container {
-        position: absolute;
+        position: absolute; 
         top: 100%; 
-        left: 50%;
-        transform: translateX(-50%); 
-        padding: 20px; 
-        z-index: -1; 
-        border-radius: 10px;
-        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); 
-        opacity: 0; 
-        transition: opacity 0.3s ease-in-out; 
+        left: 0;
+        transform: translate(-20%);
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        z-index: 10; 
     }
 
     .team-section__image-container.open .team-section__description-container {
+        max-height: 600px; 
         opacity: 1;
+        overflow: visible; 
     }
 }
 
@@ -446,9 +442,29 @@
     .team-section__name {
         font-size: 18px;
     }
+
+    .team-section__description-container {
+        position: absolute; 
+        top: 100%; 
+        left: 0;
+        transform: translate(-25%);
+    }
 }
 
 @media screen and (max-width: 640px) {
+    .team-section__description-container {
+        position: absolute; 
+        top: 100%; 
+        left: 0;
+        transform: translate(-10%);
+    }
+
+    .team-section__image-container.open .team-section__description-container {
+        max-height: 700px; 
+        opacity: 1;
+        overflow: visible; 
+    }
+
     .team-section {
         padding-left: 0px;
         padding-right: 0px;
@@ -505,6 +521,8 @@
 @media screen and (max-width: 500px) {
     .team-section__description-container {
         width: 350px;
+        transform: translate(0%);
+        padding: 20px 20px;
     }
 
     .team-section {
@@ -513,6 +531,12 @@
 
     .team-section__images {
         row-gap: 40px;
+    }
+
+    .team-section__image-container.open .team-section__description-container {
+        max-height: 750px; 
+        opacity: 1;
+        overflow: visible; 
     }
 }
 
