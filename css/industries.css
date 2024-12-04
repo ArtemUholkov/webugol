@@ -227,8 +227,8 @@
 
 .question {
   color: var(--Charcoal-gray, #fff);
-  font-family: 'Montserrat', sans-serif;
-  font-size: 30px;
+  font-family: 'Biryani', sans-serif;
+  font-size: 20px;
   font-weight: 700;
   line-height: 120%;
   text-transform: uppercase;
@@ -312,6 +312,7 @@
   position: absolute;
   right: 0;
   bottom: 0;
+  max-height: 350px;
 }
 .industries_mob_content_wrapper {
   border-radius: 8px;
