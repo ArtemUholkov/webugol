@@ -229,7 +229,8 @@
   .team_content_item {
     width: 335px !important;
     height: 382px;
-    background-size: 85%;
+    background-size: 100%;
+    background-position-y: -10px;
   }
   .active-item {
     width: 335px;

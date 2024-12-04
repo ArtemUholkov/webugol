@@ -3,6 +3,7 @@
   border: 1px solid var(--block-liner, rgba(254, 241, 225, 0.4));
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(57px);
+  -webkit-backdrop-filter: blur(57px); /* Префикс для Safari */
   position: relative;
   overflow: hidden;
 }
@@ -40,18 +41,21 @@
   border: 1px solid var(--Glass, #fff);
   background: var(--Glass, rgba(255, 255, 255, 0.2));
   backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px); /* Префикс для Safari */
 }
 .logo_line_item-top:nth-of-type(even) {
   border-radius: 10px;
   border: 1px solid var(--Glass, #fff);
   background: var(--black-cards, #1d1d1d);
   backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px); /* Префикс для Safari */
 }
 .logo_line_item-top:hover {
   border-radius: 10px;
   border: 1px solid var(--Glass, #fff);
   background: var(--violet, #6c01f6);
   backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px); /* Префикс для Safari */
   transition: all 0.3s;
 }
 .logo_line_img {
@@ -92,6 +96,7 @@
   border: 1px solid var(--Glass, #fff);
   background: var(--Glass, rgba(255, 255, 255, 0.2));
   backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px); /* Префикс для Safari */
   transition: all 0.3s;
 }
 .logo_line_item-bot:hover {
@@ -99,6 +104,7 @@
   border: 1px solid var(--Glass, #fff);
   background: var(--violet, #6c01f6);
   backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px); /* Префикс для Safari */
   transition: all 0.3s;
 }
 .bot_black {
@@ -106,6 +112,7 @@
   border: 1px solid var(--Glass, #fff);
   background: var(--black-cards, #1d1d1d);
   backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px); /* Префикс для Safari */
 }
 .animated_text_image {
   height: 110px;

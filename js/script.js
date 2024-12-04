@@ -145,7 +145,7 @@ indLinks.forEach((item, index) => {
 
     // Display the corresponding content with fade-in effect
     const activeContent = indContents[index];
-    activeContent.style.display = 'block'; // Show the active content
+    activeContent.style.display = 'flex'; // Show the active content
     requestAnimationFrame(() => {
       activeContent.classList.remove('fade-out'); // Ensure it's not fading out
       activeContent.classList.add('fade-in'); // Trigger the fade-in animation
@@ -155,7 +155,7 @@ indLinks.forEach((item, index) => {
 
 // Initial state: Display the first content and mark the first link as active
 indLinks[0].classList.add('active-link');
-indContents[0].style.display = 'block'; // Ensure only the first content is visible
+indContents[0].style.display = 'flex'; // Ensure only the first content is visible
 requestAnimationFrame(() => {
   indContents[0].classList.add('fade-in'); // Trigger the fade-in animation for the first item
 });
@@ -198,7 +198,10 @@ function toggleAnswer(faqId) {
 }
 
 // Optionally, trigger the first FAQ to open on page load
-document.querySelector('#faq-click').click();
+setTimeout(() => {
+  document.querySelector('#faq-click').click();
+}, 1000);
+// document.querySelector('#faq-click').click();
 
 // TEAM MAIN
 if (innerWidth > 630) {

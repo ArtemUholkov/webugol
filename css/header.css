@@ -14,7 +14,7 @@ header {
 }
 .header_logo-wrapper {
   display: flex;
-  width: 250px;
+  width: 240px;
   padding: 22px 46px 22px 0px;
   justify-content: flex-end;
   align-items: center;
@@ -31,7 +31,7 @@ header {
 }
 .header_burger-wrapper {
   display: flex;
-  width: 250px;
+  width: 240px;
   padding: 22px 0px 22px 46px;
   align-items: center;
   gap: 20px;
