@@ -8,10 +8,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const visiblePart = item.querySelector('.faq-section__visible-item');
         const hiddenContent = item.querySelector('.faq-section__hidden-item');
 
-        const resetHeightForSafari = (element) => {
-            element.style.display = 'none'; 
+        const forceReflow = (element) => {
+            element.style.transition = 'none'; 
             element.offsetHeight; 
-            element.style.display = ''; 
+            element.style.transition = ''; 
         };
 
         const toggleItem = () => {
@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     lastHiddenContent.style.maxHeight = '0';
                     lastHiddenContent.style.opacity = '0';
                     lastHiddenContent.style.overflow = 'hidden';
+                    forceReflow(lastHiddenContent); 
                 } else {
                     lastHiddenContent.style.transform = 'translateX(-100%)';
                     lastHiddenContent.style.opacity = '0';
@@ -38,12 +39,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     hiddenContent.style.maxHeight = '0';
                     hiddenContent.style.opacity = '0';
                     hiddenContent.style.overflow = 'hidden';
+                    forceReflow(hiddenContent); 
                 } else {
                     hiddenContent.style.transform = 'translateX(-100%)';
                     hiddenContent.style.opacity = '0';
                 }
                 hiddenContent.style.pointerEvents = 'none';
-                resetHeightForSafari(hiddenContent); 
                 lastOpenedItem = null;
             } else {
                 if (mediaQuery.matches) {
@@ -55,7 +56,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     hiddenContent.style.opacity = '1';
                 }
                 hiddenContent.style.pointerEvents = 'all';
-                resetHeightForSafari(hiddenContent); 
                 lastOpenedItem = item;
             }
         };
