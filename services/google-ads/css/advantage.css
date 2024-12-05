@@ -132,6 +132,10 @@
         padding-left: 32px;
         padding-right: 10px;
     }
+
+    .advantage-section__item-text {
+        font-size: 22px;
+    }
 }
 
 @media screen and (max-width: 400px) {

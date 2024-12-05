@@ -6,6 +6,10 @@
     background-color: #1D1D1D;
 }
 
+.about--services {
+    background-color: #111;
+}
+
 .about__main-title {
     font-family: Raleway;
     font-size: 72px;
