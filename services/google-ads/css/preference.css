@@ -327,6 +327,7 @@
 
 .preference-section__last-item:hover {
     background-color: rgba(255, 255, 255, 0.20);
+    backdrop-filter: blur(37px);
     border: 1px solid #ffffff69;
 }
 

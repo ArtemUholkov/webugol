@@ -11,7 +11,7 @@
 .servise-section__container {
     display: grid;
     grid-template-columns: repeat(3, 460px);
-    gap: 40px;
+    gap: 27px;
     row-gap: 200px;
 }
 
@@ -239,12 +239,28 @@
 
 @media screen and (max-width: 850px) {
     .servise-section__container {
-        grid-template-columns: repeat(1, 380px);
+        grid-template-columns: repeat(2, 360px);
+    }
+
+    .servise-section__container-item,
+    .servise-section__item-details  {
+        width: 360px;
     }
 
     .servise-section__item-svg {
         width: 14px;
         height: 14px;
+    }
+}
+
+@media screen and (max-width: 764px) {
+    .servise-section__container {
+        grid-template-columns: repeat(1, 380px);
+    }
+
+    .servise-section__container-item,
+    .servise-section__item-details  {
+        width: 380px;
     }
 }
 
@@ -296,7 +312,7 @@
         width: 220px;
         height: 47px;
         font-size: 16px;
-        padding-top: 15px;
+        padding: 16px 18px;
     }
 
     .google-img {
