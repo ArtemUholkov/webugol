@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (mediaQuery.matches) {
                     lastHiddenContent.style.maxHeight = '0';
                     lastHiddenContent.style.opacity = '0';
+                    lastHiddenContent.style.overflow = 'hidden'; // Убираем остатки
                 } else {
                     lastHiddenContent.style.transform = 'translateX(-100%)';
                     lastHiddenContent.style.opacity = '0';
@@ -30,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (mediaQuery.matches) {
                     hiddenContent.style.maxHeight = '0';
                     hiddenContent.style.opacity = '0';
+                    hiddenContent.style.overflow = 'hidden'; 
                 } else {
                     hiddenContent.style.transform = 'translateX(-100%)';
                     hiddenContent.style.opacity = '0';
@@ -40,6 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (mediaQuery.matches) {
                     hiddenContent.style.maxHeight = hiddenContent.scrollHeight + 'px';
                     hiddenContent.style.opacity = '1';
+                    hiddenContent.style.overflow = 'visible'; 
                 } else {
                     hiddenContent.style.transform = 'translateX(0%)';
                     hiddenContent.style.opacity = '1';
