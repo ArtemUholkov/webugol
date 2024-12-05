@@ -8,19 +8,24 @@ document.addEventListener('DOMContentLoaded', () => {
         const visiblePart = item.querySelector('.faq-section__visible-item');
         const hiddenContent = item.querySelector('.faq-section__hidden-item');
 
+        const resetHeightForSafari = (element) => {
+            element.style.display = 'none'; 
+            element.offsetHeight; 
+            element.style.display = ''; 
+        };
+
         const toggleItem = () => {
             if (lastOpenedItem && lastOpenedItem !== item) {
                 const lastHiddenContent = lastOpenedItem.querySelector('.faq-section__hidden-item');
                 if (mediaQuery.matches) {
                     lastHiddenContent.style.maxHeight = '0';
                     lastHiddenContent.style.opacity = '0';
-                    lastHiddenContent.style.overflow = 'hidden'; 
+                    lastHiddenContent.style.overflow = 'hidden';
                 } else {
                     lastHiddenContent.style.transform = 'translateX(-100%)';
                     lastHiddenContent.style.opacity = '0';
                 }
                 lastHiddenContent.style.pointerEvents = 'none';
-                lastOpenedItem = null;
             }
 
             const isOpen =
@@ -32,12 +37,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (mediaQuery.matches) {
                     hiddenContent.style.maxHeight = '0';
                     hiddenContent.style.opacity = '0';
-                    hiddenContent.style.overflow = 'hidden'; 
+                    hiddenContent.style.overflow = 'hidden';
                 } else {
                     hiddenContent.style.transform = 'translateX(-100%)';
                     hiddenContent.style.opacity = '0';
                 }
                 hiddenContent.style.pointerEvents = 'none';
+                resetHeightForSafari(hiddenContent); 
                 lastOpenedItem = null;
             } else {
                 if (mediaQuery.matches) {
@@ -49,6 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     hiddenContent.style.opacity = '1';
                 }
                 hiddenContent.style.pointerEvents = 'all';
+                resetHeightForSafari(hiddenContent); 
                 lastOpenedItem = item;
             }
         };
@@ -56,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
         visiblePart.addEventListener('click', toggleItem);
 
         visiblePart.addEventListener('touchstart', (e) => {
-            e.preventDefault(); 
+            e.preventDefault();
             toggleItem();
         });
     });
