@@ -398,7 +398,7 @@
 
 @media (max-width: 834px) {
     .offer {
-        padding: 120px 20px 120px;
+        padding: 136px 20px 140px;
     }
 
     .offer__title {
@@ -407,6 +407,10 @@
 }
 
 @media (max-width: 475px) {
+    .offer {
+        padding: 120px 20px;
+    }
+
     .offer__title {
         font-size: 36px;
         line-height: 39.4px;

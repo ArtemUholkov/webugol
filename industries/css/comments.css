@@ -48,7 +48,7 @@
 @media screen and (max-width: 834px) {
     .comments {
         flex-direction: column;
-        padding: 140px 20px;
+        padding: 140px 100px;
     }
 
     .commets__top-left-block,
@@ -56,5 +56,12 @@
         width: 100%; 
         max-width: 754px; 
         flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .comments {
+        flex-direction: column;
+        padding: 120px 20px;
     }
 }

@@ -30,8 +30,9 @@
 .result__container {
   display: grid;
   grid-template-columns: repeat(3, 455px);
-  gap: 20px;
+  gap: 21px;
   row-gap: 120px;
+  justify-content: center;
 }
 
 .result__container-item {
@@ -190,44 +191,15 @@
   }
 }
 
-@media screen and (max-width: 834px) {
-  .result {
-    overflow-x: hidden;
-  }
-
+@media screen and (max-width: 780px) {
   .result__container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    gap: 40px;
-    overflow-x: auto;
-    width: 100%;
-    padding: 0 50px 42px;
-  }
-
-  .result__container::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-  }
-
-  .result__container::-webkit-scrollbar-track {
-    background: #7b7b7b;
-  }
-
-  .result__container::-webkit-scrollbar-thumb {
-    background: linear-gradient(90deg, #ff7a00 0%, #ffdd00 100%);
-    border-radius: 5px;
-  }
-
-  .result__container::-webkit-scrollbar-thumb:hover {
-    background: #ff7a00;
-    cursor: pointer;
+    grid-template-columns: repeat(1, 460px);
+    gap: 30px;
+    row-gap: 80px;
   }
 
   .result__container-item {
     width: 460px;
-    flex-shrink: 0;
   }
 
   .result__photo {
@@ -236,23 +208,37 @@
   }
 
   .result__logo {
-    width: 273px;
-    height: 115px;
-    bottom: 160px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 150px;
+    width: 327px;
+    height: 128px;
   }
 
-  .result__title {
-    font-size: 48px;
-    line-height: 49.6px;
-    max-width: 754px;
-    margin-bottom: 32px;
-    padding: 0 20px;
+  .result__text-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 22px;
+    flex-wrap: wrap;
+    margin: 0 60px;
   }
 }
 
-@media screen and (max-width: 470px) {
+@media screen and (max-width: 600px) {
+  .result__title {
+    padding: 0 20px;
+    margin-bottom: 32px;
+  }
+}
+
+@media screen and (max-width: 500px) {
   .result__container {
     padding: 0 20px 42px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
   }
 
   .result__container-item {

@@ -17,6 +17,7 @@
 
 .ind {
     margin-bottom: 180px;
+    margin-top: 0;
 }
 
 .prefooter__title {
@@ -187,6 +188,7 @@
 
     .ind {
         margin-bottom: 140px;
+        margin-top: 0;
     }
 }
 
@@ -303,7 +305,7 @@
     }
 
     .ind {
-        margin-top: 20px;
+        margin-top: 0px;
         margin-bottom: 120px;
     }
 }
