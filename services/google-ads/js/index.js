@@ -14,12 +14,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (mediaQuery.matches) {
                     lastHiddenContent.style.maxHeight = '0';
                     lastHiddenContent.style.opacity = '0';
-                    lastHiddenContent.style.overflow = 'hidden'; // Убираем остатки
+                    lastHiddenContent.style.overflow = 'hidden'; 
                 } else {
                     lastHiddenContent.style.transform = 'translateX(-100%)';
                     lastHiddenContent.style.opacity = '0';
                 }
                 lastHiddenContent.style.pointerEvents = 'none';
+                lastOpenedItem = null;
             }
 
             const isOpen =
@@ -42,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (mediaQuery.matches) {
                     hiddenContent.style.maxHeight = hiddenContent.scrollHeight + 'px';
                     hiddenContent.style.opacity = '1';
-                    hiddenContent.style.overflow = 'visible'; 
+                    hiddenContent.style.overflow = 'visible';
                 } else {
                     hiddenContent.style.transform = 'translateX(0%)';
                     hiddenContent.style.opacity = '1';
@@ -53,6 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         visiblePart.addEventListener('click', toggleItem);
+
         visiblePart.addEventListener('touchstart', (e) => {
             e.preventDefault(); 
             toggleItem();
