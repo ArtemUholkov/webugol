@@ -9,7 +9,7 @@
 }
 
 .industrial-section--bg-grey {
-    border: 1px solid rgba(254, 241, 225, 0.40);
+    border: 1px solid rgba(254, 241, 225, 0.20);
     background-color: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(102px);
 }
@@ -188,7 +188,7 @@
 @media screen and (max-width: 834px) {
     .industrial-section {
         gap: 40px;
-        padding: 100px 128px;
+        padding: 40px 20px;
     }
 
     .industrial-section__text-container {
@@ -245,7 +245,7 @@
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 460px) {
     .industrial-section {
         padding: 34px 19px;
     }
@@ -258,11 +258,14 @@
     .industrial-section__title {
         font-size: 28px;
         line-height: 30.2px;
+        margin-bottom: 14px;
     }
 
     .industrial-section__button {
         width: 220px;
         height: 47px;
+        font-size: 16px;
+        padding: 18px 20px;
     }
 
     .industrial-section__text,
@@ -270,5 +273,9 @@
         text-align: center;
         max-width: 335px;
         width: 100%;
+    }
+
+    .industrial-section__text {
+        margin-bottom: 22px;
     }
 }
