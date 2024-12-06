@@ -10,23 +10,6 @@ document.addEventListener('DOMContentLoaded', function () {
         setTimeout(() => (isScrolling = false), 100);
     });
 
-    // function resetContainers(startIndex, numContainersInRow) {
-    //     if (isScrolling) return;
-    //     for (let i = 0; i < containers.length; i++) {
-    //         const container = containers[i];
-    //         if (container) {
-    //             container.style.transform = 'translateX(0)';
-    //             container.style.opacity = '1';
-    //             container.classList.remove('open');
-    //         }
-    //     }
-
-    //     containers.forEach((container) => {
-    //         container.style.transform = 'translateY(0)';
-    //     });
-    //     testimonialsSection.classList.remove('expanded-height');
-    // }
-
     function resetContainers() {
         if (isScrolling) return;
         let parentContainer = null;
@@ -155,14 +138,13 @@ document.addEventListener('DOMContentLoaded', function () {
     let resizeTimeout;
 
     window.addEventListener('resize', () => {
-      clearTimeout(resizeTimeout);
-      resizeTimeout = setTimeout(() => {
-        if (window.innerHeight !== document.documentElement.clientHeight) {
+        const viewportHeight = window.visualViewport ? window.visualViewport.height : window.innerHeight;
+        if (viewportHeight !== document.documentElement.clientHeight) {
           return;
         }
         updateLayout();
-      }, 100);
-    });
+      });
+      
 
     containers.forEach((container, index) => {
         container.addEventListener('click', function () {
