@@ -115,7 +115,6 @@ document.addEventListener('DOMContentLoaded', function () {
     container.addEventListener('click', () => {
       if (container.classList.contains('open') == false) {
         resetContainers(0, 3);
-        console.log('test');
       }
     });
   });
