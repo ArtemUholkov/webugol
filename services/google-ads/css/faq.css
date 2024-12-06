@@ -59,12 +59,13 @@
     top: 0;
     left: 100%;
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     display: flex;
     transform: translateX(-100%);
-    -webkit-transition: max-height 0.3s ease, opacity 0.3s ease;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
     transition: max-height 0.3s ease, opacity 0.3s ease;
-    z-index: 1;
     width: 522px;
     flex-direction: row;
     justify-content: center;
