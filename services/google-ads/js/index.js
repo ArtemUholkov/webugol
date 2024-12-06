@@ -24,38 +24,40 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
 
-            const isOpen =
-                mediaQuery.matches
-                    ? hiddenContent.style.maxHeight && hiddenContent.style.maxHeight !== '0px'
-                    : hiddenContent.style.transform === 'translateX(0%)';
+            const isOpen = lastOpenedItem === item;
 
-            if (isOpen) {
+            if (lastOpenedItem) {
+                const lastHiddenContent = lastOpenedItem.querySelector('.faq-section__hidden-item');
                 if (mediaQuery.matches) {
-                    hiddenContent.style.maxHeight = '0';
-                    hiddenContent.style.opacity = '0';
+                    lastHiddenContent.style.maxHeight = '0';
+                    lastHiddenContent.style.opacity = '0';
                     setTimeout(() => {
-                        hiddenContent.style.pointerEvents = 'none';
+                        lastHiddenContent.style.pointerEvents = 'none';
                     }, 300);
                 } else {
-                    hiddenContent.style.transform = 'translateX(-100%)';
-                    hiddenContent.style.opacity = '0';
-                    hiddenContent.style.pointerEvents = 'none';
+                    lastHiddenContent.style.transform = 'translateX(-100%)';
+                    lastHiddenContent.style.opacity = '0';
+                    lastHiddenContent.style.pointerEvents = 'none';
                 }
-                lastOpenedItem = null;
-            } else {
+                if (isOpen) {
+                    lastOpenedItem = null;
+                    return;
+                }
+            }
+
                 if (mediaQuery.matches) {
-                    hiddenContent.style.display = 'block'; // Убедитесь, что элемент видим
+                    hiddenContent.style.display = 'block'; 
                     const height = hiddenContent.scrollHeight;
                     hiddenContent.style.maxHeight = `${height}px`;
                     hiddenContent.style.opacity = '1';
-                    hiddenContent.style.display = ''; // Уберите инлайн-стиль
+                    hiddenContent.style.display = ''; 
                 } else {
                     hiddenContent.style.transform = 'translateX(0%)';
                     hiddenContent.style.opacity = '1';
                 }
                 hiddenContent.style.pointerEvents = 'all';
                 lastOpenedItem = item;
-            }
+            
         };
 
         visiblePart.addEventListener('click', toggleItem);
