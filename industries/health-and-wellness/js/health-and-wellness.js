@@ -6,37 +6,21 @@ document.addEventListener('DOMContentLoaded', function () {
     let isScrolling = false;
 
     window.addEventListener('scroll', () => {
-        if (activeContainer) {
-            return;
-        }
+        if (activeContainer) return; 
         isScrolling = true;
         setTimeout(() => (isScrolling = false), 100);
     });
 
-
     function resetContainers() {
-        if (isScrolling) return;
-        let parentContainer = null;
+        if (activeContainer) return; 
 
-        for (let i = 0; i < containers.length; i++) {
-            const container = containers[i];
-            if (container) {
-                container.style.transform = 'translateX(0)';
-                container.style.opacity = '1';
-                container.classList.remove('open');
-                container.style.transition = 'all 1.7s'
+        containers.forEach((container) => {
+            container.style.transform = 'translateX(0)';
+            container.style.opacity = '1';
+            container.classList.remove('open');
+        });
 
-                if (!parentContainer) {
-                    parentContainer = container.closest('.team-section');
-                }
-            }
-        }
-
-        if (parentContainer) {
-            if (parentContainer.dataset.baseHeight) {
-                parentContainer.style.height = parentContainer.dataset.baseHeight;
-            }
-        }
+        testimonialsSection.style.height = '';
     }
 
     containers.forEach((container, i) => {
@@ -157,10 +141,13 @@ document.addEventListener('DOMContentLoaded', function () {
         const currentHeight = window.visualViewport?.height || window.innerHeight;
         if (currentHeight !== lastHeight) {
             lastHeight = currentHeight;
-            return; 
+            return;
         }
-        updateLayout();
+        if (!activeContainer) {
+            resetContainers();
+        }
     });
+    
 
 
     containers.forEach((container, index) => {
