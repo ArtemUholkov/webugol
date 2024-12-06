@@ -62,13 +62,19 @@
     height: 100%;
     display: flex;
     transform: translateX(-100%);
-    transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out 0.1s;
+    -webkit-transition: max-height 0.3s ease, opacity 0.3s ease;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
     z-index: 1;
     width: 522px;
     flex-direction: row;
     justify-content: center;
     opacity: 0;
     pointer-events: none;
+}
+
+.faq-section__hidden-item.open {
+    opacity: 1;
+    pointer-events: all;
 }
 
 .faq-section__visible-item {
