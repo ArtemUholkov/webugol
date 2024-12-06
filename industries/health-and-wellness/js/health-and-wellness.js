@@ -6,9 +6,13 @@ document.addEventListener('DOMContentLoaded', function () {
     let isScrolling = false;
 
     window.addEventListener('scroll', () => {
+        if (activeContainer) {
+            return;
+        }
         isScrolling = true;
         setTimeout(() => (isScrolling = false), 100);
     });
+
 
     function resetContainers() {
         if (isScrolling) return;
@@ -135,19 +139,37 @@ document.addEventListener('DOMContentLoaded', function () {
         activeContainer = null;
     }
 
-    let resizeTimeout;
+    // let resizeTimeout;
+
+    // window.addEventListener('resize', () => {
+    //   clearTimeout(resizeTimeout);
+    //   resizeTimeout = setTimeout(() => {
+    //     if (window.innerHeight !== document.documentElement.clientHeight) {
+    //       return;
+    //     }
+    //     updateLayout();
+    //   }, 100);
+    // });
+
+    let lastHeight = window.visualViewport?.height || window.innerHeight;
 
     window.addEventListener('resize', () => {
-        const viewportHeight = window.visualViewport ? window.visualViewport.height : window.innerHeight;
-        if (viewportHeight !== document.documentElement.clientHeight) {
-          return;
+        const currentHeight = window.visualViewport?.height || window.innerHeight;
+        if (currentHeight !== lastHeight) {
+            lastHeight = currentHeight;
+            return; 
         }
         updateLayout();
-      });
-      
+    });
+
 
     containers.forEach((container, index) => {
         container.addEventListener('click', function () {
+
+            if (container.classList.contains('open')) {
+                return;
+            }
+
             const screenWidth = window.innerWidth;
             let numContainersInRow;
 
