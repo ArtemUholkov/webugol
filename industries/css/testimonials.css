@@ -34,30 +34,9 @@
   gap: 20px;
   width: 100%;
   justify-content: center;
-  /* max-width: 1450px;
-    overflow-x: hidden; */
   padding-bottom: 10px;
   -webkit-overflow-scrolling: touch;
 }
-
-/* .testimonials__container::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-
-.testimonials__container::-webkit-scrollbar-track {
-  background: #7b7b7b;
-}
-
-.testimonials__container::-webkit-scrollbar-thumb {
-  background: linear-gradient(90deg, #ff7a00 0%, #ffdd00 100%);
-  border-radius: 5px;
-}
-
-.testimonials__container::-webkit-scrollbar-thumb:hover {
-  background: #ff7a00;
-  cursor: pointer;
-} */
 
 .testimonials__container-item {
   width: 460px;
@@ -69,14 +48,13 @@
   border-radius: 10px;
   transition: opacity 0.8s ease-in;
   cursor: pointer;
-  /* float: left; */
   transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
   box-sizing: border-box;
   position: relative;
 }
 
 .testimonials__description-container {
-  position: fixed;
+  position: absolute;
   top: 40px;
   left: 50%;
   transform: translateX(35%);
@@ -95,7 +73,6 @@
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.2);
   transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
-  -webkit-transform: translateZ(0);
 }
 
 .testimonials__top-text-container {
@@ -140,7 +117,6 @@
   opacity: 0;
 }
 
-.testimonials__photo-default,
 .testimonials__photo-hover {
   position: absolute;
   top: 0;
@@ -149,12 +125,13 @@
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
-  transition: opacity 0.8s ease-in;
-}
-
-.testimonials__photo-hover {
-  opacity: 0;
-  z-index: 1;
+  cursor: pointer;
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  transition: filter 0.7s ease, opacity 0.7s ease;
+  opacity: 1;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .testimonials__container-item.open .testimonials__photo-hover {
@@ -167,11 +144,8 @@
 }
 
 .testimonials__container-item:hover .testimonials__photo-hover {
-  opacity: 1;
-}
-
-.testimonials__container-item:hover .testimonials__photo-default {
-  opacity: 0;
+  filter: grayscale(0%);
+  -webkit-filter: grayscale(0%);
 }
 
 .testimonials__play {

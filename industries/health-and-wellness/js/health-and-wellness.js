@@ -1,11 +1,3 @@
-window.addEventListener('scroll', () => {
-    if (activeContainer) {
-        activeContainer.style.opacity = '1';
-        activeContainer.style.transform = 'none'; // Оставляем открытый контейнер видимым
-    }
-});
-
-
 document.addEventListener('DOMContentLoaded', function () {
     const containers = document.querySelectorAll('.testimonials__container-item');
     const testimonialsSection = document.querySelector('.testimonials');
@@ -13,18 +5,85 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let isScrolling = false;
 
-    function resetContainers(startIndex, numContainersInRow) {
-        if (isScrolling || !activeContainer) return; // Избегаем сброса при прокрутке
-    
-        containers.forEach((container) => {
-            if (container !== activeContainer) {
+    window.addEventListener('scroll', () => {
+        isScrolling = true;
+        setTimeout(() => (isScrolling = false), 100);
+    });
+
+    // function resetContainers(startIndex, numContainersInRow) {
+    //     if (isScrolling) return;
+    //     for (let i = 0; i < containers.length; i++) {
+    //         const container = containers[i];
+    //         if (container) {
+    //             container.style.transform = 'translateX(0)';
+    //             container.style.opacity = '1';
+    //             container.classList.remove('open');
+    //         }
+    //     }
+
+    //     containers.forEach((container) => {
+    //         container.style.transform = 'translateY(0)';
+    //     });
+    //     testimonialsSection.classList.remove('expanded-height');
+    // }
+
+    function resetContainers() {
+        if (isScrolling) return;
+        let parentContainer = null;
+
+        for (let i = 0; i < containers.length; i++) {
+            const container = containers[i];
+            if (container) {
                 container.style.transform = 'translateX(0)';
                 container.style.opacity = '1';
                 container.classList.remove('open');
+                container.style.transition = 'all 1.7s'
+
+                if (!parentContainer) {
+                    parentContainer = container.closest('.team-section');
+                }
+            }
+        }
+
+        if (parentContainer) {
+            if (parentContainer.dataset.baseHeight) {
+                parentContainer.style.height = parentContainer.dataset.baseHeight;
+            }
+        }
+    }
+
+    containers.forEach((container, i) => {
+        container.addEventListener('click', () => {
+            if (container.classList.contains('open') == false) {
+                resetContainers(0, 3);
             }
         });
-    
-        testimonialsSection.classList.remove('expanded-height');
+    });
+
+    function handleClickForThree(containerClicked, startIndex, indexInRow) {
+        if (activeContainer === containerClicked) {
+            resetContainers(startIndex, 3);
+            activeContainer = null;
+        } else {
+            resetContainers(startIndex, 3);
+            containerClicked.classList.add('open');
+
+            containers.forEach((container, i) => {
+                if (i < startIndex || i >= startIndex + 3) return;
+
+                if (container === containerClicked) {
+                    container.style.transform = `translateX(-${indexInRow * 400}px)`;
+                } else if (i < indexInRow + startIndex) {
+                    container.style.transform = 'translateX(-100%)';
+                    container.style.opacity = '0';
+                } else if (i > indexInRow + startIndex) {
+                    container.style.transform = `translateX(${(i - indexInRow) * 400}px)`;
+                    container.style.opacity = '0';
+                }
+            });
+
+            activeContainer = containerClicked;
+        }
     }
 
     function handleClickForTwo(containerClicked, startIndex, indexInRow) {
@@ -66,32 +125,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    function handleClickForThree(containerClicked, startIndex, indexInRow) {
-        if (activeContainer === containerClicked) {
-            resetContainers(startIndex, 3);
-            activeContainer = null;
-        } else {
-            resetContainers(startIndex, 3);
-            containerClicked.classList.add('open');
-
-            containers.forEach((container, i) => {
-                if (i < startIndex || i >= startIndex + 3) return;
-
-                if (container === containerClicked) {
-                    container.style.transform = `translateX(-${indexInRow * 400}px)`;
-                } else if (i < indexInRow + startIndex) {
-                    container.style.transform = 'translateX(-100%)';
-                    container.style.opacity = '0';
-                } else if (i > indexInRow + startIndex) {
-                    container.style.transform = `translateX(${(i - indexInRow) * 400}px)`;
-                    container.style.opacity = '0';
-                }
-            });
-
-            activeContainer = containerClicked;
-        }
-    }
-
     function handleClickForOne(containerClicked, startIndex) {
         if (activeContainer === containerClicked) {
             resetContainers(startIndex, 1);
@@ -119,11 +152,17 @@ document.addEventListener('DOMContentLoaded', function () {
         activeContainer = null;
     }
 
-    // window.addEventListener('scroll', () => {
-    //     isScrolling = true;
-    //     clearTimeout(isScrolling);
-    //     setTimeout(() => (isScrolling = false), 150); 
-    // });
+    let resizeTimeout;
+
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        if (window.innerHeight !== document.documentElement.clientHeight) {
+          return;
+        }
+        updateLayout();
+      }, 100);
+    });
 
     containers.forEach((container, index) => {
         container.addEventListener('click', function () {
