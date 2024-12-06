@@ -228,8 +228,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 }
 
-
-
   function updateLayout() {
     resetContainers(0, containers.length);
     activeContainer = null;

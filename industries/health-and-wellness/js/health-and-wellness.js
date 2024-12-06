@@ -3,25 +3,18 @@ document.addEventListener('DOMContentLoaded', function () {
     const testimonialsSection = document.querySelector('.testimonials');
     let activeContainer = null;
 
-    function resetContainers(startIndex, numContainersInRow) {
-        // for (let i = startIndex; i < startIndex + numContainersInRow; i++) {
-        //     if (containers[i]) {
-        //         containers[i].style.transform = 'translateX(0)';
-        //         containers[i].style.opacity = '1';
-        //         containers[i].classList.remove('open');
-        //     }
-        // }
+    let isScrolling = false;
 
+    function resetContainers(startIndex, numContainersInRow) {
+        if (isScrolling) return; 
         for (let i = 0; i < containers.length; i++) {
             const container = containers[i];
             if (container) {
-              container.style.transform = 'translateX(0)';
-              container.style.opacity = '1';
-              container.classList.remove('open');
-        
-              
+                container.style.transform = 'translateX(0)';
+                container.style.opacity = '1';
+                container.classList.remove('open');
             }
-          }
+        }
 
         containers.forEach((container) => {
             container.style.transform = 'translateY(0)';
@@ -120,6 +113,12 @@ document.addEventListener('DOMContentLoaded', function () {
         resetContainers(0, containers.length);
         activeContainer = null;
     }
+
+    window.addEventListener('scroll', () => {
+        isScrolling = true;
+        clearTimeout(isScrolling);
+        setTimeout(() => (isScrolling = false), 150); 
+    });
 
     containers.forEach((container, index) => {
         container.addEventListener('click', function () {
