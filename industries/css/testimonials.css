@@ -37,9 +37,10 @@
   /* max-width: 1450px;
     overflow-x: hidden; */
   padding-bottom: 10px;
+  -webkit-overflow-scrolling: touch;
 }
 
-.testimonials__container::-webkit-scrollbar {
+/* .testimonials__container::-webkit-scrollbar {
   width: 10px;
   height: 10px;
 }
@@ -56,7 +57,7 @@
 .testimonials__container::-webkit-scrollbar-thumb:hover {
   background: #ff7a00;
   cursor: pointer;
-}
+} */
 
 .testimonials__container-item {
   width: 460px;
@@ -75,7 +76,7 @@
 }
 
 .testimonials__description-container {
-  position: absolute;
+  position: fixed;
   top: 40px;
   left: 50%;
   transform: translateX(35%);
