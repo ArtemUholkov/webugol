@@ -5,8 +5,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let isScrolling = false;
 
+    // Обновленный resetContainers
     function resetContainers(startIndex, numContainersInRow) {
-        if (isScrolling) return; 
+        if (isScrolling) return; // Предотвращаем сброс, если идет скролл
+
         for (let i = 0; i < containers.length; i++) {
             const container = containers[i];
             if (container) {
@@ -114,12 +116,13 @@ document.addEventListener('DOMContentLoaded', function () {
         activeContainer = null;
     }
 
+    // Добавлена логика предотвращения закрытия контейнера при скролле
     window.addEventListener('scroll', () => {
         isScrolling = true;
-        clearTimeout(isScrolling);
-        setTimeout(() => (isScrolling = false), 150); 
+        setTimeout(() => (isScrolling = false), 100);
     });
 
+    // Обработка кликов по контейнерам
     containers.forEach((container, index) => {
         container.addEventListener('click', function () {
             const screenWidth = window.innerWidth;
