@@ -5,9 +5,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let isScrolling = false;
 
-    // Обновленный resetContainers
     function resetContainers(startIndex, numContainersInRow) {
-        if (isScrolling) return; // Предотвращаем сброс, если идет скролл
+        if (isScrolling) return; // Не сбрасываем контейнеры во время скролла
 
         for (let i = 0; i < containers.length; i++) {
             const container = containers[i];
@@ -26,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function handleClickForTwo(containerClicked, startIndex, indexInRow) {
         if (activeContainer === containerClicked) {
+            // Закрываем контейнер, если кликаем по открытому
             resetContainers(startIndex, 2);
             activeContainer = null;
         } else {
@@ -59,12 +59,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             });
 
-            activeContainer = containerClicked;
+            activeContainer = containerClicked; // Устанавливаем активный контейнер
         }
     }
 
     function handleClickForThree(containerClicked, startIndex, indexInRow) {
         if (activeContainer === containerClicked) {
+            // Закрываем контейнер, если кликаем по открытому
             resetContainers(startIndex, 3);
             activeContainer = null;
         } else {
@@ -85,12 +86,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             });
 
-            activeContainer = containerClicked;
+            activeContainer = containerClicked; // Устанавливаем активный контейнер
         }
     }
 
     function handleClickForOne(containerClicked, startIndex) {
         if (activeContainer === containerClicked) {
+            // Закрываем контейнер, если кликаем по открытому
             resetContainers(startIndex, 1);
             activeContainer = null;
         } else {
@@ -107,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             }
 
-            activeContainer = containerClicked;
+            activeContainer = containerClicked; // Устанавливаем активный контейнер
         }
     }
 
@@ -116,13 +118,17 @@ document.addEventListener('DOMContentLoaded', function () {
         activeContainer = null;
     }
 
-    // Добавлена логика предотвращения закрытия контейнера при скролле
+    // Добавлена обработка scroll и touchmove
     window.addEventListener('scroll', () => {
         isScrolling = true;
-        setTimeout(() => (isScrolling = false), 100);
+        setTimeout(() => (isScrolling = false), 150);
     });
 
-    // Обработка кликов по контейнерам
+    window.addEventListener('touchmove', () => {
+        isScrolling = true;
+        setTimeout(() => (isScrolling = false), 150);
+    });
+
     containers.forEach((container, index) => {
         container.addEventListener('click', function () {
             const screenWidth = window.innerWidth;
