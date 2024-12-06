@@ -55,9 +55,7 @@
 }
 
 .faq-section__hidden-item {
-    position: relative;
-    overflow: hidden;
-    max-height: 0;
+    position: absolute;
     top: 0;
     left: 100%;
     width: 100%;
@@ -193,8 +191,7 @@
         opacity: 0;
         top: 0;
         left: 0;
-        /* transform: translate(0, 0); */
-        transform: none;
+        transform: translate(0, 0);
         max-height: 0; 
         transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
     }
