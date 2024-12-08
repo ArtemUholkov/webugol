@@ -18,17 +18,18 @@
 }
 
 .history-section__image-container {
-    width: 100%;
-    overflow-x: hidden;
-    white-space: nowrap;
+    width: 100%; 
+    overflow-x: hidden; 
+    white-space: nowrap; 
     display: flex;
     justify-content: flex-end;
-    position: relative;
+    position: relative; 
+    padding-bottom: 40px;
 }
 
 .simplebar-track {
     margin-top: 100px;
-    background-color: #9696966c;
+    background-color: #9696967d;
     height: 6px;
 }
 
@@ -43,7 +44,7 @@
 
 @media screen and (max-width: 1500px) {
     .history-section__image {
-        width: auto;
+        width: auto; 
     }
 
     .history-section__title {
@@ -51,16 +52,36 @@
     }
 
     .history-section__image-container {
-        width: 100%;
-        overflow-x: scroll;
-        white-space: nowrap;
+        width: 100%; 
+        overflow-x: scroll; 
+        white-space: nowrap; 
         display: flex;
         justify-content: flex-end;
         position: relative;
-        scrollbar-color: #ff7a00 #96969698;
-        scrollbar-width: thin;
-        padding-bottom: 40px;
+        scrollbar-color: #ff7a00 #969696; 
+        scrollbar-width: thin; 
     }
+    
+    .history-section__image-container::-webkit-scrollbar {
+        height: 6px; 
+        background-color: #969696;
+    }
+    
+    .history-section__image-container::-webkit-scrollbar-thumb {
+        background-color: #ff7a00;
+        border-radius: 3px; 
+    }
+    
+    .history-section__image-container::-webkit-scrollbar-thumb:hover {
+        background-color: #ff5500; 
+    }
+    
+    /* Для всех устройств */
+    .history-section__image-container {
+        -ms-overflow-style: scrollbar; 
+    }
+    
+    
 }
 
 @media screen and (max-width: 1200px) {
@@ -75,53 +96,30 @@
         font-size: 38px;
         line-height: 52.8px;
     }
-
-    .history-section {
-        padding-top: 140px;
-    }
 }
 
 @media screen and (max-width: 750px) {
     .history-section__image {
-        height: 500px;
+        height: 500px; 
+    }
+
+    .history-section {
+        margin-top: 120px;
     }
 }
 
 @media screen and (max-width: 570px) {
     .history-section__title {
-        margin: 10px auto;
-        font-size: 36px;
-        line-height: 110%;
-        width: 330px;
+       margin: 10px auto;
+       font-size: 36px;
+       width: 330px;
     }
 
     .history-section {
-        padding-top: 120px;
+        margin-top: 100px;
     }
 
     .history-section__image {
-        height: 450px;
+        height: 450px; 
     }
-
-    .history-section__image-container {
-        -webkit-overflow-scrolling: touch; 
-        overflow-x: scroll; 
-        display: flex;
-        white-space: nowrap;
-    }
-    
-    .history-section__image-container::-webkit-scrollbar {
-        height: 6px; 
-        background-color: #9696966c;
-    }
-    
-    .history-section__image-container::-webkit-scrollbar-thumb {
-        background-color: #ff7a00; 
-        border-radius: 3px;
-    }
-    
-    .history-section__image-container::-webkit-scrollbar-thumb:hover {
-        background-color: #ff5500;
-    }
-    
 }
