@@ -42,7 +42,6 @@ function handleEscapeKey(event) {
 }
 
 //team section
-
 document.addEventListener('DOMContentLoaded', function () {
   const containers = document.querySelectorAll('.team-section__image-container');
 
@@ -270,7 +269,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  window.addEventListener('resize', updateLayout);
+  // window.addEventListener('resize', updateLayout);
 });
 
 const container = document.querySelector('.history-section__image-container');
