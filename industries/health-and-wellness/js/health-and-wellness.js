@@ -1,19 +1,18 @@
 document.addEventListener('DOMContentLoaded', function () {
     const containers = document.querySelectorAll('.testimonials__container-item');
     const testimonialsSection = document.querySelector('.testimonials');
+    const wrappers = document.querySelectorAll('.testimonials__wrapper');
     let activeContainer = null;
 
     let isScrolling = false;
 
     window.addEventListener('scroll', () => {
-        if (activeContainer) return; 
+        if (activeContainer) return;
         isScrolling = true;
         setTimeout(() => (isScrolling = false), 100);
     });
 
     function resetContainers() {
-        if (activeContainer) return; 
-
         containers.forEach((container) => {
             container.style.transform = 'translateX(0)';
             container.style.opacity = '1';
@@ -21,22 +20,23 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         testimonialsSection.style.height = '';
+        activeContainer = null;
     }
 
     containers.forEach((container, i) => {
         container.addEventListener('click', () => {
-            if (container.classList.contains('open') == false) {
-                resetContainers(0, 3);
+            if (!container.classList.contains('open')) {
+                resetContainers();
             }
         });
     });
 
     function handleClickForThree(containerClicked, startIndex, indexInRow) {
         if (activeContainer === containerClicked) {
-            resetContainers(startIndex, 3);
+            resetContainers();
             activeContainer = null;
         } else {
-            resetContainers(startIndex, 3);
+            resetContainers();
             containerClicked.classList.add('open');
 
             containers.forEach((container, i) => {
@@ -59,10 +59,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function handleClickForTwo(containerClicked, startIndex, indexInRow) {
         if (activeContainer === containerClicked) {
-            resetContainers(startIndex, 2);
+            resetContainers();
             activeContainer = null;
         } else {
-            resetContainers(startIndex, 2);
+            resetContainers();
             containerClicked.classList.add('open');
 
             if (window.innerWidth < 1230) {
@@ -98,10 +98,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function handleClickForOne(containerClicked, startIndex) {
         if (activeContainer === containerClicked) {
-            resetContainers(startIndex, 1);
+            resetContainers();
             activeContainer = null;
         } else {
-            resetContainers(startIndex, 1);
+            resetContainers();
             containerClicked.classList.add('open');
 
             if (window.innerWidth < 991) {
@@ -119,21 +119,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function updateLayout() {
-        resetContainers(0, containers.length);
+        resetContainers();
         activeContainer = null;
     }
-
-    // let resizeTimeout;
-
-    // window.addEventListener('resize', () => {
-    //   clearTimeout(resizeTimeout);
-    //   resizeTimeout = setTimeout(() => {
-    //     if (window.innerHeight !== document.documentElement.clientHeight) {
-    //       return;
-    //     }
-    //     updateLayout();
-    //   }, 100);
-    // });
 
     let lastHeight = window.visualViewport?.height || window.innerHeight;
 
@@ -147,12 +135,9 @@ document.addEventListener('DOMContentLoaded', function () {
             resetContainers();
         }
     });
-    
-
 
     containers.forEach((container, index) => {
         container.addEventListener('click', function () {
-
             if (container.classList.contains('open')) {
                 return;
             }
@@ -177,6 +162,18 @@ document.addEventListener('DOMContentLoaded', function () {
                 handleClickForTwo(container, startOfRow, indexInRow);
             } else {
                 handleClickForOne(container, startOfRow);
+            }
+        });
+    });
+
+    // Добавление логики закрытия по клику на .testimonials__wrapper
+    wrappers.forEach((wrapper) => {
+        wrapper.addEventListener('click', (event) => {
+            const parentContainer = wrapper.closest('.testimonials__container-item');
+            if (parentContainer && parentContainer.classList.contains('open')) {
+                resetContainers();
+                activeContainer = null;
+                event.stopPropagation();
             }
         });
     });
