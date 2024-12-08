@@ -6,10 +6,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let isScrolling = false;
 
+
     window.addEventListener('scroll', () => {
-        if (activeContainer) return;
+        if (!activeContainer) return; 
         isScrolling = true;
-        setTimeout(() => (isScrolling = false), 100);
+        setTimeout(() => (isScrolling = false), 100); 
     });
 
     function resetContainers() {
@@ -166,7 +167,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Добавление логики закрытия по клику на .testimonials__wrapper
     wrappers.forEach((wrapper) => {
         wrapper.addEventListener('click', (event) => {
             const parentContainer = wrapper.closest('.testimonials__container-item');
@@ -176,6 +176,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 event.stopPropagation();
             }
         });
+    });
+
+    document.addEventListener('click', (event) => {
+        if (activeContainer && !event.target.closest('.testimonials__container-item')) {
+            resetContainers();
+        }
     });
 
     window.addEventListener('resize', updateLayout);
