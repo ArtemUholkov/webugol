@@ -71,6 +71,7 @@
 }
 
 .faq-section__hidden-item.open {
+    transform: translateX(0); 
     opacity: 1;
     pointer-events: all;
 }
