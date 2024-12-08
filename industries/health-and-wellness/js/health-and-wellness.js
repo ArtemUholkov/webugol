@@ -3,15 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const testimonialsSection = document.querySelector('.testimonials');
     const wrappers = document.querySelectorAll('.testimonials__wrapper');
     let activeContainer = null;
-
-    let isScrolling = false;
-
-
-    window.addEventListener('scroll', () => {
-        if (!activeContainer) return; 
-        isScrolling = true;
-        setTimeout(() => (isScrolling = false), 100); 
-    });
+    let lastScrollY = window.scrollY; 
 
     function resetContainers() {
         containers.forEach((container) => {
@@ -24,13 +16,15 @@ document.addEventListener('DOMContentLoaded', function () {
         activeContainer = null;
     }
 
-    containers.forEach((container, i) => {
-        container.addEventListener('click', () => {
-            if (!container.classList.contains('open')) {
-                resetContainers();
-            }
-        });
-    });
+    function handleScroll() {
+        const currentScrollY = window.scrollY;
+        if (Math.abs(currentScrollY - lastScrollY) > 50) { 
+            lastScrollY = currentScrollY;
+            return; 
+        }
+    }
+
+    window.addEventListener('scroll', handleScroll);
 
     function handleClickForThree(containerClicked, startIndex, indexInRow) {
         if (activeContainer === containerClicked) {
@@ -119,24 +113,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    function updateLayout() {
-        resetContainers();
-        activeContainer = null;
-    }
-
-    let lastHeight = window.visualViewport?.height || window.innerHeight;
-
-    window.addEventListener('resize', () => {
-        const currentHeight = window.visualViewport?.height || window.innerHeight;
-        if (currentHeight !== lastHeight) {
-            lastHeight = currentHeight;
-            return;
-        }
-        if (!activeContainer) {
-            resetContainers();
-        }
-    });
-
     containers.forEach((container, index) => {
         container.addEventListener('click', function () {
             if (container.classList.contains('open')) {
@@ -184,5 +160,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    window.addEventListener('resize', updateLayout);
+    // window.addEventListener('resize', () => {
+    //     resetContainers();
+    // });
 });
