@@ -29,12 +29,12 @@
 
 .simplebar-track {
     margin-top: 100px;
-    background-color: #9696967d;
-    height: 6px;
+    background-color: #9696961b !important;
+    height: 4px;
 }
 
 .simplebar-scrollbar:before {
-    background-color: #ff7a00;
+    background-color: #ff7300;
     border-radius: 3px;
 }
 
@@ -58,13 +58,13 @@
         display: flex;
         justify-content: flex-end;
         position: relative;
-        scrollbar-color: #ff7a00 #969696; 
+        scrollbar-color: #ff7a00 #9696961b !important; 
         scrollbar-width: thin; 
     }
     
     .history-section__image-container::-webkit-scrollbar {
-        height: 6px; 
-        background-color: #969696;
+        height: 4px !important; 
+        background-color: #9696961b !important;
     }
     
     .history-section__image-container::-webkit-scrollbar-thumb {
@@ -76,12 +76,9 @@
         background-color: #ff5500; 
     }
     
-    /* Для всех устройств */
     .history-section__image-container {
         -ms-overflow-style: scrollbar; 
     }
-    
-    
 }
 
 @media screen and (max-width: 1200px) {
@@ -96,15 +93,15 @@
         font-size: 38px;
         line-height: 52.8px;
     }
+
+    .history-section {
+        padding-top: 120px;
+    }
 }
 
 @media screen and (max-width: 750px) {
     .history-section__image {
         height: 500px; 
-    }
-
-    .history-section {
-        margin-top: 120px;
     }
 }
 
@@ -113,10 +110,6 @@
        margin: 10px auto;
        font-size: 36px;
        width: 330px;
-    }
-
-    .history-section {
-        margin-top: 100px;
     }
 
     .history-section__image {

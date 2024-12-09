@@ -44,8 +44,14 @@ function handleEscapeKey(event) {
 //team section
 document.addEventListener('DOMContentLoaded', function () {
   const containers = document.querySelectorAll('.team-section__image-container');
-
+  const descriptionContainers = document.querySelectorAll('.team-section__description-container');
   let activeContainer = null;
+
+  descriptionContainers.forEach(descriptionContainer => {
+    descriptionContainer.addEventListener('click', (event) => {
+      event.stopPropagation(); 
+    });
+  });
 
   function adjustContainerHeight(containerClicked, numContainersInRow) {
     const parentContainer = containerClicked.closest('.team-section');
@@ -65,13 +71,13 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     } else if (window.innerWidth < 640) {
       if (containerClicked.classList.contains('open')) {
-        parentContainer.style.height = `${baseHeight + 450}px`;
+        parentContainer.style.height = `${baseHeight + 550}px`;
       } else {
         parentContainer.style.height = `${baseHeight}px`;
       }
     } else if (window.innerWidth < 1000) {
       if (containerClicked.classList.contains('open')) {
-        parentContainer.style.height = `${baseHeight + 300}px`;
+        parentContainer.style.height = `${baseHeight + 350}px`;
       } else {
         parentContainer.style.height = `${baseHeight}px`;
       }
