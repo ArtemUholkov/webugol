@@ -112,15 +112,16 @@
     font-size: 18px;
     font-style: normal;
     font-weight: 300;
-    line-height: 110%; 
+    line-height: 110%;
     text-transform: capitalize;
     position: relative;
     transition: color 0.3s ease;
 }
 
 .about__menu-item:visited {
-    color: #FFF; 
+    color: #FFF;
 }
+
 @media screen and (max-width: 1370px) {
     .about-project {
         padding: 100px 50px 180px;
@@ -178,6 +179,10 @@
         margin-top: 0px;
         width: 159px;
         height: 47px;
-        padding: 0;
+        padding: 18px 20px;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        line-height: normal;
     }
 }

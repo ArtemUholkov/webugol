@@ -6,7 +6,7 @@
     width: 100vw;
     min-height: 100vh;
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .wrapper {
@@ -35,22 +35,24 @@
     height: 50%;
     object-fit: cover; 
     position: relative;
-    z-index: 10;
+    z-index: 1;
 }
 
 .main-contact__right-container {
     width: 644px;
-    height: 864px;
-    border: 1px red solid;
+    /* height: 2064px; */
     position: relative;
+    /* height: 100%; */
+    /* z-index: 10; */
 }
 
 .form {
     width: 644px;
-    height: 864px;
-    border: 1px yellow solid;
+    /* height: 1864px; */
     position: absolute;
-    top: -150px;
+    top: -200px;
+    z-index: 1;
+    height: auto;
 }
 
 .main-contact__title {
@@ -106,7 +108,7 @@
     .wrapper {
         flex-direction: column;
         gap: 0px;
-        margin-top: 205px;
+        margin-top: 0px;
     }
 
     .main-contact__social-container {
@@ -120,7 +122,7 @@
     .main-contact__social-container--mobile {
         display: block;
         position: absolute;
-        bottom: 0;
+        bottom: -1000px;
         left: 0;
         transform: translate(50%);
     }
@@ -155,6 +157,8 @@
         width: 350px;
     }
     
+   
+
     .wrapper {
         margin-top: 168px;
     }
