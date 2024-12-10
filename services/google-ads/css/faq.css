@@ -54,8 +54,13 @@
     margin-right: 15px;
 }
 
+.faq-section__visible-item--web {
+    margin-bottom: 10px;
+}
+
 .faq-section__hidden-item {
     position: absolute;
+    z-index: 1;
     top: 0;
     left: 100%;
     width: 100%;
@@ -242,7 +247,7 @@
     }
 
     .faq-section__item-question {
-        font-size: 22px;
+        font-size: 20px;
         padding: 0;
     }
 

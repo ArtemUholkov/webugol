@@ -94,6 +94,12 @@
     }
 }
 
+@media (max-width: 1120px) {
+    .offer__image-container--center--it {
+        height: 293px !important;
+    }
+}
+
 @media (max-width: 475px) {
     .offer__container-image2--it {
         width: 130.388px;

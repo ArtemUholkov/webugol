@@ -1,4 +1,3 @@
-//faq section 
 document.addEventListener('DOMContentLoaded', () => {
     const items = document.querySelectorAll('.faq-section__container-item');
     const mediaQuery = window.matchMedia('(max-width: 1200px)');
@@ -55,4 +54,3 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-

@@ -34,3 +34,14 @@
     bottom: -200px !important;
     right: -50px !important;
 }
+
+@media screen and (max-width: 670px) {
+    .preference-section__focus-item:hover .preference-section__focus-item-title--meta {
+        transform: translateY(0px) !important;
+        font-size: 26px !important;
+    }
+    
+    .preference-section__focus-item:hover .preference-section__focus-item-text--meta {
+        transform: translateY(0px);
+    }
+}

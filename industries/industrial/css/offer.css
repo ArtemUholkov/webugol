@@ -8,6 +8,10 @@
   transform-origin: center;
 }
 
+.offer__image-container--center--ind {
+  height: 256px !important;
+}
+
 @keyframes spinAndScale {
   0% {
     transform: rotate(0deg) scale(1);
@@ -109,6 +113,12 @@
   }
 }
 
+@media (max-width: 1120px) {
+  .offer__image-container--center--ind {
+    height: 256px !important;
+  }
+}
+
 @media (max-width: 500px) {
   .offer__container__image2--industrial {
     width: 150px;
@@ -118,5 +128,5 @@
   .offer__container__image3--industrial {
     width: 150px;
     height: 150px;
-  }
+  }  
 }

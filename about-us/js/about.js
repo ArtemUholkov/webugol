@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (window.innerWidth < 500) {
       if (containerClicked.classList.contains('open')) {
-        parentContainer.style.height = `${baseHeight + 500}px`;
+        parentContainer.style.height = `${baseHeight + 600}px`;
       } else {
         parentContainer.style.height = `${baseHeight}px`;
       }

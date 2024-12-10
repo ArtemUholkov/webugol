@@ -142,4 +142,8 @@
         font-weight: 700;
         line-height: normal;
     }
+
+    .text-container__title {
+        max-width: 339px;
+    }
 }
