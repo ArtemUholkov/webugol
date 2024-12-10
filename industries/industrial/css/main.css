@@ -159,7 +159,7 @@
     transform: translateY(0); 
 }
 
-.three, .six {
+.six {
     max-width: 150px;
 }
 

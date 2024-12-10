@@ -11,10 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         buttons.forEach((btn, i) => {
             if (i === index) {
-                btn.src = './assets/img/portfolio/active-btn.png'; 
+                btn.src = '../email-marketing/assets/img/portfolio/active-btn.png'; 
                 btn.classList.add('active-btn');
             } else {
-                btn.src = './assets/img/portfolio/orange-btn.png';
+                btn.src = '../email-marketing/assets/img/portfolio/orange-btn.png';
                 btn.classList.remove('active-btn');
             }
         });
