@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const testimonialsSection = document.querySelector('.testimonials');
     const wrappers = document.querySelectorAll('.testimonials__wrapper');
     let activeContainer = null;
-    let lastScrollY = window.scrollY; 
+    let lastScrollY = window.scrollY;
 
     function resetContainers() {
         containers.forEach((container) => {
@@ -18,9 +18,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function handleScroll() {
         const currentScrollY = window.scrollY;
-        if (Math.abs(currentScrollY - lastScrollY) > 50) { 
+        if (Math.abs(currentScrollY - lastScrollY) > 50) {
             lastScrollY = currentScrollY;
-            return; 
+            return;
         }
     }
 
@@ -163,4 +163,32 @@ document.addEventListener('DOMContentLoaded', function () {
     // window.addEventListener('resize', () => {
     //     resetContainers();
     // });
+});
+
+
+//Main modal form 
+document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.getElementById("modal");
+    const openModalButton = document.querySelector(".hw-main__button");
+    const openModalFooterButton = document.querySelector(".prefooter__button");
+    const closeModalButton = document.getElementById("closeModal");
+
+    openModalButton.addEventListener("click", () => {
+        modal.classList.add("visible");
+    });
+
+    openModalFooterButton.addEventListener("click", () => {
+        modal.classList.add("visible");
+    });
+
+
+    closeModalButton.addEventListener("click", () => {
+        modal.classList.remove("visible");
+    });
+
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            modal.classList.remove("visible");
+        }
+    });
 });

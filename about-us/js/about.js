@@ -1,3 +1,30 @@
+//Main modal form 
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById("modal");
+  const openModalButton = document.querySelector(".main__button");
+  const openModalFooterButton = document.querySelector(".footer-contacts__button");
+  const closeModalButton = document.getElementById("closeModal");
+
+  openModalFooterButton.addEventListener("click", () => {
+    modal.classList.add("visible");
+  });
+
+  openModalButton.addEventListener("click", () => {
+    modal.classList.add("visible");
+  });
+
+  closeModalButton.addEventListener("click", () => {
+    modal.classList.remove("visible");
+  });
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.remove("visible");
+    }
+  });
+});
+
+
 //Video - about us section
 function openModal() {
   const modal = document.getElementById('video-modal');
@@ -49,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   descriptionContainers.forEach(descriptionContainer => {
     descriptionContainer.addEventListener('click', (event) => {
-      event.stopPropagation(); 
+      event.stopPropagation();
     });
   });
 
@@ -180,15 +207,15 @@ document.addEventListener('DOMContentLoaded', function () {
             const expandedDescription = containerClicked.querySelector('.team-section__description-container');
             setTimeout(() => {
               const descriptionHeight = expandedDescription
-                ? expandedDescription.scrollHeight 
+                ? expandedDescription.scrollHeight
                 : 0;
-          
+
               for (let j = startIndex + 2; j < containers.length; j++) {
-                containers[j].style.transform = `translateY(${descriptionHeight + 50}px)`; 
+                containers[j].style.transform = `translateY(${descriptionHeight + 50}px)`;
               }
-            }, 300); 
+            }, 300);
           }
-          
+
         } else if (i !== indexInRow + startIndex) {
           container.style.transform = 'translateX(460px)';
           container.style.opacity = '0';
@@ -200,37 +227,37 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function handleClickForOne(containerClicked, startIndex, numContainersInRow) {
-  if (activeContainer === containerClicked) {
-    containerClicked.classList.remove('open');
-    resetContainers(startIndex, 1);
-    activeContainer = null;
-  } else {
-    resetContainers(startIndex, 1);
-    containerClicked.classList.add('open');
-    adjustContainerHeight(containerClicked, numContainersInRow);
+    if (activeContainer === containerClicked) {
+      containerClicked.classList.remove('open');
+      resetContainers(startIndex, 1);
+      activeContainer = null;
+    } else {
+      resetContainers(startIndex, 1);
+      containerClicked.classList.add('open');
+      adjustContainerHeight(containerClicked, numContainersInRow);
 
-    containers.forEach((container, i) => {
-      if (i < startIndex || i >= startIndex + 1) return;
+      containers.forEach((container, i) => {
+        if (i < startIndex || i >= startIndex + 1) return;
 
-      if (container === containerClicked) {
-        if (window.innerWidth < 640) {
-          const expandedDescription = containerClicked.querySelector('.team-section__description-container');
-          setTimeout(() => {
-            const descriptionHeight = expandedDescription
-              ? expandedDescription.scrollHeight
-              : 0;
+        if (container === containerClicked) {
+          if (window.innerWidth < 640) {
+            const expandedDescription = containerClicked.querySelector('.team-section__description-container');
+            setTimeout(() => {
+              const descriptionHeight = expandedDescription
+                ? expandedDescription.scrollHeight
+                : 0;
 
-            for (let j = startIndex + 1; j < containers.length; j++) {
-              containers[j].style.transform = `translateY(${descriptionHeight + 120}px)`;
-            }
-          }, 300); 
+              for (let j = startIndex + 1; j < containers.length; j++) {
+                containers[j].style.transform = `translateY(${descriptionHeight + 120}px)`;
+              }
+            }, 300);
+          }
         }
-      }
-    });
+      });
 
-    activeContainer = containerClicked;
+      activeContainer = containerClicked;
+    }
   }
-}
 
   function updateLayout() {
     resetContainers(0, containers.length);
