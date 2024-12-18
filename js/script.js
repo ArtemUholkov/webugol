@@ -248,3 +248,30 @@ wrapContTeam.addEventListener('mousemove', (e) => {
   const walk = (x - startX) * 2; // Scroll faster with higher multiplier (2 here)
   wrapContTeam.scrollLeft = scrollLeft - walk;
 });
+
+
+//Main modal form 
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById("modal");
+  const openModalButton = document.querySelector(".main_button");
+  const openModalFooterButton = document.querySelector(".footer-contacts__button");
+  const closeModalButton = document.getElementById("closeModal");
+
+  openModalFooterButton.addEventListener("click", () => {
+    modal.classList.add("visible");
+  });
+
+  openModalButton.addEventListener("click", () => {
+    modal.classList.add("visible");
+  });
+
+  closeModalButton.addEventListener("click", () => {
+    modal.classList.remove("visible");
+  });
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.remove("visible");
+    }
+  });
+});

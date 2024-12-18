@@ -144,19 +144,28 @@
             </div>
         </div>
     </section>
-
     <section class="hw-main">
         <div class="hw-main__video-container">
             <video autoplay playsinline muted loop id="myVideo" class="hw-main__video--it">
                 <source src="../industrial/assets/img/main/video.mp4" type="video/mp4" />
             </video>
         </div>
-        <img src="../industrial/assets/img/main/main-page.png" alt="health-and-wellness-main" class="hw-main__image" data-aos="flip-right" />
+        <img src="../industrial/assets/img/main/main-page.png" alt="health-and-wellness-main" class="hw-main__image"
+            data-aos="flip-right" />
         <div class="hw-main__text-container">
-            <h1 class="hw-main__title" data-aos="fade-down">Powering Industrial <br /> Growth with Digital <br /> Marketing</h1>
+            <h1 class="hw-main__title" data-aos="fade-down">Powering Industrial <br /> Growth with Digital <br />
+                Marketing</h1>
             <button class="hw-main__button" data-aos="fade-down" data-aos-delay="300">Get Started</button>
         </div>
     </section>
+    <!-- Modal structure -->
+    <div class="modal-form hidden" id="modal">
+        <div class="modal-form__content">
+            <button class="modal-form__close" id="closeModal">&times;</button>
+            <iframe src="https://form.jotform.com/243451527464357" frameborder="0"
+                style="width: 100%; height: 400px; border: none;"></iframe>
+        </div>
+    </div>
     <section class="digit">
         <div class="digit__container first" data-aos="fade-down">
             <img src="../health-and-wellness/assets/img/digit/svg.png" alt="digit" class="digit__image" />
@@ -186,8 +195,8 @@
                 </div>
                 <div class="offer__image-container--standart">
                     <div class="svg-container ind-sec">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="238" height="225" viewBox="0 0 238 225" fill="none"
-                            class="svg-first">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="238" height="225" viewBox="0 0 238 225"
+                            fill="none" class="svg-first">
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                 d="M105.73 55.3787L169.564 92.7306L132.213 156.565L68.3777 119.214L105.73 55.3787ZM106.833 59.5948L165.348 93.834L131.109 152.349L72.5938 118.11L106.833 59.5948Z"
                                 fill="url(#paint0_radial_6462_9980)" />
@@ -236,35 +245,56 @@
                                 </radialGradient>
                             </defs>
                         </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="272" height="272" viewBox="0 0 272 272" fill="none" class="svg-second">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M194.279 136.912L135.088 194.279L77.7215 135.088L136.912 77.7214L194.279 136.912ZM189.422 136.836L135.164 189.422L82.578 135.164L136.836 82.5779L189.422 136.836Z" fill="url(#paint0_radial_1307_9498)"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M213.705 137.216L137.216 58.2952L58.2953 134.784L134.784 213.705L213.705 137.216ZM134.86 208.848L208.848 137.14L137.14 63.1517L63.1518 134.86L134.86 208.848Z" fill="url(#paint1_radial_1307_9498)"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M233.131 137.52L134.48 233.131L38.8691 134.48L137.52 38.869L233.131 137.52ZM228.275 137.444L134.556 228.274L43.7257 134.556L137.444 43.7255L228.275 137.444Z" fill="url(#paint2_radial_1307_9498)"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M252.557 137.824L137.824 19.4428L19.4429 134.176L134.176 252.557L252.557 137.824ZM134.252 247.701L247.701 137.748L137.748 24.2993L24.2995 134.252L134.252 247.701Z" fill="url(#paint3_radial_1307_9498)"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M271.983 138.128L138.128 0.0165998L0.0167673 133.872L133.872 271.983L271.983 138.128ZM133.948 267.127L267.127 138.052L138.052 4.87312L4.87332 133.948L133.948 267.127Z" fill="url(#paint4_radial_1307_9498)"/>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="272" height="272" viewBox="0 0 272 272"
+                            fill="none" class="svg-second">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M194.279 136.912L135.088 194.279L77.7215 135.088L136.912 77.7214L194.279 136.912ZM189.422 136.836L135.164 189.422L82.578 135.164L136.836 82.5779L189.422 136.836Z"
+                                fill="url(#paint0_radial_1307_9498)" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M213.705 137.216L137.216 58.2952L58.2953 134.784L134.784 213.705L213.705 137.216ZM134.86 208.848L208.848 137.14L137.14 63.1517L63.1518 134.86L134.86 208.848Z"
+                                fill="url(#paint1_radial_1307_9498)" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M233.131 137.52L134.48 233.131L38.8691 134.48L137.52 38.869L233.131 137.52ZM228.275 137.444L134.556 228.274L43.7257 134.556L137.444 43.7255L228.275 137.444Z"
+                                fill="url(#paint2_radial_1307_9498)" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M252.557 137.824L137.824 19.4428L19.4429 134.176L134.176 252.557L252.557 137.824ZM134.252 247.701L247.701 137.748L137.748 24.2993L24.2995 134.252L134.252 247.701Z"
+                                fill="url(#paint3_radial_1307_9498)" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M271.983 138.128L138.128 0.0165998L0.0167673 133.872L133.872 271.983L271.983 138.128ZM133.948 267.127L267.127 138.052L138.052 4.87312L4.87332 133.948L133.948 267.127Z"
+                                fill="url(#paint4_radial_1307_9498)" />
                             <defs>
-                              <radialGradient id="paint0_radial_1307_9498" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(136.107 129.132) rotate(-121.575) scale(134.342 134.342)">
-                                <stop offset="0.9999" stop-color="#620CD1"/>
-                                <stop offset="1" stop-color="white" stop-opacity="0"/>
-                              </radialGradient>
-                              <radialGradient id="paint1_radial_1307_9498" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(136.107 129.132) rotate(-121.575) scale(134.342 134.342)">
-                                <stop offset="0.9999" stop-color="#620CD1"/>
-                                <stop offset="1" stop-color="white" stop-opacity="0"/>
-                              </radialGradient>
-                              <radialGradient id="paint2_radial_1307_9498" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(136.107 129.132) rotate(-121.575) scale(134.342 134.342)">
-                                <stop offset="0.9999" stop-color="#620CD1"/>
-                                <stop offset="1" stop-color="white" stop-opacity="0"/>
-                              </radialGradient>
-                              <radialGradient id="paint3_radial_1307_9498" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(136.107 129.132) rotate(-121.575) scale(134.342 134.342)">
-                                <stop offset="0.9999" stop-color="#620CD1"/>
-                                <stop offset="1" stop-color="white" stop-opacity="0"/>
-                              </radialGradient>
-                              <radialGradient id="paint4_radial_1307_9498" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(136.107 129.132) rotate(-121.575) scale(134.342 134.342)">
-                                <stop offset="0.9999" stop-color="#620CD1"/>
-                                <stop offset="1" stop-color="white" stop-opacity="0"/>
-                              </radialGradient>
+                                <radialGradient id="paint0_radial_1307_9498" cx="0" cy="0" r="1"
+                                    gradientUnits="userSpaceOnUse"
+                                    gradientTransform="translate(136.107 129.132) rotate(-121.575) scale(134.342 134.342)">
+                                    <stop offset="0.9999" stop-color="#620CD1" />
+                                    <stop offset="1" stop-color="white" stop-opacity="0" />
+                                </radialGradient>
+                                <radialGradient id="paint1_radial_1307_9498" cx="0" cy="0" r="1"
+                                    gradientUnits="userSpaceOnUse"
+                                    gradientTransform="translate(136.107 129.132) rotate(-121.575) scale(134.342 134.342)">
+                                    <stop offset="0.9999" stop-color="#620CD1" />
+                                    <stop offset="1" stop-color="white" stop-opacity="0" />
+                                </radialGradient>
+                                <radialGradient id="paint2_radial_1307_9498" cx="0" cy="0" r="1"
+                                    gradientUnits="userSpaceOnUse"
+                                    gradientTransform="translate(136.107 129.132) rotate(-121.575) scale(134.342 134.342)">
+                                    <stop offset="0.9999" stop-color="#620CD1" />
+                                    <stop offset="1" stop-color="white" stop-opacity="0" />
+                                </radialGradient>
+                                <radialGradient id="paint3_radial_1307_9498" cx="0" cy="0" r="1"
+                                    gradientUnits="userSpaceOnUse"
+                                    gradientTransform="translate(136.107 129.132) rotate(-121.575) scale(134.342 134.342)">
+                                    <stop offset="0.9999" stop-color="#620CD1" />
+                                    <stop offset="1" stop-color="white" stop-opacity="0" />
+                                </radialGradient>
+                                <radialGradient id="paint4_radial_1307_9498" cx="0" cy="0" r="1"
+                                    gradientUnits="userSpaceOnUse"
+                                    gradientTransform="translate(136.107 129.132) rotate(-121.575) scale(134.342 134.342)">
+                                    <stop offset="0.9999" stop-color="#620CD1" />
+                                    <stop offset="1" stop-color="white" stop-opacity="0" />
+                                </radialGradient>
                             </defs>
-                          </svg>
+                        </svg>
                     </div>
                 </div>
             </div>
@@ -639,10 +669,17 @@
         <img src="../assets/industries/desktop.gif" alt="image" class="footer-business__gif" />
         <button class="prefooter__button">get started</button>
     </section>
+    <!-- Modal structure -->
+    <div class="modal-form hidden" id="modal">
+        <div class="modal-form__content">
+            <button class="modal-form__close" id="closeModal">&times;</button>
+            <iframe src="https://form.jotform.com/243451527464357" frameborder="0"
+                style="width: 100%; height: 400px; border: none;"></iframe>
+        </div>
+    </div>
     <section class="comments">
-        <div class="commets__top-left-block" data-aos="flip-left"
-        data-aos-easing="ease-out-cubic"
-        data-aos-duration="2000">
+        <div class="commets__top-left-block" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000">
             <h3 class="commets__title">
                 Customized Digital Strategies for the Health and Wellness Industry
             </h3>
@@ -665,9 +702,8 @@
                 in a rise in client retention, more bookings, and overall business success.
             </p>
         </div>
-        <div class="commets__top-right-block" data-aos="flip-left"
-        data-aos-easing="ease-out-cubic"
-        data-aos-duration="2000">
+        <div class="commets__top-right-block" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000">
             <h3 class="commets__title">
                 Why your business needs Webugol?
             </h3>
@@ -741,7 +777,7 @@
     <script src="../../js/script.js"></script>
     <script src="../../js/aos.js"></script>
     <script>
-      AOS.init();
+        AOS.init();
     </script>
 </body>
 

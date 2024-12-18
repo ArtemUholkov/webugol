@@ -273,7 +273,7 @@
 
 @media screen and (max-width: 650px) {
     .main-section {
-        min-height: 700px;
+        min-height: 800px;
     }
 
     .main__bottom-image--position-top {
@@ -295,6 +295,7 @@
         width: 220px;
         height: 47px;
         padding: 0;
+        margin-top: 32px;
     }
 }
 
