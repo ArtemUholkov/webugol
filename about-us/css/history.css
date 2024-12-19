@@ -25,6 +25,11 @@
     justify-content: flex-end;
     position: relative; 
     padding-bottom: 40px;
+    pointer-events: auto;
+}
+
+.history-section__image {
+    pointer-events: none; 
 }
 
 .simplebar-track {
