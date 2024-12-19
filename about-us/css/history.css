@@ -55,11 +55,13 @@
         width: 100%; 
         overflow-x: scroll; 
         white-space: nowrap; 
+        -webkit-overflow-scrolling: touch;
         display: flex;
         justify-content: flex-end;
         position: relative;
         scrollbar-color: #ff7a00 #9696961b !important; 
         scrollbar-width: thin; 
+        -ms-overflow-style: scrollbar; 
     }
     
     .history-section__image-container::-webkit-scrollbar {
@@ -74,10 +76,6 @@
     
     .history-section__image-container::-webkit-scrollbar-thumb:hover {
         background-color: #ff5500; 
-    }
-    
-    .history-section__image-container {
-        -ms-overflow-style: scrollbar; 
     }
 }
 
