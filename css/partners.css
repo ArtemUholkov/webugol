@@ -175,6 +175,7 @@
 
   .google-logo {
     max-width: 80px !important;
+    height: auto;
   }
 
   .looker-logo {

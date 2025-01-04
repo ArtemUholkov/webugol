@@ -10,7 +10,6 @@
 .logos_abs_bg_img {
   position: absolute;
   top: 0;
-
   left: 0;
   z-index: -1;
 }
@@ -35,6 +34,7 @@
   align-items: center;
   justify-content: center;
   transition: all 0.3s;
+  
 }
 .logo_line_item-top:nth-of-type(odd) {
   border-radius: 10px;
@@ -139,7 +139,6 @@
   .change-color_gray {
     background: var(--Glass, rgba(255, 255, 255, 0.2)) !important;
   }
-
   .change-color-black {
     background: var(--black-cards, #1d1d1d) !important;
   }
@@ -172,7 +171,9 @@
   .logo_8_img {
     width: 60px;
     height: 28.286px;
+    /* background: var(--Glass, rgba(255, 255, 255, 0.2)) !important; */
   }
+  
   .logo_3_img {
     width: 86.715px;
     height: 28.286px;
@@ -208,6 +209,7 @@
   .logo_12_img {
     width: 40.698px;
     height: 41.143px;
+    /* background: var(--Glass, rgba(255, 255, 255, 0.2)) !important; */
   }
   .logo_13_img {
     width: 100.983px;
@@ -220,6 +222,7 @@
   .logo_15_img {
     width: 63.986px;
     height: 22.714px;
+    /* background: var(--Glass, rgba(255, 255, 255, 0.2)) !important; */
   }
   .logo_20_img {
     width: 65.872px;
@@ -228,6 +231,7 @@
   .logo_17_img {
     width: 82.505px;
     height: 27px;
+    /* background: var(--Glass, rgba(255, 255, 255, 0.2)) !important; */
   }
   .logo_line_item-top {
     height: 60px;
