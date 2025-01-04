@@ -305,7 +305,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // window.addEventListener('resize', updateLayout);
 });
 
-const container = document.querySelector('.history-section__image-container');
+
 
 
 
@@ -317,7 +317,7 @@ let isDown = false;
 let startX;
 let scrollLeft;
 
-// Начало нажатия
+
 imageContainer.addEventListener('mousedown', (e) => {
   isDown = true;
   imageContainer.classList.add('active');
@@ -335,16 +335,16 @@ imageContainer.addEventListener('mouseup', () => {
   imageContainer.classList.remove('active');
 });
 
-// Свайп для прокрутки
+
 imageContainer.addEventListener('mousemove', (e) => {
   if (!isDown) return;
   e.preventDefault();
   const x = e.pageX - imageContainer.offsetLeft;
-  const walk = (x - startX) * 2; // Увеличиваем чувствительность прокрутки
+  const walk = (x - startX) * 2; 
   imageContainer.scrollLeft = scrollLeft - walk;
 });
 
-// Поддержка тач-устройств
+
 let touchStartX;
 let touchScrollLeft;
 
@@ -355,6 +355,6 @@ imageContainer.addEventListener('touchstart', (e) => {
 
 imageContainer.addEventListener('touchmove', (e) => {
   const x = e.touches[0].pageX - imageContainer.offsetLeft;
-  const walk = (x - touchStartX) * 2; // Увеличиваем чувствительность прокрутки
+  const walk = (x - touchStartX) * 2; 
   imageContainer.scrollLeft = touchScrollLeft - walk;
 });
