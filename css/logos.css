@@ -104,6 +104,9 @@
 .logo_line_mobile {
   display: none;
 }
+.change-color_gray {
+  background: var(--Glass, rgb(222, 41, 41)) !important;
+}
 
 @media (max-width: 1740px) {
   .logo_line {
