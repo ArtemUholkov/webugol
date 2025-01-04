@@ -3,7 +3,6 @@
     flex-direction: column;
     padding-top: 220px;
     background-color: #1D1D1D;
-    overflow-x: visible;
 }
 
 .history-section__title {
@@ -19,36 +18,62 @@
 }
 
 .history-section__image-container {
-    width: 100%;
-    overflow-x: auto; 
-    -webkit-overflow-scrolling: touch; 
-    cursor: grab;
+    width: 100%; 
+    /* overflow-x: hidden;  */
+    white-space: nowrap; 
+    /* display: flex; */
+    justify-content: flex-end;
+    /* position: relative;  */
+    /* margin-bottom: 40px; */
 }
 
-
-.history-section__image {
-    display: block; 
-    width: auto; 
-    height: auto; 
-    min-width: 1500px;
-    pointer-events: none;
+/* .simplebar-track {
+    margin-top: 100px;
+    background-color: #9696961b !important;
+    height: 4px;
 }
 
-.history-section__image-container::-webkit-scrollbar {
-    height: 4px; 
-}
-
-.history-section__image-container::-webkit-scrollbar-track {
-    background: #9696961b; 
-}
-
-.history-section__image-container::-webkit-scrollbar-thumb {
-    background: #ff7a00; 
+.simplebar-scrollbar:before {
+    background-color: #ff7300;
     border-radius: 3px;
 }
 
-.history-section__image-container::-webkit-scrollbar-thumb:hover {
-    background: #ff5500;
+.simplebar-scrollbar:hover:before {
+    background-color: #ff5500;
+}  */
+
+@media screen and (max-width: 1500px) {
+    .history-section__title {
+        font-size: 60px;
+    }
+
+    .history-section__image {
+        flex-shrink: 0; 
+        max-width: none; 
+        pointer-events: none; 
+    }
+
+    .history-section__image-container {
+        overflow-x: scroll; 
+        flex-direction: row;
+        justify-content: initial;
+        touch-action: pan-x; 
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .history-section__image-container::-webkit-scrollbar {
+        height: 4px !important; 
+        background-color: #9696961b !important;
+    }
+    
+    .history-section__image-container::-webkit-scrollbar-thumb {
+        background-color: #ff7a00;
+        border-radius: 3px; 
+    }
+    
+    .history-section__image-container::-webkit-scrollbar-thumb:hover {
+        background-color: #ff5500; 
+    } 
 }
 
 @media screen and (max-width: 1200px) {
@@ -69,14 +94,20 @@
     }
 }
 
+@media screen and (max-width: 750px) {
+    /* .history-section__image {
+        height: 500px; 
+    } */
+}
+
 @media screen and (max-width: 570px) {
     .history-section__title {
-        margin: 10px auto;
-        font-size: 36px;
-        width: 330px;
+       margin: 10px auto;
+       font-size: 36px;
+       width: 330px;
     }
 
-    .history-section__image {
-        height: auto;
-    }
+    /* .history-section__image {
+        height: 450px; 
+    } */
 }
