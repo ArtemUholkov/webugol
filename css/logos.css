@@ -145,7 +145,7 @@
 }
 @media (max-width: 820px) {
   .new-color {
-    background: #f601ee !important;
+    background: rgba(255, 255, 255, 0.2) !important;
   }
   .logo_line_mobile {
     display: flex;
