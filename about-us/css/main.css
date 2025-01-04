@@ -153,7 +153,7 @@
     position: absolute;
     top: 120px;
     right: -600px;
-    animation: infiniteRotate 20s linear infinite;
+    animation: infiniteRotate 50s linear infinite;
 }
 
 @keyframes infiniteRotate {
