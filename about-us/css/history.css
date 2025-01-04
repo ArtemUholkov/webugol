@@ -58,16 +58,12 @@
     }
 
     .history-section__image-container {
-        width: 100%; 
-        overflow-x: auto; 
-        white-space: nowrap; 
-        -webkit-overflow-scrolling: touch;
         display: flex;
-        justify-content: flex-end;
-        position: relative;
-        scrollbar-color: #ff7a00 #9696961b !important; 
-        scrollbar-width: thin; 
-        -ms-overflow-style: scrollbar; 
+        overflow-x: auto; 
+        white-space: nowrap;
+        scroll-snap-type: x mandatory; 
+        cursor: grab; 
+        -webkit-overflow-scrolling: touch;
     }
     
     .history-section__image-container::-webkit-scrollbar {
@@ -84,13 +80,19 @@
         background-color: #ff5500; 
     }
 
-    .history-section__image-container.active {
+    /* .history-section__image-container.active {
         cursor: grabbing;
         cursor: -webkit-grabbing;
     }
     .history-section__image-container {
         cursor: grab;
         cursor: -webkit-grab;
+    } */
+
+    .history-section__image {
+        flex-shrink: 0; 
+        pointer-events: none; 
+        user-select: none; 
     }
     
 }
