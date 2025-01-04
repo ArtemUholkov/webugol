@@ -305,7 +305,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // window.addEventListener('resize', updateLayout);
 });
 
-const container = document.querySelector('.history-section__image-container');
+
 
 
 
