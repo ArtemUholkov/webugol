@@ -27,6 +27,12 @@
     padding-bottom: 40px;
 }
 
+/* .history-section__image {
+    width: auto;
+    display: block;
+    touch-action: pan-x; 
+} */
+
 .simplebar-track {
     margin-top: 100px;
     background-color: #9696961b !important;
@@ -40,7 +46,7 @@
 
 .simplebar-scrollbar:hover:before {
     background-color: #ff5500;
-}
+} 
 
 @media screen and (max-width: 1500px) {
     .history-section__image {
@@ -53,7 +59,7 @@
 
     .history-section__image-container {
         width: 100%; 
-        overflow-x: scroll; 
+        overflow-x: auto; 
         white-space: nowrap; 
         -webkit-overflow-scrolling: touch;
         display: flex;

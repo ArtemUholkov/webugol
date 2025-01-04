@@ -17,8 +17,8 @@
   margin: 0 auto;
 }
 .wrap-cont-team {
-  overflow-x: scroll; /* Enables horizontal scrolling */
-  -ms-overflow-style: none; /* Hides scrollbar in Internet Explorer and Edge */
+  overflow-x: scroll; 
+  -ms-overflow-style: none; 
   scrollbar-width: none; /* Hides scrollbar in Firefox */
 }
 
@@ -44,7 +44,7 @@
   font-family: 'Biryani', sans-serif;
   font-size: 32px;
   font-weight: 275;
-  line-height: 140%; /* 44.8px */
+  line-height: 140%; 
   text-transform: uppercase;
   margin-bottom: 2px;
 }
@@ -81,14 +81,14 @@
   position: relative;
   background-position: center bottom;
   background-repeat: no-repeat;
-  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
-  filter: grayscale(0%);
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
   cursor: pointer;
   transition: all 0.7s;
 }
 .team_content_item:hover {
-  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-  filter: grayscale(100%);
+  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
   transition: all 0.7s;
 }
 
