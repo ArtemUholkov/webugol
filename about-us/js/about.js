@@ -305,56 +305,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // window.addEventListener('resize', updateLayout);
 });
 
+const container = document.querySelector('.history-section__image-container');
 
 
 
-
-////// History section
-
-const imageContainer = document.querySelector('.history-section__image-container');
-
-let isDown = false;
-let startX;
-let scrollLeft;
-
-
-imageContainer.addEventListener('mousedown', (e) => {
-  isDown = true;
-  imageContainer.classList.add('active');
-  startX = e.pageX - imageContainer.offsetLeft;
-  scrollLeft = imageContainer.scrollLeft;
-});
-
-imageContainer.addEventListener('mouseleave', () => {
-  isDown = false;
-  imageContainer.classList.remove('active');
-});
-
-imageContainer.addEventListener('mouseup', () => {
-  isDown = false;
-  imageContainer.classList.remove('active');
-});
-
-
-imageContainer.addEventListener('mousemove', (e) => {
-  if (!isDown) return;
-  e.preventDefault();
-  const x = e.pageX - imageContainer.offsetLeft;
-  const walk = (x - startX) * 2; 
-  imageContainer.scrollLeft = scrollLeft - walk;
-});
-
-
-let touchStartX;
-let touchScrollLeft;
-
-imageContainer.addEventListener('touchstart', (e) => {
-  touchStartX = e.touches[0].pageX - imageContainer.offsetLeft;
-  touchScrollLeft = imageContainer.scrollLeft;
-});
-
-imageContainer.addEventListener('touchmove', (e) => {
-  const x = e.touches[0].pageX - imageContainer.offsetLeft;
-  const walk = (x - touchStartX) * 2; 
-  imageContainer.scrollLeft = touchScrollLeft - walk;
-});
