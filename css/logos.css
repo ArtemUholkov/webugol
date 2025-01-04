@@ -104,9 +104,6 @@
 .logo_line_mobile {
   display: none;
 }
-.change-color_gray {
-  background: var(--Glass, rgb(222, 41, 41)) !important;
-}
 
 @media (max-width: 1740px) {
   .logo_line {
@@ -147,6 +144,9 @@
   }
 }
 @media (max-width: 820px) {
+  .new-color {
+    background: #f601ee !important;
+  }
   .logo_line_mobile {
     display: flex;
     flex-direction: row;
