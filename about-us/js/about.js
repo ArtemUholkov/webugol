@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (window.innerWidth < 500) {
       if (containerClicked.classList.contains('open')) {
-        parentContainer.style.height = `${baseHeight + 600}px`;
+        parentContainer.style.height = `${baseHeight + 650}px`;
       } else {
         parentContainer.style.height = `${baseHeight}px`;
       }
@@ -306,3 +306,55 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 const container = document.querySelector('.history-section__image-container');
+
+
+
+////// History section
+
+const imageContainer = document.querySelector('.history-section__image-container');
+
+let isDown = false;
+let startX;
+let scrollLeft;
+
+// Начало нажатия
+imageContainer.addEventListener('mousedown', (e) => {
+  isDown = true;
+  imageContainer.classList.add('active');
+  startX = e.pageX - imageContainer.offsetLeft;
+  scrollLeft = imageContainer.scrollLeft;
+});
+
+imageContainer.addEventListener('mouseleave', () => {
+  isDown = false;
+  imageContainer.classList.remove('active');
+});
+
+imageContainer.addEventListener('mouseup', () => {
+  isDown = false;
+  imageContainer.classList.remove('active');
+});
+
+// Свайп для прокрутки
+imageContainer.addEventListener('mousemove', (e) => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - imageContainer.offsetLeft;
+  const walk = (x - startX) * 2; // Увеличиваем чувствительность прокрутки
+  imageContainer.scrollLeft = scrollLeft - walk;
+});
+
+// Поддержка тач-устройств
+let touchStartX;
+let touchScrollLeft;
+
+imageContainer.addEventListener('touchstart', (e) => {
+  touchStartX = e.touches[0].pageX - imageContainer.offsetLeft;
+  touchScrollLeft = imageContainer.scrollLeft;
+});
+
+imageContainer.addEventListener('touchmove', (e) => {
+  const x = e.touches[0].pageX - imageContainer.offsetLeft;
+  const walk = (x - touchStartX) * 2; // Увеличиваем чувствительность прокрутки
+  imageContainer.scrollLeft = touchScrollLeft - walk;
+});

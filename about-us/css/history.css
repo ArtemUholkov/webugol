@@ -83,6 +83,16 @@
     .history-section__image-container::-webkit-scrollbar-thumb:hover {
         background-color: #ff5500; 
     }
+
+    .history-section__image-container.active {
+        cursor: grabbing;
+        cursor: -webkit-grabbing;
+    }
+    .history-section__image-container {
+        cursor: grab;
+        cursor: -webkit-grab;
+    }
+    
 }
 
 @media screen and (max-width: 1200px) {
