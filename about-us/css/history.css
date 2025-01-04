@@ -3,6 +3,7 @@
     flex-direction: column;
     padding-top: 220px;
     background-color: #1D1D1D;
+    overflow-x: visible;
 }
 
 .history-section__title {
@@ -17,40 +18,38 @@
     margin: 0 auto 57px;
 }
 
-/* Контейнер для изображения */
 .history-section__image-container {
     width: 100%;
-    overflow-x: auto; /* Только горизонтальная прокрутка */
-    -webkit-overflow-scrolling: touch; /* Плавный скролл на iOS */
+    overflow-x: auto; 
+    -webkit-overflow-scrolling: touch; 
+    white-space: nowrap;
 }
 
-/* Само изображение */
+
 .history-section__image {
-    display: block; /* Избегаем лишних отступов */
-    width: auto; /* Естественная ширина изображения */
-    height: auto; /* Сохраняем пропорции */
-    min-width: 1500px; /* Минимальная ширина изображения для скролла */
+    display: block; 
+    width: auto; 
+    height: auto; 
+    min-width: 100%;
 }
 
-/* Стилизация горизонтального скроллбара */
 .history-section__image-container::-webkit-scrollbar {
-    height: 4px; /* Толщина скроллбара */
+    height: 4px; 
 }
 
 .history-section__image-container::-webkit-scrollbar-track {
-    background: #9696961b; /* Цвет фона скроллбара */
+    background: #9696961b; 
 }
 
 .history-section__image-container::-webkit-scrollbar-thumb {
-    background: #ff7a00; /* Цвет ползунка */
+    background: #ff7a00; 
     border-radius: 3px;
 }
 
 .history-section__image-container::-webkit-scrollbar-thumb:hover {
-    background: #ff5500; /* Цвет ползунка при наведении */
+    background: #ff5500;
 }
 
-/* Дополнительные стили для адаптации */
 @media screen and (max-width: 1200px) {
     .history-section__title {
         font-size: 50px;
