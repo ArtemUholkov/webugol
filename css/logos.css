@@ -1,6 +1,6 @@
 .logos {
   padding: 115px 169px 115px;
-  border: 1px solid var(--block-liner, rgba(254, 241, 225, 0.4));
+  border: 1px solid var(--block-liner, rgba(254, 241, 225, 0.2));
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(57px);
   -webkit-backdrop-filter: blur(57px); /* Префикс для Safari */
@@ -38,47 +38,25 @@
 }
 .logo_line_item-top:nth-of-type(odd) {
   border-radius: 10px;
-  border: 1px solid var(--Glass, #fff);
-  background: var(--Glass, rgba(255, 255, 255, 0.2));
+  border: 0.2px solid var(--Glass, #fff);
+  background: var(--Glass, rgba(255, 255, 255, 0.1));
   backdrop-filter: blur(22px);
   -webkit-backdrop-filter: blur(22px); /* Префикс для Safari */
 }
 .logo_line_item-top:nth-of-type(even) {
   border-radius: 10px;
-  border: 1px solid var(--Glass, #fff);
+  border: 0.2px solid var(--Glass, #fff);
   background: var(--black-cards, #1d1d1d);
   backdrop-filter: blur(22px);
   -webkit-backdrop-filter: blur(22px); /* Префикс для Safari */
 }
 .logo_line_item-top:hover {
   border-radius: 10px;
-  border: 1px solid var(--Glass, #fff);
+  border: 0.2px solid var(--Glass, #fff);
   background: var(--violet, #6c01f6);
   backdrop-filter: blur(22px);
   -webkit-backdrop-filter: blur(22px); /* Префикс для Safari */
   transition: all 0.3s;
-}
-.logo_line_img {
-}
-.logo_1_img {
-}
-.logo_2_img {
-}
-.logo_3_img {
-}
-.logo_4_img {
-}
-.logo_5_img {
-}
-.logo_6_img {
-}
-.logo_7_img {
-}
-.logo_8_img {
-}
-.logo_9_img {
-}
-.logo_10_img {
 }
 .logos_animated_text {
   display: flex;
@@ -119,27 +97,7 @@
   margin-top: 60px;
   margin-bottom: 60px;
 }
-.logo_11_img {
-}
-.logo_12_img {
-}
-.logo_13_img {
-}
-.logo_14_img {
-}
-.logo_15_img {
-}
 
-.logo_16_img {
-}
-.logo_17_img {
-}
-.logo_18_img {
-}
-.logo_19_img {
-}
-.logo_20_img {
-}
 .logo_line_mob {
   display: none;
 }
