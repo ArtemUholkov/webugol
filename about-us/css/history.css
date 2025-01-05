@@ -19,14 +19,15 @@
 
 .history-section__image-container {
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    /* justify-content: flex-end;
+    align-items: flex-end; */
     width: 100%;
+    overflow-x: hidden;
 }
 
 .history-section__image {
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 
 
