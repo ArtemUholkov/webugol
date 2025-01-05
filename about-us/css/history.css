@@ -18,12 +18,8 @@
 }
 
 .history-section__image-container {
-
-    /* justify-content: flex-end;
-    align-items: flex-end; */
     width: 100%;
     overflow-x: hidden;
-
 }
 
 .history-section__image {
@@ -41,9 +37,16 @@
     .history-section__image-container {
         overflow-x: auto; 
         white-space: nowrap; 
+        position: relative;
+        -webkit-overflow-scrolling: touch;
         /* justify-content: initial; */
     }
 
+    .history-section__image {
+        width: 1500px; 
+        height: auto; 
+        display: inline-block; 
+    }
 
 }
 
