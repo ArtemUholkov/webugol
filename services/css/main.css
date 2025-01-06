@@ -11,3 +11,17 @@ video::-webkit-media-controls-panel {
     display: none !important;
     opacity: 1 !important;
 }
+
+
+@media screen and (max-width: 850px) {
+    .hw-main__title--services {
+        margin: 0 !important;
+    }
+
+    .hw-main__text-container--services {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+    }
+}

@@ -20,64 +20,6 @@
     margin-top: 0;
 }
 
-.prefooter__title {
-    position: absolute;
-    top: 212px;
-    right: 252px;
-    z-index: 2;
-    text-align: center;
-    font-family: "Josefin Sans";
-    font-size: 50px;
-    font-weight: 900;
-    text-transform: uppercase;
-    color: #FFF;
-    opacity: 0;
-    transform: translateX(100%);
-    animation: slideIn 1s ease-out forwards;
-    display: block;
-}
-
-.prefooter__title span {
-    display: inline-block;
-    padding: 0;
-    margin-right: -0.05em; 
-    animation: blink 1s alternate 2s;
-}
-
-.prefooter__title span:empty {
-    margin-right: 0.2em; 
-}
-
-.prefooter__title span:nth-child(1) { animation-delay: 2s; }
-.prefooter__title span:nth-child(2) { animation-delay: 2.2s; }
-.prefooter__title span:nth-child(3) { animation-delay: 2.4s; }
-.prefooter__title span:nth-child(4) { animation-delay: 2.6s; }
-.prefooter__title span:nth-child(5) { animation-delay: 2.8s; }
-.prefooter__title span:nth-child(6) { animation-delay: 2s; }
-.prefooter__title span:nth-child(7) { animation-delay: 2.2s; }
-.prefooter__title span:nth-child(8) { animation-delay: 2.4s; }
-.prefooter__title span:nth-child(9) { animation-delay: 2.6s; }
-.prefooter__title span:nth-child(10) { animation-delay: 2.8s; }
-.prefooter__title span:nth-child(11) { animation-delay: 2s; }
-.prefooter__title span:nth-child(12) { animation-delay: 2.2s; }
-.prefooter__title span:nth-child(13) { animation-delay: 2.4s; }
-.prefooter__title span:nth-child(14) { animation-delay: 2.6s; }
-.prefooter__title span:nth-child(15) { animation-delay: 2.8s; }
-.prefooter__title span:nth-child(16) { animation-delay: 2s; }
-.prefooter__title span:nth-child(17) { animation-delay: 2.2s; }
-.prefooter__title span:nth-child(18) { animation-delay: 2.4s; }
-.prefooter__title span:nth-child(19) { animation-delay: 2.6s; }
-.prefooter__title span:nth-child(20) { animation-delay: 2.8s; }
-.prefooter__title span:nth-child(21) { animation-delay: 2s; }
-.prefooter__title span:nth-child(22) { animation-delay: 2.2s; }
-.prefooter__title span:nth-child(23) { animation-delay: 2.4s; }
-.prefooter__title span:nth-child(24) { animation-delay: 2.6s; }
-.prefooter__title span:nth-child(25) { animation-delay: 2.8s; }
-.prefooter__title span:nth-child(26) { animation-delay: 2s; }
-.prefooter__title span:nth-child(27) { animation-delay: 2.2s; }
-.prefooter__title span:nth-child(28) { animation-delay: 2.4s; }
-.prefooter__title span:nth-child(29) { animation-delay: 2.6s; }
-
 .prefooter__button {
     display: block;
     width: 320px;
@@ -136,7 +78,7 @@
     top: 190px;
     right: 230px;
     z-index: 1;
-    width: 1200px;
+    width: 1000px;
 }
 
 @media screen and (max-width: 1582px) {

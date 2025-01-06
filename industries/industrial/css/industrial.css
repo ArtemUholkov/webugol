@@ -271,8 +271,7 @@
     .industrial-section__text,
     .industrial-section__subtitle {
         text-align: center;
-        max-width: 335px;
-        width: 100%;
+        width: 360px;
     }
 
     .industrial-section__text {
