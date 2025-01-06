@@ -167,6 +167,10 @@
     max-width: 90px;
 }
 
+.three {
+    max-width: 150px;
+}
+
 .main-industry__vertical-navigation__item.active .main-industry__page-name {
     opacity: 1;
 }

@@ -4,13 +4,12 @@
     align-items: center;
     justify-content: center;
     background-color: #111;
-    padding-bottom: 180px;
 }
 
 .blog-section__container {
     display: grid;
     grid-template-columns: repeat(3, 455px);
-    gap: 15px;
+    gap: 25px;
     row-gap: 80px;
     padding-bottom: 80px;
 }
@@ -201,9 +200,5 @@
 
     .blog-section__title-container {
         padding-bottom: 330px;
-    }
-
-    .blog-section {
-        padding-bottom: 120px;
     }
 }
