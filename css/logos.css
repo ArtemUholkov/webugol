@@ -1,6 +1,8 @@
 .logos {
   padding: 115px 169px 115px;
-  border: 1px solid var(--block-liner, rgba(254, 241, 225, 0.2));
+  border: 1px solid var(--block-liner, rgba(254, 241, 225, 0.1));
+  border-left: none;
+  border-right: none;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(57px);
   -webkit-backdrop-filter: blur(57px); /* Префикс для Safari */
@@ -34,28 +36,27 @@
   align-items: center;
   justify-content: center;
   transition: all 0.3s;
-  
 }
 .logo_line_item-top:nth-of-type(odd) {
   border-radius: 10px;
   border: 0.2px solid var(--Glass, #fff);
-  background: var(--Glass, rgba(255, 255, 255, 0.1));
-  backdrop-filter: blur(22px);
-  -webkit-backdrop-filter: blur(22px); /* Префикс для Safari */
+  background: var(--Glass, rgba(255, 255, 255, 0.2));
+  backdrop-filter: blur(44px);
+  -webkit-backdrop-filter: blur(44px); /* Префикс для Safari */
 }
 .logo_line_item-top:nth-of-type(even) {
   border-radius: 10px;
   border: 0.2px solid var(--Glass, #fff);
   background: var(--black-cards, #1d1d1d);
-  backdrop-filter: blur(22px);
-  -webkit-backdrop-filter: blur(22px); /* Префикс для Safari */
+  backdrop-filter: blur(44px);
+  -webkit-backdrop-filter: blur(44px); /* Префикс для Safari */
 }
 .logo_line_item-top:hover {
   border-radius: 10px;
   border: 0.2px solid var(--Glass, #fff);
   background: var(--violet, #6c01f6);
-  backdrop-filter: blur(22px);
-  -webkit-backdrop-filter: blur(22px); /* Префикс для Safari */
+  backdrop-filter: blur(44px);
+  -webkit-backdrop-filter: blur(44px); /* Префикс для Safari */
   transition: all 0.3s;
 }
 .logos_animated_text {
@@ -73,24 +74,24 @@
   border-radius: 10px;
   border: 1px solid var(--Glass, #fff);
   background: var(--Glass, rgba(255, 255, 255, 0.2));
-  backdrop-filter: blur(22px);
-  -webkit-backdrop-filter: blur(22px); /* Префикс для Safari */
+  backdrop-filter: blur(44px);
+  -webkit-backdrop-filter: blur(44px); /* Префикс для Safari */
   transition: all 0.3s;
 }
 .logo_line_item-bot:hover {
   border-radius: 10px;
   border: 1px solid var(--Glass, #fff);
   background: var(--violet, #6c01f6);
-  backdrop-filter: blur(22px);
-  -webkit-backdrop-filter: blur(22px); /* Префикс для Safari */
+  backdrop-filter: blur(44px);
+  -webkit-backdrop-filter: blur(44px); /* Префикс для Safari */
   transition: all 0.3s;
 }
 .bot_black {
   border-radius: 10px;
   border: 1px solid var(--Glass, #fff);
   background: var(--black-cards, #1d1d1d);
-  backdrop-filter: blur(22px);
-  -webkit-backdrop-filter: blur(22px); /* Префикс для Safari */
+  backdrop-filter: blur(44px);
+  -webkit-backdrop-filter: blur(44px); /* Префикс для Safari */
 }
 .animated_text_image {
   height: 110px;
@@ -176,7 +177,7 @@
     height: 28.286px;
     /* background: var(--Glass, rgba(255, 255, 255, 0.2)) !important; */
   }
-  
+
   .logo_3_img {
     width: 86.715px;
     height: 28.286px;
