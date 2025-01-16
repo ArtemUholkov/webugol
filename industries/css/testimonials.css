@@ -41,7 +41,7 @@
 .testimonials__container-item {
   width: 460px;
   height: 100%;
-  min-height: 600px;
+  min-height: 650px;
   flex-shrink: 0;
   position: relative;
   z-index: 1;
@@ -144,6 +144,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  filter: grayscale(0%);
+  -webkit-filter: grayscale(0%);
 }
 
 .testimonials__container-item:hover .testimonials__photo-hover {

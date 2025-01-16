@@ -249,29 +249,45 @@ wrapContTeam.addEventListener('mousemove', (e) => {
   wrapContTeam.scrollLeft = scrollLeft - walk;
 });
 
+//Main modal form
+document.addEventListener('DOMContentLoaded', () => {
+  const modal = document.getElementById('modal');
+  const openModalButton = document.querySelector('.main_button');
+  const openModalFooterButton = document.querySelector('.footer-contacts__button');
+  const closeModalButton = document.getElementById('closeModal');
 
-//Main modal form 
-document.addEventListener("DOMContentLoaded", () => {
-  const modal = document.getElementById("modal");
-  const openModalButton = document.querySelector(".main_button");
-  const openModalFooterButton = document.querySelector(".footer-contacts__button");
-  const closeModalButton = document.getElementById("closeModal");
-
-  openModalFooterButton.addEventListener("click", () => {
-    modal.classList.add("visible");
+  openModalFooterButton.addEventListener('click', () => {
+    modal.classList.add('visible');
   });
 
-  openModalButton.addEventListener("click", () => {
-    modal.classList.add("visible");
+  openModalButton.addEventListener('click', () => {
+    modal.classList.add('visible');
   });
 
-  closeModalButton.addEventListener("click", () => {
-    modal.classList.remove("visible");
+  closeModalButton.addEventListener('click', () => {
+    modal.classList.remove('visible');
   });
 
-  modal.addEventListener("click", (e) => {
+  modal.addEventListener('click', (e) => {
     if (e.target === modal) {
-      modal.classList.remove("visible");
+      modal.classList.remove('visible');
     }
   });
+});
+const modalvideo = document.getElementById('modalvideo');
+const openModall = document.getElementById('openModal');
+const closeModall = document.querySelector('.close-btn');
+
+openModall.addEventListener('click', () => {
+  modalvideo.classList.add('show');
+});
+
+closeModall.addEventListener('click', () => {
+  modalvideo.classList.remove('show');
+});
+
+window.addEventListener('click', (event) => {
+  if (event.target === modalvideo) {
+    modalvideo.classList.remove('show');
+  }
 });
