@@ -253,7 +253,7 @@ video::-webkit-media-controls-panel {
   }
 
   .hw-main--projects {
-    min-height: 1500px;
+    min-height: 1300px;
   }
 
   .hw-main__digit-wraper {
@@ -272,6 +272,7 @@ video::-webkit-media-controls-panel {
 @media screen and (max-width: 630px) {
   .hw-main__text-container--project {
     left: auto;
+    top: 250px;
   }
 
   .hw-main__title--project {

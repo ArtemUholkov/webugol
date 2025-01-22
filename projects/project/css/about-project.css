@@ -115,7 +115,12 @@
   line-height: 110%;
   text-transform: capitalize;
   position: relative;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+}
+.about__menu-item:hover {
+  color: #fff;
+  opacity: 0.8;
+  transition: all 0.3s ease;
 }
 
 .about__menu-item:visited {

@@ -59,6 +59,9 @@
   object-fit: contain;
   margin-bottom: 22px;
 }
+.result__image-container .three {
+  max-width: 100% !important;
+}
 
 .result__photo {
   width: 440px;

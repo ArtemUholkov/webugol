@@ -20,6 +20,8 @@
 
 .solutions_title {
   margin-bottom: 68px;
+  position: relative;
+  z-index: 102;
 }
 .solutions_content_wrapper {
   display: flex;
@@ -57,6 +59,7 @@
   justify-content: center;
   gap: 20px;
   flex-direction: column;
+  cursor: pointer;
 }
 .solutions_items__l_t {
   display: flex;
@@ -143,6 +146,7 @@
   justify-content: center;
   gap: 20px;
   flex-direction: column;
+  cursor: pointer;
 }
 .solutions_items__c_t {
   width: 220px;
@@ -243,6 +247,7 @@
   justify-content: center;
   gap: 20px;
   flex-direction: column;
+  cursor: pointer;
 }
 .solutions_items__r_t {
   display: flex;

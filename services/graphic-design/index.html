@@ -267,15 +267,22 @@
           </div>
         </div>
       </div>
-      <button
-        class="preference-section__btn"
-        data-aos="fade-up"
-        data-aos-anchor-placement="center-bottom"
-        data-aos-duration="3000"
-      >
-        get started
-      </button>
+      <button class="preference-section__btn">get started</button>
     </section>
+    <div id="video-modal" class="modal" onclick="closeModal()">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="video-wrapper">
+          <iframe
+            id="video-frame"
+            width="560"
+            height="315"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
     <section class="advantage-section">
       <img
         src="../google-ads/assets/img/advantage/bg-image.png"
@@ -1087,7 +1094,7 @@
     <script src="./js/index.js"></script>
     <script src="../../js/script.js"></script>
     <script src="../../js/aos.js"></script>
-    <script src="../js/script.js"></script>
+    <!-- <script src="../js/script.js"></script> -->
     <script>
       AOS.init();
     </script>

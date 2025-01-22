@@ -175,6 +175,12 @@
     height: 366px;
     right: -120px;
   }
+  .blog-section__container-item::after {
+    opacity: 1;
+  }
+  .blog-section {
+    padding-bottom: 100px;
+  }
 }
 
 @media screen and (max-width: 820px) {

@@ -269,14 +269,7 @@
           </div>
         </div>
       </div>
-      <button
-        class="preference-section__btn"
-        data-aos="fade-up"
-        data-aos-anchor-placement="center-bottom"
-        data-aos-duration="3000"
-      >
-        get started
-      </button>
+      <button class="preference-section__btn">get started</button>
     </section>
     <section class="advantage-section">
       <img
@@ -521,9 +514,25 @@
       </div>
       <div class="text-container" data-aos="fade-up">
         <p class="text-container__title">Check it out our portfolio</p>
-        <button class="text-container__button">View</button>
+        <a href="https://www.behance.net/webugol" target="_blank" class="text-container__button"
+          >View</a
+        >
       </div>
     </section>
+    <div id="video-modal" class="modal" onclick="closeModal()">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="video-wrapper">
+          <iframe
+            id="video-frame"
+            width="560"
+            height="315"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
     <section class="result services-page">
       <h2 class="result__title" data-aos="zoom-in">Projects on advanced analytics</h2>
       <div class="result__container">
@@ -740,28 +749,30 @@
           <div class="faq-section__container-item">
             <div class="faq-section__visible-item">
               <p class="faq-section__item-number">1</p>
-              <p class="faq-section__item-question">How does Google Ads work?</p>
+              <p class="faq-section__item-question">What is analytics and reporting?</p>
             </div>
             <div class="faq-section__hidden-item">
               <p class="faq-section__item-answer">
-                Google Ads operates on a pay-per-click (PPC) model, meaning you only pay when
-                someone clicks on your ad. Advertisers bid on keywords and phrases relevant to their
-                business and the amount you bid will determine your ad’s position on the search
-                results page.
+                Analytics and reporting involve the collection, analysis, and presentation of data
+                related to your marketing activities. This includes website analytics, ad
+                performance, SEO metrics, and email marketing results. Our goal is to provide you
+                with actionable insights that drive business growth.
               </p>
             </div>
           </div>
           <div class="faq-section__container-item">
             <div class="faq-section__visible-item">
               <p class="faq-section__item-number">2</p>
-              <p class="faq-section__item-question">Why should I use Google Ads for my business?</p>
+              <p class="faq-section__item-question">
+                Why are custom marketing reports important for my business?
+              </p>
             </div>
             <div class="faq-section__hidden-item">
               <p class="faq-section__item-answer">
-                Google Ads can help you reach a wider audience, increase brand awareness, drive more
-                traffic to your website, and ultimately, increase sales and revenue. It provides
-                measurable results and allows you to target your ads to specific audiences based on
-                keywords, location, demographics, and more.
+                Custom marketing reports are crucial because they offer a detailed view of your
+                marketing performance. They help identify strengths, uncover opportunities for
+                improvement, and inform strategic decisions. With tailored reports, you can measure
+                the effectiveness of your campaigns and optimize your marketing efforts.
               </p>
             </div>
           </div>
@@ -769,30 +780,31 @@
             <div class="faq-section__visible-item">
               <p class="faq-section__item-number">3</p>
               <p class="faq-section__item-question">
-                How does Webugol create an effective Google Ads campaign?
+                How long does it take to create a custom marketing report?
               </p>
             </div>
             <div class="faq-section__hidden-item">
               <p class="faq-section__item-answer">
-                We involve thorough keyword research, creating compelling ad copy, setting a budget,
-                selecting the right targeting options, monitoring and optimizing ad campaigns daily
-                for better performance.
+                The timeline for creating a custom marketing report can vary depending on the
+                complexity and scope of the data. A straightforward report may take a few days,
+                while a comprehensive report with extensive analysis can take several weeks. We work
+                closely with you to establish a timeline that meets your needs and keeps the project
+                on track.
               </p>
             </div>
           </div>
           <div class="faq-section__container-item">
             <div class="faq-section__visible-item">
               <p class="faq-section__item-number">4</p>
-              <p class="faq-section__item-question">
-                How long does it take to see results from Google Ads?
-              </p>
+              <p class="faq-section__item-question">How much do custom marketing reports cost?</p>
             </div>
             <div class="faq-section__hidden-item">
               <p class="faq-section__item-answer">
-                Some businesses may see results within a few days of launching their campaigns,
-                while others may take a few weeks. The speed at which you see results can depend on
-                various factors including the competitiveness of your industry, the quality of your
-                ads, and your budget.
+                The cost of custom marketing reports depends on various factors, including the
+                complexity of the data, the number of metrics included, and the level of detail
+                required. At Webugol, we offer customized reporting packages tailored to your budget
+                and goals. Contact us for a free consultation and quote to determine the best plan
+                for you.
               </p>
             </div>
           </div>
@@ -800,15 +812,15 @@
             <div class="faq-section__visible-item">
               <p class="faq-section__item-number">5</p>
               <p class="faq-section__item-question">
-                How much does it cost to advertise with Google Ads?
+                Do you provide tracking and configuration services?
               </p>
             </div>
             <div class="faq-section__hidden-item">
               <p class="faq-section__item-answer">
-                The cost of Google Ads can vary widely based on your industry, the competitiveness
-                of your keywords, your budget, and other factors. You can set a daily budget and
-                maximum bid amount that suits your needs. Google Ads also allows you to control your
-                spending with various bidding strategies.
+                Yes, we configure all necessary tracking tools, including GA4, GTM, Meta Pixel, and
+                Conversions API, to ensure accurate data collection. Our configuration services
+                ensure that you have the right data to make informed decisions and optimize your
+                marketing strategies.
               </p>
             </div>
           </div>
@@ -1127,7 +1139,7 @@
     <script src="./js/index.js"></script>
     <script src="../../js/script.js"></script>
     <script src="../../js/aos.js"></script>
-    <script src="../js/script.js"></script>
+    <!-- <script src="../js/script.js"></script> -->
     <script>
       AOS.init();
     </script>
